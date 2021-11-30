@@ -225,18 +225,18 @@
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <select name="" id="" class="form-control">
+                                            <select name="kelompok_umur" id="" class="form-control">
                                                 <option selected disabled>-Pilih Kelompok Umur</option>
-                                                <option value="12 Hingga 18 Bulan">12 Hingga 18 Bulan</option>
-                                                <option value="18 Hingga 24 Bulan">18 Hingga 24 Bulan</option>
-                                                <option value="24 Hingga 36 Bulan">24 Hingga 36 Bulan</option>
-                                                <option value="36 Hingga 48 Bulan">36 Hingga 48 Bulan</option>
-                                                <option value="48 Hingga 60 Bulan">48 Hingga 60 Bulan</option>
+                                                <option value="1">12 Hingga 18 Bulan</option>
+                                                <option value="2">18 Hingga 24 Bulan</option>
+                                                <option value="3">24 Hingga 36 Bulan</option>
+                                                <option value="4">36 Hingga 48 Bulan</option>
+                                                <option value="5">48 Hingga 60 Bulan</option>
                                             </select>
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <a href="halaman_stimulasi.html"><button type="button" class="btn btn-primary">Update Stimulasi & Intervensi</button></a>
+                                            <button type="button" class="btn btn-primary" id="update_stimulasi">Update Stimulasi & Intervensi</button>
                                         </div>
                                         
 
@@ -287,5 +287,25 @@
 <script src="template_assets/js/core.js"></script>
 <script src="assets/js/page/index.js"></script>
 <script src="assets/js/page/summernote.js"></script>
+<script src="assets/toastr/toastr.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/toastr/toastr.min.css">
+<script src="main.js"></script>
+<script>
+
+
+    // create function if button id="update_stimulasi" is click
+    $('#update_stimulasi').click(function(){
+        // get value from select option
+        var kelompok_umur = $('select[name=kelompok_umur]').val();
+        // if kelompok umur is null or empty than show alert else move to halaman_stimulasi.html?id=kelompok_umur
+        if(kelompok_umur == null || kelompok_umur == ""){
+            //create toastr
+            toastr.error('Pilih kelompok umur stimulasi terlebih dahulu');
+        }else{
+            window.location.href = "halaman_stimulasi.html?id="+kelompok_umur;
+        }
+        
+    });
+</script>
 </body>
 </html>

@@ -16,6 +16,7 @@
 
 <!-- Core css -->
 <link rel="stylesheet" href="template_assets/css/style.min.css"/>
+<link rel="stylesheet" href="assets/sweetalert/sweetalert.css">
 </head>
 
 <body class="font-muli theme-cyan gradient">
@@ -24,6 +25,8 @@
     <div class="loader">
     </div>
 </div>
+
+<div id="modal_here"></div>
 
 <div id="main_content">
     <!-- Start Main top header -->
@@ -161,14 +164,14 @@
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control stimulasi_input" placeholder="Jumlah Stimulasi">
+                                            <input type="text" class="form-control numbersOnly" id="input_kemampuan_gerak_dasar" placeholder="Jumlah Stimulasi" minlength="1" maxlength="2">
                                         </div>
 
                                         <div class="btn-list text-center">
-                                            <button type="button" class="btn btn-primary">Tambah Stimulasi</button>
+                                            <button type="button" class="btn btn-primary" id="button_input_kemampuan_gerak_dasar" onclick="tambah_update_kemampuan_gerak_dasar()">Tambah Stimulasi</button>
                                         </div>
                                         
-
+                                        <div id="div_kemampuan_gerak_kasar" style="display: none;"></div>
 
                                         
                                     </div>
@@ -202,6 +205,14 @@
 
                                         <div class="input-group mb-3">
                                             <input type="text" class="form-control stimulasi_input" placeholder="Jumlah Stimulasi Baru">
+                                            <!-- create html input type="text"-->
+
+
+
+
+                                            
+
+
                                         </div>
 
                                         <div class="btn-list text-center">
@@ -410,5 +421,175 @@
 <script src="template_assets/js/core.js"></script>
 <script src="assets/js/page/index.js"></script>
 <script src="assets/js/page/summernote.js"></script>
+<script src="assets/toastr/toastr.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/toastr/toastr.min.css">
+<script src="assets/sweetalert/sweetalert.js"></script>
+<script src="main.js"></script>
+<script>
+    // buat function cek url ?id= apakah 1 hingga 5,jika tidak maka buat sweet alert dengan mesej error "Halaman tidak ditemukan" kemudian lanjutkan ke halaman index.html 
+    function cek_url(){
+        var url = window.location.href;
+        var id = url.split("?");
+        if(id[1] == "id=1" || id[1] == "id=2" || id[1] == "id=3" || id[1] == "id=4" || id[1] == "id=5"){
+            return true;
+        }else{
+            swal({
+                title: "Halaman tidak ditemukan",
+                text: "",
+                icon: "error",
+                button: "Kembali",
+            }).then(function() {
+                window.location.href = "index.html";
+            });
+        }
+    }
+    cek_url();
+
+    //buat fungsi async dengan nama cek_data_kemampuan_gerak_dasar, di dalam fungsi memiliki variabel "data" yang bersifat ajax dengan api variable url dengan basic auth username Kicap_karan dan password karan_kicap456, jika terkoneksi maka "data" = data dari api dan console.log(response), jika tidak maka swal dengan mesej error "Tidak dapat terhubung ke server,sila periksa sambungan internet anda" dengan icon error dan button Reload Halaman yang mana refresh kembali halaman ini
+    function cek_data_kemampuan_gerak_dasar(){
+        var data;
+        var auth = "Basic " + btoa("Kicap_karan" + ":" + "karan_kicap456");
+        $.ajax({
+            url: url+"cek_data_kemampuan_gerak_kasar?id="+ $_GET('id'),
+            type: "GET",
+            dataType: "json",
+            async: false,
+            headers: {
+                "Authorization": auth
+            },
+            success: function(response){
+                data = response;
+                // jika data.message = "ya" maka tampilkan div id="div_kemampuan_gerak_dasar" dengan isi dari data.data
+                if(data.message == "ya"){
+                    $("#div_kemampuan_gerak_dasar").html(data.data);
+                }
+                console.log(response);
+            },
+            error: function(response){
+                swal({
+                    title: "Tidak dapat terhubung ke server",
+                    text: "Sila periksa sambungan internet anda",
+                    icon: "error",
+                    button: "Reload Halaman",
+                }).then(function() {
+                    window.location.reload();
+                });
+            }
+        });
+        return data;
+    }    
+    cek_data_kemampuan_gerak_dasar();
+
+    
+    function tambah_update_kemampuan_gerak_dasar(){
+        var val = $("#input_kemampuan_gerak_dasar").val();
+        console.log(val);
+        if(val == "" || val == "0" || val == "00"){
+            toastr.error("Jumlah Stimulasi Kemampuan Gerak Kasar Harus Terisi Minimal 1");
+        }else{
+            //buat modal lg html ,di body modal terisi tabel dengan column "No" width=5%,"Stimulasi" width=85%,"Nilai%" width=10% ,dengan row sebanyak val, column "Stimulasi" disi dengan textarea dan column "Nilai%" diisi dengan input class numbersOnly tapi hanya bisa diinput nomor, masukkan html pada div id="modal_here", tampilkan modal dan jalankan fungsi InputNumbersOnly() dan buat fungsi untuk tombol simpan dengan nama simpan_kemampuan_gerak_dasar()
+            var html = `<div class="modal fade" id="modal_kemampuan_gerak_dasar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Tambah Kemampuan Gerak Kasar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th width="5%">No</th>
+                                        <th width="85%">Stimulasi</th>
+                                        <th width="10%">Nilai%</th>
+                                    </tr>
+                                </thead>
+                                <tbody>`;
+                for(var i = 0; i < val; i++){
+
+                    html += `<tr>
+                                <td>`+(i+1)+`</td>
+                                <td><textarea class="form-control" id="input_stimulasi_kemampuan_gerak_dasar_`+(i+1)+`"></textarea></td>
+                                <td><input type="text" class="form-control numbersOnly" id="input_nilai_kemampuan_gerak_dasar_`+(i+1)+`"></td>
+                            </tr>`;
+                }
+                html += `</tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="simpan_kemampuan_gerak_dasar()">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+            $("#modal_here").html(html);
+            $("#modal_kemampuan_gerak_dasar").modal("show");
+            InputNumbersOnly();
+
+
+            
+            
+        }   
+    }
+
+     function simpan_kemampuan_gerak_dasar(){
+        // jika input id="input_nilai_kemampuan_gerak_dasar_"+i masih kosong maka tampilkan toastr error "Nilai Kemampuan Gerak Kasar + i Harus Terisi" dan focus ke input id="input_nilai_kemampuan_gerak_dasar_"+i dan jika input id="input_nilai_kemampuan_gerak_dasar_"+i dijumlahkan semua dan hasilnya lebih dari 100 maka tampilkan toastr error "Nilai Kemampuan Gerak Kasar Tidak Bisa Melebihi 100%" dan focus ke input id="input_nilai_kemampuan_gerak_dasar_1"
+        // jika textarea id="input_stimulasi_kemampuan_gerak_dasar_"+i masih kosong maka tampilkan toastr error "Stimulasi Kemampuan Gerak Kasar + i Harus Terisi" dan focus ke textarea id="input_stimulasi_kemampuan_gerak_dasar_"+i
+        // jika input id="input_stimulasi_kemampuan_gerak_dasar_"+i dan input id="input_nilai_kemampuan_gerak_dasar_"+i tidak kosong maka tampilkan modal dengan isi dari data.data dan tampilkan toastr success "Berjaya menyimpan data"
+        var val = $("#input_kemampuan_gerak_dasar").val();
+        var this_data = [];
+        var nilai = 0;
+        for(var i = 0; i < val; i++){
+            var stimulasi = $("#input_stimulasi_kemampuan_gerak_dasar_"+(i+1)).val();
+            var nilai_stimulasi = $("#input_nilai_kemampuan_gerak_dasar_"+(i+1)).val();
+            if(stimulasi == ""){
+                toastr.error("Stimulasi Kemampuan Gerak Kasar "+(i+1)+" Harus Terisi");
+                $("#input_stimulasi_kemampuan_gerak_dasar_"+(i+1)).focus();
+                return false;
+            }else if(nilai_stimulasi == ""){
+                toastr.error("Nilai Kemampuan Gerak Kasar "+(i+1)+" Harus Terisi");
+                $("#input_nilai_kemampuan_gerak_dasar_"+(i+1)).focus();
+                return false;
+            }else{
+                // this_data.push id,stimulasi,nilai_stimulasi dengan id 6 karakter acak nomor dan huruf tidak boleh sama dari id yang lain
+                this_data.push({
+                    id: randomString(10, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
+                    stimulasi: stimulasi,
+                    nilai_stimulasi: nilai_stimulasi
+                });
+                nilai += parseInt(nilai_stimulasi);
+            }
+        }
+
+        if(nilai > 100){
+            toastr.error("Nilai Kemampuan Gerak Kasar Tidak Bisa Melebihi 100%");
+            $("#input_nilai_kemampuan_gerak_dasar_1").focus();
+            return false;
+        }else{
+            let data_sebelumnya = cek_data_kemampuan_gerak_dasar()
+            console.log(data_sebelumnya);
+            console.log(this_data);
+        }
+
+       
+   
+    }
+    
+    
+    
+
+
+
+
+    
+
+    
+
+    
+    
+</script>
 </body>
 </html>
