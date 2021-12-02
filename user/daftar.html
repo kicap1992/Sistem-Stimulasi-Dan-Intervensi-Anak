@@ -15,6 +15,7 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sweet-alert/sweetalert.css">
 
 </head>
 
@@ -127,35 +128,38 @@
                         <!-- <h4 class="mb-30">Login</h4> -->
 
                         <!-- Form -->
-                        <form action="#" method="post">
+                        <form id="sini_form">
                             <div class="row">
                                 <div class="col-12 col-md-6">
-                                    <input type="text" name="message-name" class="form-control mb-15" placeholder="Username">
+                                    <input type="text" name="username" id="username" class="form-control mb-15" placeholder="Username">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <input type="password" name="message-email" class="form-control mb-15" placeholder="Password">
+                                    <input type="password" name="password" id="password" class="form-control mb-15" placeholder="Password">
                                 </div>
                                 <div class="col-12">
-                                    <input type="password" name="website" class="form-control mb-15" placeholder="Konfirmasi Password">
+                                    <input type="password" name="konfirmasi_password" id="konfirmasi_password" class="form-control mb-15" placeholder="Konfirmasi Password">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" name="website" class="form-control mb-15" placeholder="Nama">
+                                    <input type="text" name="nama" id="nama" class="form-control mb-15" placeholder="Nama">
+                                </div>
+                                <div class="col-12">
+                                    <input type="email" name="email" id='email' class="form-control mb-15" placeholder="Email">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <input type="text" name="message-name" class="form-control mb-15" placeholder="Umur">
+                                    <input type="text" name="umur" id="umur" minlength="1" maxlength="2"  class="form-control mb-15 numbersOnly" placeholder="Umur" >
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <select class="form-control mb-15" >
+                                    <select class="form-control mb-15" name="jk" id="jk">
                                         <option  selected disabled>-Pilih Jenis Kelamin</option>
                                         <option value="Laki-laki">Laki-laki</option>
                                         <option value="Perempuan">Perempuan</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea name="message" class="form-control mb-10" placeholder="Alamat"></textarea>
+                                    <textarea name="alamat" id="alamat" class="form-control mb-10" placeholder="Alamat"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <center><button type="submit" class="btn alime-btn btn-2 mt-15 mb-15">Daftar</button></center>
+                                    <center><button type="button" onclick="daftar()" class="btn alime-btn btn-2 mt-15 mb-15">Daftar</button></center>
                                 </div>
                                 <div class="col-12">
                                     <center class="mb-10">Kembali ke <a href="login.html" style="color: blue;"> Halaman Login</a></center>
@@ -214,6 +218,99 @@
     <script src="js/alime.bundle.js"></script>
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
+    <script src="sweet-alert/sweetalert.js"></script>
+    <script src="sweet-alert/toastr/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweet-alert/toastr/toastr.min.css">
+    <script src="sweet-alert/block/jquery.blockUI.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        function daftar(){
+            //check if all input in form='sini_form' is filled and focus on first empty input dan dan cek jika password dan konfirmasi password sama maka toast error
+            let username = $('#username').val();
+            let password = $('#password').val();
+            let konfirmasi_password = $('#konfirmasi_password').val();
+            let nama = $('#nama').val();
+            let email = $('#email').val();
+            let umur = $('#umur').val();
+            let jk = $('#jk').val();
+            let alamat = $('#alamat').val();
+
+            if(username == ''){
+                toastr.error('Username tidak boleh kosong');
+                $('#username').focus();
+            }else if(password == ''){
+                toastr.error('Password tidak boleh kosong');
+                $('#password').focus();
+            }else if(konfirmasi_password == ''){
+                toastr.error('Konfirmasi Password tidak boleh kosong');
+                $('#konfirmasi_password').focus();
+            }else if(nama == ''){
+                toastr.error('Nama tidak boleh kosong');
+                $('#nama').focus();
+            }else if(email == ''){
+                toastr.error('Email tidak boleh kosong');
+                $('#email').focus();
+            }else if(umur == ''){
+                toastr.error('Umur tidak boleh kosong');
+                $('#umur').focus();
+            }else if(jk == '' || jk == null){
+                toastr.error('Jenis Kelamin harus dipilih');
+                $('#jk').focus();
+            }else if(alamat == ''){
+                toastr.error('Alamat tidak boleh kosong');
+                $('#alamat').focus();
+            }else if(password != konfirmasi_password){
+                toastr.error('Password dan Konfirmasi Password tidak sama');
+                $('#konfirmasi_password').focus();
+            }else{
+                //bikin var data untuk menampung semua data yang diinputkan
+                let data = {
+                    username: username,
+                    password: password,
+                    nama: nama,
+                    email: email,
+                    umur: umur,
+                    jk: jk,
+                    alamat: alamat
+                };
+                //kirim data ke server
+                $.ajax({
+                    url: url+'user_daftar',
+                    type: 'POST',
+                    data: {data: data},
+                    headers: {
+                        //basicAuth username="Kicap_karan", password="karan_kicap456" 
+                        'Authorization': 'Basic ' + btoa('Kicap_karan' + ':' + 'karan_kicap456') 
+                    },
+                    beforeSend: function(){
+                       sedang_proses();
+                    },
+                    success: function(response){
+                        $.unblockUI();
+                        console.log(response);
+                    },
+                    error: function(xhr, ajaxOptions, thrownError){
+                        $.unblockUI();
+                        // jika xhr.status = 401 toast error "Email dalam proses pendaftaran dan menunggu pengesahan admin", jika xhr.status = 402 toast error "Email sudah terdaftar",
+                        if(xhr.status == 401){
+                            toastr.error('Email dalam proses pendaftaran dan menunggu pengesahan admin');
+                        }else if(xhr.status == 402){
+                            toastr.error('Email sudah terdaftar');
+                        }else{
+                            //buat sweet alert 2 button dengan text "Refresh Halaman" untuk refresh halaman dan button dengan text "Close" untuk menutup sweet alert 2
+                            
+                        }
+                        
+                    }
+                });
+                
+            }
+
+            
+            
+        }
+    </script>
 
 </body>
 
