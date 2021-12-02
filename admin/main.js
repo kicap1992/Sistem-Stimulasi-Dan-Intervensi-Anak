@@ -55,3 +55,17 @@ function randomString(length, chars) {
   for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
   return result;
 }   
+
+function sedang_proses(){
+  $.blockUI({ 
+    message: "Sedang Diproses", 
+    css: { 
+    border: 'none', 
+    padding: '15px', 
+    backgroundColor: '#000', 
+    '-webkit-border-radius': '10px', 
+    '-moz-border-radius': '10px', 
+    opacity: .5, 
+    color: '#fff' 
+  } });
+}

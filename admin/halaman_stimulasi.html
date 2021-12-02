@@ -144,6 +144,7 @@
         <div class="section-body mt-4">
             <div class="container-fluid">
                 
+                <!-- Awal Stimulasi Kemampuan Gerak Kasar-->
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="admin-Dashboard" role="tabpanel">
                         <div class="row clearfix">
@@ -159,16 +160,16 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="d-sm-flex justify-content-between">
-                                            <div class="font-16 mb-2"><span>Masukkan Jumlah Stimulasi (Belum Ada Data)</span></div>
+                                            <div class="font-16 mb-2"><span id="title_stimulasi_kemampuan_gerak_kasar">Masukkan Jumlah Stimulasi (Belum Ada Data)</span></div>
                                             
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control numbersOnly" id="input_kemampuan_gerak_dasar" placeholder="Jumlah Stimulasi" minlength="1" maxlength="2">
+                                            <input type="text" class="form-control numbersOnly" id="input_kemampuan_gerak_kasar" placeholder="Jumlah Stimulasi" minlength="1" maxlength="2">
                                         </div>
 
                                         <div class="btn-list text-center">
-                                            <button type="button" class="btn btn-primary" id="button_input_kemampuan_gerak_dasar" onclick="tambah_update_kemampuan_gerak_dasar()">Tambah Stimulasi</button>
+                                            <button type="button" class="btn btn-primary" id="button_input_kemampuan_gerak_kasar" onclick="tambah_update_kemampuan_gerak_kasar()">Tambah Stimulasi</button>
                                         </div>
                                         
                                         <div id="div_kemampuan_gerak_kasar" style="display: none;"></div>
@@ -183,7 +184,10 @@
                     </div>
                     
                 </div>
+                <!-- Akhir Stimulasi Kemampuan Gerak Kasar-->
 
+                
+                <!-- Awal Stimulasi Kemampuan Gerak Halus-->
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="admin-Dashboard" role="tabpanel">
                         <div class="row clearfix">
@@ -199,87 +203,21 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="d-sm-flex justify-content-between">
-                                            <div class="font-16 mb-2"><span>Tambah Jumlah Stimulasi Baru</span></div>
+                                            <div class="font-16 mb-2"><span id="title_stimulasi_kemampuan_gerak_halus">Masukkan Jumlah Stimulasi (Belum Ada Data)</span></div>
                                             
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control stimulasi_input" placeholder="Jumlah Stimulasi Baru">
-                                            <!-- create html input type="text"-->
-
-
-
-
-                                            
-
-
+                                            <input type="text" class="form-control numbersOnly" id="input_kemampuan_gerak_halus" placeholder="Jumlah Stimulasi" minlength="1" maxlength="2">
                                         </div>
 
                                         <div class="btn-list text-center">
-                                            <center><button type="button" class="btn btn-primary">Update Stimulasi</button></center>
+                                            <button type="button" class="btn btn-primary" id="button_input_kemampuan_gerak_halus" onclick="tambah_update_kemampuan_gerak_halus()">Tambah Stimulasi</button>
                                         </div>
+                                        
+                                        <div id="div_kemampuan_gerak_halus" style="display: none;"></div>
 
-                                        <hr>
-                                        <div class="table-responsive">
-                                            <div class="table-responsive card">
-                                                <table class="table table-hover table-striped cell-border table-vcenter  mb-0">
-                                                    <thead>
-                                                        <tr>
-                                                            <th width="5%">No</th>
-                                                            <th width="70%" style="text-align: center;">Stimulasi</th>
-                                                            <th width="10%" style="text-align: center;">Nilai(%)</th>
-                                                            <th width="15%" style="text-align: center;">Edit</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td style="text-align: center;">1</td>
-                                                            <td>The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.</td>
-                                                            <td style="text-align: center;">5%</td>
-                                                            <td style="text-align: center;">
-                                                                <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                                <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                                <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                            </td>
-                                                        </tr>
-                                                        
-                                                        <tr>
-                                                            <td style="text-align: center;">1</td>
-                                                            <td>The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.</td>
-                                                            <td style="text-align: center;">5%</td>
-                                                            <td style="text-align: center;">
-                                                                <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                                <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                                <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td style="text-align: center;">1</td>
-                                                            <td>The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.</td>
-                                                            <td style="text-align: center;">5%</td>
-                                                            <td style="text-align: center;">
-                                                                <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                                <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                                <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td style="text-align: center;">1</td>
-                                                            <td>The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.</td>
-                                                            <td style="text-align: center;">5%</td>
-                                                            <td style="text-align: center;">
-                                                                <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                                <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                                <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                            </td>
-                                                        </tr>
-                                                        
-                                                    </tbody>
-                                                </table>
-                                            </div>        
-                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
@@ -289,14 +227,18 @@
                     </div>
                     
                 </div>
+                <!-- Akhir Stimulasi Kemampuan Gerak Halus-->
 
+
+
+                <!-- Awal Stimulasi Kemampuan Bicara Dan Bahasa-->
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="admin-Dashboard" role="tabpanel">
                         <div class="row clearfix">
                             <div class="col-xl-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h3 class="card-title">KEMAMPUAN GERAK DASAR</h3>
+                                        <h3 class="card-title">KEMAMPUAN BICARA DAN BAHASA</h3>
                                         <div class="card-options">
                                             <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
                                             <a href="#" class="card-options-fullscreen" data-toggle="card-fullscreen"><i class="fe fe-maximize"></i></a>
@@ -305,27 +247,19 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="d-sm-flex justify-content-between">
-                                            <!-- <div class="font-12 mb-2"><span>Measure How Fast You’re Growing Monthly Recurring Revenue. <a href="#">Learn More</a></span></div> -->
-                                            <div class="font-12 mb-2"><span>Pilih kekompok umur stimulasi. </span></div>
+                                            <div class="font-16 mb-2"><span id="title_stimulasi_kemampuan_bicara_dan_bahasa">Masukkan Jumlah Stimulasi (Belum Ada Data)</span></div>
                                             
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <select name="" id="" class="form-control">
-                                                <option selected disabled>-Pilih Kelompok Umur</option>
-                                                <option value="12 Hingga 18 Bulan">12 Hingga 18 Bulan</option>
-                                                <option value="18 Hingga 24 Bulan">18 Hingga 24 Bulan</option>
-                                                <option value="24 Hingga 36 Bulan">24 Hingga 36 Bulan</option>
-                                                <option value="36 Hingga 48 Bulan">36 Hingga 48 Bulan</option>
-                                                <option value="48 Hingga 60 Bulan">48 Hingga 60 Bulan</option>
-                                            </select>
+                                            <input type="text" class="form-control numbersOnly" id="input_kemampuan_bicara_dan_bahasa" placeholder="Jumlah Stimulasi" minlength="1" maxlength="2">
                                         </div>
 
-                                        <div class="input-group mb-3">
-                                            <a href="halaman_stimulasi.html"><button type="button" class="btn btn-primary">Update Stimulasi & Intervensi</button></a>
+                                        <div class="btn-list text-center">
+                                            <button type="button" class="btn btn-primary" id="button_input_kemampuan_bicara_dan_bahasa" onclick="tambah_update_kemampuan_bicara_dan_bahasa()">Tambah Stimulasi</button>
                                         </div>
                                         
-
+                                        <div id="div_kemampuan_bicara_dan_bahasa" style="display: none;"></div>
 
                                         
                                     </div>
@@ -337,14 +271,16 @@
                     </div>
                     
                 </div>
+                <!-- Akhir Stimulasi Kemampuan Bicara Dan Bahasa-->
 
+                <!-- Awal Stimulasi Kemampuan Bersosialisasi Dan Kemandirian-->
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="admin-Dashboard" role="tabpanel">
                         <div class="row clearfix">
                             <div class="col-xl-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h3 class="card-title">KEMAMPUAN GERAK DASAR</h3>
+                                        <h3 class="card-title">KEMAMPUAN BERSOSIALISASI DAN KEMANDIRIAN</h3>
                                         <div class="card-options">
                                             <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
                                             <a href="#" class="card-options-fullscreen" data-toggle="card-fullscreen"><i class="fe fe-maximize"></i></a>
@@ -353,27 +289,19 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="d-sm-flex justify-content-between">
-                                            <!-- <div class="font-12 mb-2"><span>Measure How Fast You’re Growing Monthly Recurring Revenue. <a href="#">Learn More</a></span></div> -->
-                                            <div class="font-12 mb-2"><span>Pilih kekompok umur stimulasi. </span></div>
+                                            <div class="font-16 mb-2"><span id="title_stimulasi_kemampuan_bersosialisasi_dan_kemandirian">Masukkan Jumlah Stimulasi (Belum Ada Data)</span></div>
                                             
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <select name="" id="" class="form-control">
-                                                <option selected disabled>-Pilih Kelompok Umur</option>
-                                                <option value="12 Hingga 18 Bulan">12 Hingga 18 Bulan</option>
-                                                <option value="18 Hingga 24 Bulan">18 Hingga 24 Bulan</option>
-                                                <option value="24 Hingga 36 Bulan">24 Hingga 36 Bulan</option>
-                                                <option value="36 Hingga 48 Bulan">36 Hingga 48 Bulan</option>
-                                                <option value="48 Hingga 60 Bulan">48 Hingga 60 Bulan</option>
-                                            </select>
+                                            <input type="text" class="form-control numbersOnly" id="input_kemampuan_bersosialisasi_dan_kemandirian" placeholder="Jumlah Stimulasi" minlength="1" maxlength="2">
                                         </div>
 
-                                        <div class="input-group mb-3">
-                                            <a href="halaman_stimulasi.html"><button type="button" class="btn btn-primary">Update Stimulasi & Intervensi</button></a>
+                                        <div class="btn-list text-center">
+                                            <button type="button" class="btn btn-primary" id="button_input_kemampuan_bersosialisasi_dan_kemandirian" onclick="tambah_update_kemampuan_bersosialisasi_dan_kemandirian()">Tambah Stimulasi</button>
                                         </div>
                                         
-
+                                        <div id="div_kemampuan_bersosialisasi_dan_kemandirian" style="display: none;"></div>
 
                                         
                                     </div>
@@ -385,6 +313,166 @@
                     </div>
                     
                 </div>
+                <!-- Akhir Stimulasi Kemampuan Bersosialisasi Dan Kemandirian-->
+
+                
+                <!-- Dibawah merupakan kesimpulan-->
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="admin-Dashboard" role="tabpanel">
+                        <div class="row clearfix">
+                            <div class="col-xl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">KESIMPULAN</h3>
+                                        <div class="card-options">
+                                            <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+                                            <a href="#" class="card-options-fullscreen" data-toggle="card-fullscreen"><i class="fe fe-maximize"></i></a>
+                                            <!-- <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a> -->
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th  width="5%">NO</th>
+                                                        <th  width="70%">KESIMPULAN</th>
+                                                        <th  width="15%">NILAI (%)</th>
+                                                        <th  width="10%">AKSI</th>
+                                                    </tr>
+                                                    
+                                                </thead>
+                                                <tbody id="tbody_kesimpulan">
+                                                    <tr>
+                                                        <td class="text-center">1</td>
+                                                        <td id="td_kesimpulan_100_81">Belum Ada Data</td>
+                                                        <td >100% - 81%</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_kesimpulan_intervensi('100-81','kesimpulan')"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">2</td>
+                                                        <td id="td_kesimpulan_80_61">Belum Ada Data</td>
+                                                        <td >80% - 61%</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_kesimpulan_intervensi('80-61','kesimpulan')"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">3</td>
+                                                        <td id="td_kesimpulan_60_41">Belum Ada Data</td>
+                                                        <td >60% - 41%</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_kesimpulan_intervensi('60-41','kesimpulan')"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">4</td>
+                                                        <td id="td_kesimpulan_40_21">Belum Ada Data</td>
+                                                        <td >40% - 21%</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_kesimpulan_intervensi('40-21','kesimpulan')"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">5</td>
+                                                        <td id="td_kesimpulan_20_0">Belum Ada Data</td>
+                                                        <td >20% - 0%</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_kesimpulan_intervensi('20-0','kesimpulan')"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Diatas merupakan kesimpulan-->
+
+                <!-- Dibawah merupakan intervensi-->
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="admin-Dashboard" role="tabpanel">
+                        <div class="row clearfix">
+                            <div class="col-xl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">intervensi</h3>
+                                        <div class="card-options">
+                                            <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+                                            <a href="#" class="card-options-fullscreen" data-toggle="card-fullscreen"><i class="fe fe-maximize"></i></a>
+                                            <!-- <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a> -->
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th  width="5%">NO</th>
+                                                        <th  width="70%">intervensi</th>
+                                                        <th  width="15%">NILAI (%)</th>
+                                                        <th  width="10%">AKSI</th>
+                                                    </tr>
+                                                    
+                                                </thead>
+                                                <tbody id="tbody_intervensi">
+                                                    <tr>
+                                                        <td class="text-center">1</td>
+                                                        <td id="td_intervensi_100_81">Belum Ada Data</td>
+                                                        <td >100% - 81%</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_kesimpulan_intervensi('100-81','intervensi')"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">2</td>
+                                                        <td id="td_intervensi_80_61">Belum Ada Data</td>
+                                                        <td >80% - 61%</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_kesimpulan_intervensi('80-61','intervensi')"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">3</td>
+                                                        <td id="td_intervensi_60_41">Belum Ada Data</td>
+                                                        <td >60% - 41%</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_kesimpulan_intervensi('60-41','intervensi')"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">4</td>
+                                                        <td id="td_intervensi_40_21">Belum Ada Data</td>
+                                                        <td >40% - 21%</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_kesimpulan_intervensi('40-21','intervensi')"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">5</td>
+                                                        <td id="td_intervensi_20_0">Belum Ada Data</td>
+                                                        <td >20% - 0%</td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_kesimpulan_intervensi('20-0','intervensi')"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Diatas merupakan intervensi-->
+                
+                    
             </div>
         </div>
         <!-- Start main footer -->
@@ -424,6 +512,7 @@
 <script src="assets/toastr/toastr.min.js"></script>
 <link rel="stylesheet" type="text/css" href="assets/toastr/toastr.min.css">
 <script src="assets/sweetalert/sweetalert.js"></script>
+<script src="assets/block/jquery.blockUI.js"></script>
 <script src="main.js"></script>
 <script>
     // buat function cek url ?id= apakah 1 hingga 5,jika tidak maka buat sweet alert dengan mesej error "Halaman tidak ditemukan" kemudian lanjutkan ke halaman index.html 
@@ -445,27 +534,73 @@
     }
     cek_url();
 
-    //buat fungsi async dengan nama cek_data_kemampuan_gerak_dasar, di dalam fungsi memiliki variabel "data" yang bersifat ajax dengan api variable url dengan basic auth username Kicap_karan dan password karan_kicap456, jika terkoneksi maka "data" = data dari api dan console.log(response), jika tidak maka swal dengan mesej error "Tidak dapat terhubung ke server,sila periksa sambungan internet anda" dengan icon error dan button Reload Halaman yang mana refresh kembali halaman ini
-    function cek_data_kemampuan_gerak_dasar(){
+
+    /// dibawah merupakan fungsi untuk stimulasi kemampuan gerak kasar ////
+    //buat fungsi async dengan nama cek_data_kemampuan_gerak_kasar, di dalam fungsi memiliki variabel "data" yang bersifat ajax dengan api variable url dengan basic auth username Kicap_karan dan password karan_kicap456, jika terkoneksi maka "data" = data dari api dan console.log(response), jika tidak maka swal dengan mesej error "Tidak dapat terhubung ke server,sila periksa sambungan internet anda" dengan icon error dan button Reload Halaman yang mana refresh kembali halaman ini
+    function cek_data_kemampuan_gerak_kasar(){
         var data;
         var auth = "Basic " + btoa("Kicap_karan" + ":" + "karan_kicap456");
         $.ajax({
             url: url+"cek_data_kemampuan_gerak_kasar?id="+ $_GET('id'),
             type: "GET",
+            crossDomain: true,
             dataType: "json",
             async: false,
             headers: {
                 "Authorization": auth
             },
+            beforeSend: function(){
+                sedang_proses();
+            },
             success: function(response){
+                $.unblockUI();
+                // console.log(response)
                 data = response;
-                // jika data.message = "ya" maka tampilkan div id="div_kemampuan_gerak_dasar" dengan isi dari data.data
-                if(data.message == "ya"){
-                    $("#div_kemampuan_gerak_dasar").html(data.data);
+                // jika data.message = "ya" dan data.kemampuan_gerak_kasar tidak null atau "" maka  hapus attribute style id="div_kemampuan_gerak_kasar" 
+                if(data.message == "ya" && data.data.kemampuan_gerak_kasar != null && data.data.kemampuan_gerak_kasar != ""){
+                    //bikin html="Masukkan Jumlah Stimulasi" dan html di id="title_stimulasi_kemampuan_gerak_kasar"
+                    $("#title_stimulasi_kemampuan_gerak_kasar").html("Masukkan Jumlah Stimulasi");
+
+                    // bikin variabel data_database dengan isi JSON.parse(data.data.kemampuan_gerak_kasar)
+                    var data_database = JSON.parse(data.data.kemampuan_gerak_kasar);
+                    // bikin variabel html dengan hr , dan terisi tabel dengan width="100%" column "No" width=5%,"Stimulasi" width=65%,"Nilai%" width=10% ,"Aksi" width="20%",dengan row sebanyak data_database.length kemudian html di html dengan id="div_kemampuan_gerak_kasar"
+                    var html = `<hr><table class="table table-striped table-bordered table-hover table-checkable" id="table_kemampuan_gerak_kasar" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th width="5%">No</th>
+                                            <th width="65%">Stimulasi</th>
+                                            <th width="10%">Nilai</th>
+                                            <th width="20%" ><center>Aksi</center></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>`;
+                    for(var i = 0; i < data_database.length; i++){
+                        html += `<tr>
+                                    <td>`+(i+1)+`</td>
+                                    <td>`+data_database[i].stimulasi+`</td>
+                                    <td>`+data_database[i].nilai_stimulasi+`%</td>
+                                    <td align="center">
+                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_perklik_stimulasi('kemampuan_gerak_kasar','${data_database[i].id}')"></i></button>
+                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger" onclick="hapus_data_perklik_stimulasi('kemampuan_gerak_kasar','${data_database[i].id}')"></i></button>
+                                    </td>
+                                </tr>`;
+                    }
+                    html += `</tbody>
+                            </table>`;
+                    $("#div_kemampuan_gerak_kasar").html(html);
+
+                    
+                    $("#div_kemampuan_gerak_kasar").removeAttr("style");
+                }else{
+                    $("#div_kemampuan_gerak_kasar").html("");
+                    $("#div_kemampuan_gerak_kasar").attr("style","display:none");
                 }
-                console.log(response);
+
+                // console.log(response);
             },
             error: function(response){
+                $.unblockUI();
+                console.log(response);
                 swal({
                     title: "Tidak dapat terhubung ke server",
                     text: "Sila periksa sambungan internet anda",
@@ -478,17 +613,17 @@
         });
         return data;
     }    
-    cek_data_kemampuan_gerak_dasar();
+    cek_data_kemampuan_gerak_kasar();
 
     
-    function tambah_update_kemampuan_gerak_dasar(){
-        var val = $("#input_kemampuan_gerak_dasar").val();
+    function tambah_update_kemampuan_gerak_kasar(){
+        var val = $("#input_kemampuan_gerak_kasar").val();
         console.log(val);
         if(val == "" || val == "0" || val == "00"){
             toastr.error("Jumlah Stimulasi Kemampuan Gerak Kasar Harus Terisi Minimal 1");
         }else{
-            //buat modal lg html ,di body modal terisi tabel dengan column "No" width=5%,"Stimulasi" width=85%,"Nilai%" width=10% ,dengan row sebanyak val, column "Stimulasi" disi dengan textarea dan column "Nilai%" diisi dengan input class numbersOnly tapi hanya bisa diinput nomor, masukkan html pada div id="modal_here", tampilkan modal dan jalankan fungsi InputNumbersOnly() dan buat fungsi untuk tombol simpan dengan nama simpan_kemampuan_gerak_dasar()
-            var html = `<div class="modal fade" id="modal_kemampuan_gerak_dasar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            //buat modal lg html ,di body modal terisi tabel dengan column "No" width=5%,"Stimulasi" width=85%,"Nilai%" width=10% ,dengan row sebanyak val, column "Stimulasi" disi dengan textarea dan column "Nilai%" diisi dengan input class numbersOnly tapi hanya bisa diinput nomor, masukkan html pada div id="modal_here", tampilkan modal dan jalankan fungsi InputNumbersOnly() dan buat fungsi untuk tombol simpan dengan nama simpan_kemampuan_gerak_kasar()
+            var html = `<div class="modal fade" id="modal_kemampuan_gerak_kasar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -511,8 +646,8 @@
 
                     html += `<tr>
                                 <td>`+(i+1)+`</td>
-                                <td><textarea class="form-control" id="input_stimulasi_kemampuan_gerak_dasar_`+(i+1)+`"></textarea></td>
-                                <td><input type="text" class="form-control numbersOnly" id="input_nilai_kemampuan_gerak_dasar_`+(i+1)+`"></td>
+                                <td><textarea class="form-control" id="input_stimulasi_kemampuan_gerak_kasar_`+(i+1)+`"></textarea></td>
+                                <td><input type="text" class="form-control numbersOnly" id="input_nilai_kemampuan_gerak_kasar_`+(i+1)+`"></td>
                             </tr>`;
                 }
                 html += `</tbody>
@@ -520,13 +655,13 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" onclick="simpan_kemampuan_gerak_dasar()">Simpan</button>
+                            <button type="button" class="btn btn-primary" onclick="simpan_kemampuan_gerak_kasar()">Simpan</button>
                         </div>
                     </div>
                 </div>
             </div>`;
             $("#modal_here").html(html);
-            $("#modal_kemampuan_gerak_dasar").modal("show");
+            $("#modal_kemampuan_gerak_kasar").modal("show");
             InputNumbersOnly();
 
 
@@ -535,23 +670,23 @@
         }   
     }
 
-     function simpan_kemampuan_gerak_dasar(){
-        // jika input id="input_nilai_kemampuan_gerak_dasar_"+i masih kosong maka tampilkan toastr error "Nilai Kemampuan Gerak Kasar + i Harus Terisi" dan focus ke input id="input_nilai_kemampuan_gerak_dasar_"+i dan jika input id="input_nilai_kemampuan_gerak_dasar_"+i dijumlahkan semua dan hasilnya lebih dari 100 maka tampilkan toastr error "Nilai Kemampuan Gerak Kasar Tidak Bisa Melebihi 100%" dan focus ke input id="input_nilai_kemampuan_gerak_dasar_1"
-        // jika textarea id="input_stimulasi_kemampuan_gerak_dasar_"+i masih kosong maka tampilkan toastr error "Stimulasi Kemampuan Gerak Kasar + i Harus Terisi" dan focus ke textarea id="input_stimulasi_kemampuan_gerak_dasar_"+i
-        // jika input id="input_stimulasi_kemampuan_gerak_dasar_"+i dan input id="input_nilai_kemampuan_gerak_dasar_"+i tidak kosong maka tampilkan modal dengan isi dari data.data dan tampilkan toastr success "Berjaya menyimpan data"
-        var val = $("#input_kemampuan_gerak_dasar").val();
+    function simpan_kemampuan_gerak_kasar(){
+        // jika input id="input_nilai_kemampuan_gerak_kasar_"+i masih kosong maka tampilkan toastr error "Nilai Kemampuan Gerak Kasar + i Harus Terisi" dan focus ke input id="input_nilai_kemampuan_gerak_kasar_"+i dan jika input id="input_nilai_kemampuan_gerak_kasar_"+i dijumlahkan semua dan hasilnya lebih dari 100 maka tampilkan toastr error "Nilai Kemampuan Gerak Kasar Tidak Bisa Melebihi 100%" dan focus ke input id="input_nilai_kemampuan_gerak_kasar_1"
+        // jika textarea id="input_stimulasi_kemampuan_gerak_kasar_"+i masih kosong maka tampilkan toastr error "Stimulasi Kemampuan Gerak Kasar + i Harus Terisi" dan focus ke textarea id="input_stimulasi_kemampuan_gerak_kasar_"+i
+        // jika input id="input_stimulasi_kemampuan_gerak_kasar_"+i dan input id="input_nilai_kemampuan_gerak_kasar_"+i tidak kosong maka tampilkan modal dengan isi dari data.data dan tampilkan toastr success "Berjaya menyimpan data"
+        var val = $("#input_kemampuan_gerak_kasar").val();
         var this_data = [];
         var nilai = 0;
         for(var i = 0; i < val; i++){
-            var stimulasi = $("#input_stimulasi_kemampuan_gerak_dasar_"+(i+1)).val();
-            var nilai_stimulasi = $("#input_nilai_kemampuan_gerak_dasar_"+(i+1)).val();
+            var stimulasi = $("#input_stimulasi_kemampuan_gerak_kasar_"+(i+1)).val();
+            var nilai_stimulasi = $("#input_nilai_kemampuan_gerak_kasar_"+(i+1)).val();
             if(stimulasi == ""){
                 toastr.error("Stimulasi Kemampuan Gerak Kasar "+(i+1)+" Harus Terisi");
-                $("#input_stimulasi_kemampuan_gerak_dasar_"+(i+1)).focus();
+                $("#input_stimulasi_kemampuan_gerak_kasar_"+(i+1)).focus();
                 return false;
             }else if(nilai_stimulasi == ""){
                 toastr.error("Nilai Kemampuan Gerak Kasar "+(i+1)+" Harus Terisi");
-                $("#input_nilai_kemampuan_gerak_dasar_"+(i+1)).focus();
+                $("#input_nilai_kemampuan_gerak_kasar_"+(i+1)).focus();
                 return false;
             }else{
                 // this_data.push id,stimulasi,nilai_stimulasi dengan id 6 karakter acak nomor dan huruf tidak boleh sama dari id yang lain
@@ -565,30 +700,1425 @@
         }
 
         if(nilai > 100){
-            toastr.error("Nilai Kemampuan Gerak Kasar Tidak Bisa Melebihi 100%");
-            $("#input_nilai_kemampuan_gerak_dasar_1").focus();
+            toastr.error("Nilai Kemampuan Gerak Kasar Akumulasi Tidak Bisa Melebihi 100% ");
+            $("#input_nilai_kemampuan_gerak_kasar_1").focus();
             return false;
         }else{
-            let data_sebelumnya = cek_data_kemampuan_gerak_dasar()
-            console.log(data_sebelumnya);
-            console.log(this_data);
+            let data_sebelumnya = cek_data_kemampuan_gerak_kasar()
+            // console.log(data_sebelumnya);
+            // console.log(this_data);
+
+            //jika data_sebelumnya.message = "tidak" maka console.log("tidak ada data sebelumnya"), jika data_sebelumnya.message = "ada" maka bikin variable data_lama dengan isi data_sebelumnya.data dan merge this_data ke data_lama
+            if(data_sebelumnya.message == "tidak"){
+                console.log("tidak ada data sebelumnya");
+                var data_lama = this_data;
+            }else{
+                var data_lama = data_sebelumnya.data.kemampuan_gerak_kasar;
+                //jika data_lama = null dan data_lama ="" maka data_lama = this_data, jika data_lama tidak null dan data_lama tidak "" maka data_lama = data_lama.concat(this_data) 
+                if(data_lama == null || data_lama == ""){
+                    data_lama = this_data;
+                }else{
+                    data_lama = JSON.parse(data_lama);
+                    data_lama = data_lama.concat(this_data);
+                }
+                // data_lama = data_lama.concat(this_data);
+                // console.log(data_lama);
+            }
+            console.log(data_lama);
+            // cek data_lama.nilai_stimulasi, jika tidak = 100 maka tampilkan toastr error "Nilai Stimulasi Kemampuan Gerak Kasar Harus Akumulasi 100% Semuanya" dan focus ke input id="input_nilai_kemampuan_gerak_kasar_1", jika = 100 maka jalankan fungsi simpan_data_stimulasi(data_lama,"masukkan_data_kemampuan_gerak_kasar")
+            var nilai_stimulasi = 0;
+            for(var i = 0; i < data_lama.length; i++){
+                nilai_stimulasi += parseInt(data_lama[i].nilai_stimulasi);
+            }
+            if(nilai_stimulasi != 100){
+                toastr.error("Nilai Stimulasi Kemampuan Gerak Kasar Harus Akumulasi 100% Semuanya");
+                $("#input_nilai_kemampuan_gerak_kasar_1").focus();
+                return false;
+            }else{
+                simpan_data_stimulasi(data_lama,"masukkan_data_kemampuan_gerak_kasar");
+            }
+
         }
 
-       
-   
     }
     
     
+    /// diatas merupakan fungsi untuk  stimulasi kemampuan gerak kasar ////
+
+
+
+    /// dibawah merupakan fungsi untuk stimulasi kemampuan gerak halus ////
+    //buat fungsi async dengan nama cek_data_kemampuan_gerak_halus, di dalam fungsi memiliki variabel "data" yang bersifat ajax dengan api variable url dengan basic auth username Kicap_karan dan password karan_kicap456, jika terkoneksi maka "data" = data dari api dan console.log(response), jika tidak maka swal dengan mesej error "Tidak dapat terhubung ke server,sila periksa sambungan internet anda" dengan icon error dan button Reload Halaman yang mana refresh kembali halaman ini
+    function cek_data_kemampuan_gerak_halus(){
+        var data;
+        var auth = "Basic " + btoa("Kicap_karan" + ":" + "karan_kicap456");
+        $.ajax({
+            url: url+"cek_data_kemampuan_gerak_halus?id="+ $_GET('id'),
+            type: "GET",
+            crossDomain: true,
+            dataType: "json",
+            async: false,
+            headers: {
+                "Authorization": auth
+            },
+            beforeSend: function(){
+                sedang_proses();
+            },
+            success: function(response){
+                $.unblockUI();
+                // console.log(response)
+                data = response;
+                // jika data.message = "ya" dan data.kemampuan_gerak_halus tidak null atau "" maka  hapus attribute style id="div_kemampuan_gerak_halus" 
+                if(data.message == "ya" && data.data.kemampuan_gerak_halus != null && data.data.kemampuan_gerak_halus != ""){
+                    //bikin html="Masukkan Jumlah Stimulasi" dan html di id="title_stimulasi_kemampuan_gerak_halus"
+                    $("#title_stimulasi_kemampuan_gerak_halus").html("Masukkan Jumlah Stimulasi");
+
+                    // bikin variabel data_database dengan isi JSON.parse(data.data.kemampuan_gerak_halus)
+                    var data_database = JSON.parse(data.data.kemampuan_gerak_halus);
+                    // bikin variabel html dengan hr , dan terisi tabel dengan width="100%" column "No" width=5%,"Stimulasi" width=65%,"Nilai%" width=10% ,"Aksi" width="20%",dengan row sebanyak data_database.length kemudian html di html dengan id="div_kemampuan_gerak_halus"
+                    var html = `<hr><table class="table table-striped table-bordered table-hover table-checkable" id="table_kemampuan_gerak_halus" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th width="5%">No</th>
+                                            <th width="65%">Stimulasi</th>
+                                            <th width="10%">Nilai</th>
+                                            <th width="20%" ><center>Aksi</center></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>`;
+                    for(var i = 0; i < data_database.length; i++){
+                        html += `<tr>
+                                    <td>`+(i+1)+`</td>
+                                    <td>`+data_database[i].stimulasi+`</td>
+                                    <td>`+data_database[i].nilai_stimulasi+`%</td>
+                                    <td align="center">
+                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_perklik_stimulasi('kemampuan_gerak_halus','${data_database[i].id}')"></i></button>
+                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger" onclick="hapus_data_perklik_stimulasi('kemampuan_gerak_halus','${data_database[i].id}')"></i></button>
+                                    </td>
+                                </tr>`;
+                    }
+                    html += `</tbody>
+                            </table>`;
+                    $("#div_kemampuan_gerak_halus").html(html);
+
+                    
+                    $("#div_kemampuan_gerak_halus").removeAttr("style");
+                }else{
+                    $("#div_kemampuan_gerak_halus").html("");
+                    $("#div_kemampuan_gerak_halus").attr("style","display:none");
+                }
+
+                // console.log(response);
+            },
+            error: function(response){
+                $.unblockUI();
+                console.log(response);
+                swal({
+                    title: "Tidak dapat terhubung ke server",
+                    text: "Sila periksa sambungan internet anda",
+                    icon: "error",
+                    button: "Reload Halaman",
+                }).then(function() {
+                    window.location.reload();
+                });
+            }
+        });
+        return data;
+    }    
+    cek_data_kemampuan_gerak_halus();
+
+    
+    function tambah_update_kemampuan_gerak_halus(){
+        var val = $("#input_kemampuan_gerak_halus").val();
+        console.log(val);
+        if(val == "" || val == "0" || val == "00"){
+            toastr.error("Jumlah Stimulasi Kemampuan Gerak halus Harus Terisi Minimal 1");
+        }else{
+            //buat modal lg html ,di body modal terisi tabel dengan column "No" width=5%,"Stimulasi" width=85%,"Nilai%" width=10% ,dengan row sebanyak val, column "Stimulasi" disi dengan textarea dan column "Nilai%" diisi dengan input class numbersOnly tapi hanya bisa diinput nomor, masukkan html pada div id="modal_here", tampilkan modal dan jalankan fungsi InputNumbersOnly() dan buat fungsi untuk tombol simpan dengan nama simpan_kemampuan_gerak_halus()
+            var html = `<div class="modal fade" id="modal_kemampuan_gerak_halus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Tambah Kemampuan Gerak Halus</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th width="5%">No</th>
+                                        <th width="85%">Stimulasi</th>
+                                        <th width="10%">Nilai%</th>
+                                    </tr>
+                                </thead>
+                                <tbody>`;
+                for(var i = 0; i < val; i++){
+
+                    html += `<tr>
+                                <td>`+(i+1)+`</td>
+                                <td><textarea class="form-control" id="input_stimulasi_kemampuan_gerak_halus_`+(i+1)+`"></textarea></td>
+                                <td><input type="text" class="form-control numbersOnly" id="input_nilai_kemampuan_gerak_halus_`+(i+1)+`"></td>
+                            </tr>`;
+                }
+                html += `</tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="simpan_kemampuan_gerak_halus()">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+            $("#modal_here").html(html);
+            $("#modal_kemampuan_gerak_halus").modal("show");
+            InputNumbersOnly();
+
+
+            
+            
+        }   
+    }
+
+    function simpan_kemampuan_gerak_halus(){
+        // jika input id="input_nilai_kemampuan_gerak_halus_"+i masih kosong maka tampilkan toastr error "Nilai Kemampuan Gerak halus + i Harus Terisi" dan focus ke input id="input_nilai_kemampuan_gerak_halus_"+i dan jika input id="input_nilai_kemampuan_gerak_halus_"+i dijumlahkan semua dan hasilnya lebih dari 100 maka tampilkan toastr error "Nilai Kemampuan Gerak halus Tidak Bisa Melebihi 100%" dan focus ke input id="input_nilai_kemampuan_gerak_halus_1"
+        // jika textarea id="input_stimulasi_kemampuan_gerak_halus_"+i masih kosong maka tampilkan toastr error "Stimulasi Kemampuan Gerak halus + i Harus Terisi" dan focus ke textarea id="input_stimulasi_kemampuan_gerak_halus_"+i
+        // jika input id="input_stimulasi_kemampuan_gerak_halus_"+i dan input id="input_nilai_kemampuan_gerak_halus_"+i tidak kosong maka tampilkan modal dengan isi dari data.data dan tampilkan toastr success "Berjaya menyimpan data"
+        var val = $("#input_kemampuan_gerak_halus").val();
+        var this_data = [];
+        var nilai = 0;
+        for(var i = 0; i < val; i++){
+            var stimulasi = $("#input_stimulasi_kemampuan_gerak_halus_"+(i+1)).val();
+            var nilai_stimulasi = $("#input_nilai_kemampuan_gerak_halus_"+(i+1)).val();
+            if(stimulasi == ""){
+                toastr.error("Stimulasi Kemampuan Gerak halus "+(i+1)+" Harus Terisi");
+                $("#input_stimulasi_kemampuan_gerak_halus_"+(i+1)).focus();
+                return false;
+            }else if(nilai_stimulasi == ""){
+                toastr.error("Nilai Kemampuan Gerak halus "+(i+1)+" Harus Terisi");
+                $("#input_nilai_kemampuan_gerak_halus_"+(i+1)).focus();
+                return false;
+            }else{
+                // this_data.push id,stimulasi,nilai_stimulasi dengan id 6 karakter acak nomor dan huruf tidak boleh sama dari id yang lain
+                this_data.push({
+                    id: randomString(10, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
+                    stimulasi: stimulasi,
+                    nilai_stimulasi: nilai_stimulasi
+                });
+                nilai += parseInt(nilai_stimulasi);
+            }
+        }
+
+        if(nilai > 100){
+            toastr.error("Nilai Kemampuan Gerak halus Akumulasi Tidak Bisa Melebihi 100% ");
+            $("#input_nilai_kemampuan_gerak_halus_1").focus();
+            return false;
+        }else{
+            let data_sebelumnya = cek_data_kemampuan_gerak_halus()
+            // console.log(data_sebelumnya);
+            // console.log(this_data);
+
+            //jika data_sebelumnya.message = "tidak" maka console.log("tidak ada data sebelumnya"), jika data_sebelumnya.message = "ada" maka bikin variable data_lama dengan isi data_sebelumnya.data dan merge this_data ke data_lama
+            if(data_sebelumnya.message == "tidak"){
+                console.log("tidak ada data sebelumnya");
+                var data_lama = this_data;
+            }else{
+                var data_lama = data_sebelumnya.data.kemampuan_gerak_halus;
+                //jika data_lama = null dan data_lama ="" maka data_lama = this_data, jika data_lama tidak null dan data_lama tidak "" maka data_lama = data_lama.concat(this_data) 
+                if(data_lama == null || data_lama == ""){
+                    data_lama = this_data;
+                }else{
+                    data_lama = JSON.parse(data_lama);
+                    data_lama = data_lama.concat(this_data);
+                }
+                // data_lama = data_lama.concat(this_data);
+                // console.log(data_lama);
+            }
+            console.log(data_lama);
+            // cek data_lama.nilai_stimulasi, jika tidak = 100 maka tampilkan toastr error "Nilai Stimulasi Kemampuan Gerak halus Harus Akumulasi 100% Semuanya" dan focus ke input id="input_nilai_kemampuan_gerak_halus_1", jika = 100 maka jalankan fungsi simpan_data_stimulasi(data_lama,"masukkan_data_kemampuan_gerak_halus")
+            var nilai_stimulasi = 0;
+            for(var i = 0; i < data_lama.length; i++){
+                nilai_stimulasi += parseInt(data_lama[i].nilai_stimulasi);
+            }
+            if(nilai_stimulasi != 100){
+                toastr.error("Nilai Stimulasi Kemampuan Gerak halus Harus Akumulasi 100% Semuanya");
+                $("#input_nilai_kemampuan_gerak_halus_1").focus();
+                return false;
+            }else{
+                simpan_data_stimulasi(data_lama,"masukkan_data_kemampuan_gerak_halus");
+            }
+
+        }
+
+    }
+    
+    
+    /// diatas merupakan fungsi untuk  stimulasi kemampuan gerak halus ////
+
+
+
+    /// dibawah merupakan fungsi untuk stimulasi kemampuan bicara dan bahasa ////
+    //buat fungsi async dengan nama cek_data_kemampuan_bicara_dan_bahasa, di dalam fungsi memiliki variabel "data" yang bersifat ajax dengan api variable url dengan basic auth username Kicap_karan dan password karan_kicap456, jika terkoneksi maka "data" = data dari api dan console.log(response), jika tidak maka swal dengan mesej error "Tidak dapat terhubung ke server,sila periksa sambungan internet anda" dengan icon error dan button Reload Halaman yang mana refresh kembali halaman ini
+    function cek_data_kemampuan_bicara_dan_bahasa(){
+        var data;
+        var auth = "Basic " + btoa("Kicap_karan" + ":" + "karan_kicap456");
+        $.ajax({
+            url: url+"cek_data_kemampuan_bicara_dan_bahasa?id="+ $_GET('id'),
+            type: "GET",
+            crossDomain: true,
+            dataType: "json",
+            async: false,
+            headers: {
+                "Authorization": auth
+            },
+            beforeSend: function(){
+                sedang_proses();
+            },
+            success: function(response){
+                $.unblockUI();
+                // console.log(response)
+                data = response;
+                // jika data.message = "ya" dan data.kemampuan_bicara_dan_bahasa tidak null atau "" maka  hapus attribute style id="div_kemampuan_bicara_dan_bahasa" 
+                if(data.message == "ya" && data.data.kemampuan_bicara_dan_bahasa != null && data.data.kemampuan_bicara_dan_bahasa != ""){
+                    //bikin html="Masukkan Jumlah Stimulasi" dan html di id="title_stimulasi_kemampuan_bicara_dan_bahasa"
+                    $("#title_stimulasi_kemampuan_bicara_dan_bahasa").html("Masukkan Jumlah Stimulasi");
+
+                    // bikin variabel data_database dengan isi JSON.parse(data.data.kemampuan_bicara_dan_bahasa)
+                    var data_database = JSON.parse(data.data.kemampuan_bicara_dan_bahasa);
+                    // bikin variabel html dengan hr , dan terisi tabel dengan width="100%" column "No" width=5%,"Stimulasi" width=65%,"Nilai%" width=10% ,"Aksi" width="20%",dengan row sebanyak data_database.length kemudian html di html dengan id="div_kemampuan_bicara_dan_bahasa"
+                    var html = `<hr><table class="table table-striped table-bordered table-hover table-checkable" id="table_kemampuan_bicara_dan_bahasa" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th width="5%">No</th>
+                                            <th width="65%">Stimulasi</th>
+                                            <th width="10%">Nilai</th>
+                                            <th width="20%" ><center>Aksi</center></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>`;
+                    for(var i = 0; i < data_database.length; i++){
+                        html += `<tr>
+                                    <td>`+(i+1)+`</td>
+                                    <td>`+data_database[i].stimulasi+`</td>
+                                    <td>`+data_database[i].nilai_stimulasi+`%</td>
+                                    <td align="center">
+                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_perklik_stimulasi('kemampuan_bicara_dan_bahasa','${data_database[i].id}')"></i></button>
+                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger" onclick="hapus_data_perklik_stimulasi('kemampuan_bicara_dan_bahasa','${data_database[i].id}')"></i></button>
+                                    </td>
+                                </tr>`;
+                    }
+                    html += `</tbody>
+                            </table>`;
+                    $("#div_kemampuan_bicara_dan_bahasa").html(html);
+
+                    
+                    $("#div_kemampuan_bicara_dan_bahasa").removeAttr("style");
+                }else{
+                    $("#div_kemampuan_bicara_dan_bahasa").html("");
+                    $("#div_kemampuan_bicara_dan_bahasa").attr("style","display:none");
+                }
+
+                // console.log(response);
+            },
+            error: function(response){
+                $.unblockUI();
+                console.log(response);
+                swal({
+                    title: "Tidak dapat terhubung ke server",
+                    text: "Sila periksa sambungan internet anda",
+                    icon: "error",
+                    button: "Reload Halaman",
+                }).then(function() {
+                    window.location.reload();
+                });
+            }
+        });
+        return data;
+    }    
+    cek_data_kemampuan_bicara_dan_bahasa();
+
+    
+    function tambah_update_kemampuan_bicara_dan_bahasa(){
+        var val = $("#input_kemampuan_bicara_dan_bahasa").val();
+        console.log(val);
+        if(val == "" || val == "0" || val == "00"){
+            toastr.error("Jumlah Stimulasi Kemampuan Gerak halus Harus Terisi Minimal 1");
+        }else{
+            //buat modal lg html ,di body modal terisi tabel dengan column "No" width=5%,"Stimulasi" width=85%,"Nilai%" width=10% ,dengan row sebanyak val, column "Stimulasi" disi dengan textarea dan column "Nilai%" diisi dengan input class numbersOnly tapi hanya bisa diinput nomor, masukkan html pada div id="modal_here", tampilkan modal dan jalankan fungsi InputNumbersOnly() dan buat fungsi untuk tombol simpan dengan nama simpan_kemampuan_bicara_dan_bahasa()
+            var html = `<div class="modal fade" id="modal_kemampuan_bicara_dan_bahasa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Tambah Kemampuan Bicara Dan Bahasa</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th width="5%">No</th>
+                                        <th width="85%">Stimulasi</th>
+                                        <th width="10%">Nilai%</th>
+                                    </tr>
+                                </thead>
+                                <tbody>`;
+                for(var i = 0; i < val; i++){
+
+                    html += `<tr>
+                                <td>`+(i+1)+`</td>
+                                <td><textarea class="form-control" id="input_stimulasi_kemampuan_bicara_dan_bahasa_`+(i+1)+`"></textarea></td>
+                                <td><input type="text" class="form-control numbersOnly" id="input_nilai_kemampuan_bicara_dan_bahasa_`+(i+1)+`"></td>
+                            </tr>`;
+                }
+                html += `</tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="simpan_kemampuan_bicara_dan_bahasa()">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+            $("#modal_here").html(html);
+            $("#modal_kemampuan_bicara_dan_bahasa").modal("show");
+            InputNumbersOnly();
+
+
+            
+            
+        }   
+    }
+
+    function simpan_kemampuan_bicara_dan_bahasa(){
+        // jika input id="input_nilai_kemampuan_bicara_dan_bahasa_"+i masih kosong maka tampilkan toastr error "Nilai Kemampuan Gerak halus + i Harus Terisi" dan focus ke input id="input_nilai_kemampuan_bicara_dan_bahasa_"+i dan jika input id="input_nilai_kemampuan_bicara_dan_bahasa_"+i dijumlahkan semua dan hasilnya lebih dari 100 maka tampilkan toastr error "Nilai Kemampuan Gerak halus Tidak Bisa Melebihi 100%" dan focus ke input id="input_nilai_kemampuan_bicara_dan_bahasa_1"
+        // jika textarea id="input_stimulasi_kemampuan_bicara_dan_bahasa_"+i masih kosong maka tampilkan toastr error "Stimulasi Kemampuan Gerak halus + i Harus Terisi" dan focus ke textarea id="input_stimulasi_kemampuan_bicara_dan_bahasa_"+i
+        // jika input id="input_stimulasi_kemampuan_bicara_dan_bahasa_"+i dan input id="input_nilai_kemampuan_bicara_dan_bahasa_"+i tidak kosong maka tampilkan modal dengan isi dari data.data dan tampilkan toastr success "Berjaya menyimpan data"
+        var val = $("#input_kemampuan_bicara_dan_bahasa").val();
+        var this_data = [];
+        var nilai = 0;
+        for(var i = 0; i < val; i++){
+            var stimulasi = $("#input_stimulasi_kemampuan_bicara_dan_bahasa_"+(i+1)).val();
+            var nilai_stimulasi = $("#input_nilai_kemampuan_bicara_dan_bahasa_"+(i+1)).val();
+            if(stimulasi == ""){
+                toastr.error("Stimulasi Kemampuan Gerak halus "+(i+1)+" Harus Terisi");
+                $("#input_stimulasi_kemampuan_bicara_dan_bahasa_"+(i+1)).focus();
+                return false;
+            }else if(nilai_stimulasi == ""){
+                toastr.error("Nilai Kemampuan Gerak halus "+(i+1)+" Harus Terisi");
+                $("#input_nilai_kemampuan_bicara_dan_bahasa_"+(i+1)).focus();
+                return false;
+            }else{
+                // this_data.push id,stimulasi,nilai_stimulasi dengan id 6 karakter acak nomor dan huruf tidak boleh sama dari id yang lain
+                this_data.push({
+                    id: randomString(10, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
+                    stimulasi: stimulasi,
+                    nilai_stimulasi: nilai_stimulasi
+                });
+                nilai += parseInt(nilai_stimulasi);
+            }
+        }
+
+        if(nilai > 100){
+            toastr.error("Nilai Kemampuan Gerak halus Akumulasi Tidak Bisa Melebihi 100% ");
+            $("#input_nilai_kemampuan_bicara_dan_bahasa_1").focus();
+            return false;
+        }else{
+            let data_sebelumnya = cek_data_kemampuan_bicara_dan_bahasa()
+            // console.log(data_sebelumnya);
+            // console.log(this_data);
+
+            //jika data_sebelumnya.message = "tidak" maka console.log("tidak ada data sebelumnya"), jika data_sebelumnya.message = "ada" maka bikin variable data_lama dengan isi data_sebelumnya.data dan merge this_data ke data_lama
+            if(data_sebelumnya.message == "tidak"){
+                console.log("tidak ada data sebelumnya");
+                var data_lama = this_data;
+            }else{
+                var data_lama = data_sebelumnya.data.kemampuan_bicara_dan_bahasa;
+                //jika data_lama = null dan data_lama ="" maka data_lama = this_data, jika data_lama tidak null dan data_lama tidak "" maka data_lama = data_lama.concat(this_data) 
+                if(data_lama == null || data_lama == ""){
+                    data_lama = this_data;
+                }else{
+                    data_lama = JSON.parse(data_lama);
+                    data_lama = data_lama.concat(this_data);
+                }
+                // data_lama = data_lama.concat(this_data);
+                // console.log(data_lama);
+            }
+            console.log(data_lama);
+            // cek data_lama.nilai_stimulasi, jika tidak = 100 maka tampilkan toastr error "Nilai Stimulasi Kemampuan Gerak halus Harus Akumulasi 100% Semuanya" dan focus ke input id="input_nilai_kemampuan_bicara_dan_bahasa_1", jika = 100 maka jalankan fungsi simpan_data_stimulasi(data_lama,"masukkan_data_kemampuan_bicara_dan_bahasa")
+            var nilai_stimulasi = 0;
+            for(var i = 0; i < data_lama.length; i++){
+                nilai_stimulasi += parseInt(data_lama[i].nilai_stimulasi);
+            }
+            if(nilai_stimulasi != 100){
+                toastr.error("Nilai Stimulasi Kemampuan Gerak halus Harus Akumulasi 100% Semuanya");
+                $("#input_nilai_kemampuan_bicara_dan_bahasa_1").focus();
+                return false;
+            }else{
+                simpan_data_stimulasi(data_lama,"masukkan_data_kemampuan_bicara_dan_bahasa");
+            }
+
+        }
+
+    }
+    
+    
+    /// diatas merupakan fungsi untuk  stimulasi kemampuan bicara dan bahasa ////
+
+
+
+    /// dibawah merupakan fungsi untuk stimulasi kemampuan bersosialisasi dan kemandirian ////
+    //buat fungsi async dengan nama cek_data_kemampuan_bersosialisasi_dan_kemandirian, di dalam fungsi memiliki variabel "data" yang bersifat ajax dengan api variable url dengan basic auth username Kicap_karan dan password karan_kicap456, jika terkoneksi maka "data" = data dari api dan console.log(response), jika tidak maka swal dengan mesej error "Tidak dapat terhubung ke server,sila periksa sambungan internet anda" dengan icon error dan button Reload Halaman yang mana refresh kembali halaman ini
+    function cek_data_kemampuan_bersosialisasi_dan_kemandirian(){
+        var data;
+        var auth = "Basic " + btoa("Kicap_karan" + ":" + "karan_kicap456");
+        $.ajax({
+            url: url+"cek_data_kemampuan_bersosialisasi_dan_kemandirian?id="+ $_GET('id'),
+            type: "GET",
+            crossDomain: true,
+            dataType: "json",
+            async: false,
+            headers: {
+                "Authorization": auth
+            },
+            beforeSend: function(){
+                sedang_proses();
+            },
+            success: function(response){
+                $.unblockUI();
+                // console.log(response)
+                data = response;
+                // jika data.message = "ya" dan data.kemampuan_bersosialisasi_dan_kemandirian tidak null atau "" maka  hapus attribute style id="div_kemampuan_bersosialisasi_dan_kemandirian" 
+                if(data.message == "ya" && data.data.kemampuan_bersosialisasi_dan_kemandirian != null && data.data.kemampuan_bersosialisasi_dan_kemandirian != ""){
+                    //bikin html="Masukkan Jumlah Stimulasi" dan html di id="title_stimulasi_kemampuan_bersosialisasi_dan_kemandirian"
+                    $("#title_stimulasi_kemampuan_bersosialisasi_dan_kemandirian").html("Masukkan Jumlah Stimulasi");
+
+                    // bikin variabel data_database dengan isi JSON.parse(data.data.kemampuan_bersosialisasi_dan_kemandirian)
+                    var data_database = JSON.parse(data.data.kemampuan_bersosialisasi_dan_kemandirian);
+                    // bikin variabel html dengan hr , dan terisi tabel dengan width="100%" column "No" width=5%,"Stimulasi" width=65%,"Nilai%" width=10% ,"Aksi" width="20%",dengan row sebanyak data_database.length kemudian html di html dengan id="div_kemampuan_bersosialisasi_dan_kemandirian"
+                    var html = `<hr><table class="table table-striped table-bordered table-hover table-checkable" id="table_kemampuan_bersosialisasi_dan_kemandirian" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th width="5%">No</th>
+                                            <th width="65%">Stimulasi</th>
+                                            <th width="10%">Nilai</th>
+                                            <th width="20%" ><center>Aksi</center></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>`;
+                    for(var i = 0; i < data_database.length; i++){
+                        html += `<tr>
+                                    <td>`+(i+1)+`</td>
+                                    <td>`+data_database[i].stimulasi+`</td>
+                                    <td>`+data_database[i].nilai_stimulasi+`%</td>
+                                    <td align="center">
+                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit" onclick="show_perklik_stimulasi('kemampuan_bersosialisasi_dan_kemandirian','${data_database[i].id}')"></i></button>
+                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger" onclick="hapus_data_perklik_stimulasi('kemampuan_bersosialisasi_dan_kemandirian','${data_database[i].id}')"></i></button>
+                                    </td>
+                                </tr>`;
+                    }
+                    html += `</tbody>
+                            </table>`;
+                    $("#div_kemampuan_bersosialisasi_dan_kemandirian").html(html);
+
+                    
+                    $("#div_kemampuan_bersosialisasi_dan_kemandirian").removeAttr("style");
+                }else{
+                    $("#div_kemampuan_bersosialisasi_dan_kemandirian").html("");
+                    $("#div_kemampuan_bersosialisasi_dan_kemandirian").attr("style","display:none");
+                }
+
+                // console.log(response);
+            },
+            error: function(response){
+                $.unblockUI();
+                console.log(response);
+                swal({
+                    title: "Tidak dapat terhubung ke server",
+                    text: "Sila periksa sambungan internet anda",
+                    icon: "error",
+                    button: "Reload Halaman",
+                }).then(function() {
+                    window.location.reload();
+                });
+            }
+        });
+        // console.log(data);
+        return data;
+    }    
+    cek_data_kemampuan_bersosialisasi_dan_kemandirian();
+
+    
+    function tambah_update_kemampuan_bersosialisasi_dan_kemandirian(){
+        var val = $("#input_kemampuan_bersosialisasi_dan_kemandirian").val();
+        console.log(val);
+        if(val == "" || val == "0" || val == "00"){
+            toastr.error("Jumlah Stimulasi Kemampuan Gerak halus Harus Terisi Minimal 1");
+        }else{
+            //buat modal lg html ,di body modal terisi tabel dengan column "No" width=5%,"Stimulasi" width=85%,"Nilai%" width=10% ,dengan row sebanyak val, column "Stimulasi" disi dengan textarea dan column "Nilai%" diisi dengan input class numbersOnly tapi hanya bisa diinput nomor, masukkan html pada div id="modal_here", tampilkan modal dan jalankan fungsi InputNumbersOnly() dan buat fungsi untuk tombol simpan dengan nama simpan_kemampuan_bersosialisasi_dan_kemandirian()
+            var html = `<div class="modal fade" id="modal_kemampuan_bersosialisasi_dan_kemandirian" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Tambah Kemampuan bersosialisasi dan kemandirian</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th width="5%">No</th>
+                                        <th width="85%">Stimulasi</th>
+                                        <th width="10%">Nilai%</th>
+                                    </tr>
+                                </thead>
+                                <tbody>`;
+                for(var i = 0; i < val; i++){
+
+                    html += `<tr>
+                                <td>`+(i+1)+`</td>
+                                <td><textarea class="form-control" id="input_stimulasi_kemampuan_bersosialisasi_dan_kemandirian_`+(i+1)+`"></textarea></td>
+                                <td><input type="text" class="form-control numbersOnly" id="input_nilai_kemampuan_bersosialisasi_dan_kemandirian_`+(i+1)+`"></td>
+                            </tr>`;
+                }
+                html += `</tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="simpan_kemampuan_bersosialisasi_dan_kemandirian()">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+            $("#modal_here").html(html);
+            $("#modal_kemampuan_bersosialisasi_dan_kemandirian").modal("show");
+            InputNumbersOnly();
+
+
+            
+            
+        }   
+    }
+
+    function simpan_kemampuan_bersosialisasi_dan_kemandirian(){
+        // jika input id="input_nilai_kemampuan_bersosialisasi_dan_kemandirian_"+i masih kosong maka tampilkan toastr error "Nilai Kemampuan Gerak halus + i Harus Terisi" dan focus ke input id="input_nilai_kemampuan_bersosialisasi_dan_kemandirian_"+i dan jika input id="input_nilai_kemampuan_bersosialisasi_dan_kemandirian_"+i dijumlahkan semua dan hasilnya lebih dari 100 maka tampilkan toastr error "Nilai Kemampuan Gerak halus Tidak Bisa Melebihi 100%" dan focus ke input id="input_nilai_kemampuan_bersosialisasi_dan_kemandirian_1"
+        // jika textarea id="input_stimulasi_kemampuan_bersosialisasi_dan_kemandirian_"+i masih kosong maka tampilkan toastr error "Stimulasi Kemampuan Gerak halus + i Harus Terisi" dan focus ke textarea id="input_stimulasi_kemampuan_bersosialisasi_dan_kemandirian_"+i
+        // jika input id="input_stimulasi_kemampuan_bersosialisasi_dan_kemandirian_"+i dan input id="input_nilai_kemampuan_bersosialisasi_dan_kemandirian_"+i tidak kosong maka tampilkan modal dengan isi dari data.data dan tampilkan toastr success "Berjaya menyimpan data"
+        var val = $("#input_kemampuan_bersosialisasi_dan_kemandirian").val();
+        var this_data = [];
+        var nilai = 0;
+        for(var i = 0; i < val; i++){
+            var stimulasi = $("#input_stimulasi_kemampuan_bersosialisasi_dan_kemandirian_"+(i+1)).val();
+            var nilai_stimulasi = $("#input_nilai_kemampuan_bersosialisasi_dan_kemandirian_"+(i+1)).val();
+            if(stimulasi == ""){
+                toastr.error("Stimulasi Kemampuan Gerak halus "+(i+1)+" Harus Terisi");
+                $("#input_stimulasi_kemampuan_bersosialisasi_dan_kemandirian_"+(i+1)).focus();
+                return false;
+            }else if(nilai_stimulasi == ""){
+                toastr.error("Nilai Kemampuan Gerak halus "+(i+1)+" Harus Terisi");
+                $("#input_nilai_kemampuan_bersosialisasi_dan_kemandirian_"+(i+1)).focus();
+                return false;
+            }else{
+                // this_data.push id,stimulasi,nilai_stimulasi dengan id 6 karakter acak nomor dan huruf tidak boleh sama dari id yang lain
+                this_data.push({
+                    id: randomString(10, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
+                    stimulasi: stimulasi,
+                    nilai_stimulasi: nilai_stimulasi
+                });
+                nilai += parseInt(nilai_stimulasi);
+            }
+        }
+
+        if(nilai > 100){
+            toastr.error("Nilai Kemampuan Gerak halus Akumulasi Tidak Bisa Melebihi 100% ");
+            $("#input_nilai_kemampuan_bersosialisasi_dan_kemandirian_1").focus();
+            return false;
+        }else{
+            let data_sebelumnya = cek_data_kemampuan_bersosialisasi_dan_kemandirian()
+            // console.log(data_sebelumnya);
+            // console.log(this_data);
+
+            //jika data_sebelumnya.message = "tidak" maka console.log("tidak ada data sebelumnya"), jika data_sebelumnya.message = "ada" maka bikin variable data_lama dengan isi data_sebelumnya.data dan merge this_data ke data_lama
+            if(data_sebelumnya.message == "tidak"){
+                console.log("tidak ada data sebelumnya");
+                var data_lama = this_data;
+            }else{
+                var data_lama = data_sebelumnya.data.kemampuan_bersosialisasi_dan_kemandirian;
+                //jika data_lama = null dan data_lama ="" maka data_lama = this_data, jika data_lama tidak null dan data_lama tidak "" maka data_lama = data_lama.concat(this_data) 
+                if(data_lama == null || data_lama == ""){
+                    data_lama = this_data;
+                }else{
+                    data_lama = JSON.parse(data_lama);
+                    data_lama = data_lama.concat(this_data);
+                }
+                // data_lama = data_lama.concat(this_data);
+                // console.log(data_lama);
+            }
+            console.log(data_lama);
+            // cek data_lama.nilai_stimulasi, jika tidak = 100 maka tampilkan toastr error "Nilai Stimulasi Kemampuan Gerak halus Harus Akumulasi 100% Semuanya" dan focus ke input id="input_nilai_kemampuan_bersosialisasi_dan_kemandirian_1", jika = 100 maka jalankan fungsi simpan_data_stimulasi(data_lama,"masukkan_data_kemampuan_bersosialisasi_dan_kemandirian")
+            var nilai_stimulasi = 0;
+            for(var i = 0; i < data_lama.length; i++){
+                nilai_stimulasi += parseInt(data_lama[i].nilai_stimulasi);
+            }
+            if(nilai_stimulasi != 100){
+                toastr.error("Nilai Stimulasi Kemampuan Gerak halus Harus Akumulasi 100% Semuanya");
+                $("#input_nilai_kemampuan_bersosialisasi_dan_kemandirian_1").focus();
+                return false;
+            }else{
+                simpan_data_stimulasi(data_lama,"masukkan_data_kemampuan_bersosialisasi_dan_kemandirian");
+            }
+
+        }
+
+    }
+    
+    
+    /// diatas merupakan fungsi untuk  stimulasi kemampuan bersosialisasi dan kemandirian ////
+
+
     
 
 
+    // create a function "simpan_data_stimulasi" with parameter data,stimulasi,inside is ajax function method POST,url is url+stimulasi+"?id="+$_GET('id'),basicAuth with username="Kicap_karan" and password="karan_kicap456",success menampilkan toastr success "Berjaya menyimpan data" and jika error menampilkan toastr error "Gagal menyimpan data"
+    function simpan_data_stimulasi(data,stimulasi){
+        $.ajax({
+            url: url+stimulasi,
+            type: "POST",
+            crossDomain: true,
+            beforeSend: function (request) {
+                sedang_proses()
+                request.setRequestHeader("Authorization", "Basic " + btoa("Kicap_karan:karan_kicap456"));
+                
+            },
+            data: {
+                data: data,
+                id: $_GET('id')
+            },
+            success: function(data){
+                $.unblockUI();
+                console.log(data);
+                // bikin variabel id = $_GET('id') dan varibel mesej_stimulasi,jika id=1 maka mesej_stimulasi = "Kemampuan Gerak Kasar" dan jalankan fungsi cek_data_kemampuan_gerak_kasar(),
+                // var id = $_GET('id');
+                var mesej_stimulasi;
+                if(stimulasi == "masukkan_data_kemampuan_gerak_kasar"){
+                    mesej_stimulasi = "Kemampuan Gerak Kasar";
+                    cek_data_kemampuan_gerak_kasar()
+                    $("#input_kemampuan_gerak_kasar").val("");
+                }else if(stimulasi == "masukkan_data_kemampuan_gerak_halus"){
+                    mesej_stimulasi = "Kemampuan Gerak Halus";
+                    cek_data_kemampuan_gerak_halus()
+                    $("#input_kemampuan_gerak_halus").val("");
+                }else if(stimulasi == "masukkan_data_kemampuan_bicara_dan_bahasa"){
+                    mesej_stimulasi = "Kemampuan Bicara Dan Bahasa";
+                    cek_data_kemampuan_bicara_dan_bahasa()
+                    $("#input_kemampuan_bicara_dan_bahasa").val("");
+                }else if(stimulasi == "masukkan_data_kemampuan_bersosialisasi_dan_kemandirian"){
+                    mesej_stimulasi = "Kemampuan Bersosisalisasi dan Kemandirian";
+                    cek_data_kemampuan_bersosialisasi_dan_kemandirian()
+                    $("#input_kemampuan_bersosialisasi_dan_kemandirian").val("");
+                }
+
+                //jalankan swal dengan isi "Berjaya menyimpan data \n"+mesej_stimulasi dan close .modal
+                swal({
+                    title: "Berjaya",
+                    text: "Berjaya menyimpan data stimulasi \n"+mesej_stimulasi,
+                    type: "success",
+                    confirmButtonText: "Ya"
+                });
+                $('.modal').modal('hide');
+
+                
+                
+                
+            },
+            error: function(data){
+                $.unblockUI();
+                console.log(data);
+                // bikin sweetalert error melalui mesej data.responseJSON.message+"\n  Jaringan Mungkin Bermasalah" dan bikin button reload page untuk refresh halaman dan cancel button untuk tutup sweetalert
+                swal({
+                    title: "Jaringan Mungkin Bermasalah",
+                    text: data.responseJSON.message+"\n  Sila cuba sebentar lagi",
+                    icon: "error",
+                    buttons: {
+                        reload: {
+                            text: "Reload Page",
+                            value: "reload",
+                            visible: true,
+                            className: "",
+                            closeModal: true,
+                        },
+                        cancel: {
+                            text: "Cancel",
+                            value: "cancel",
+                            visible: true,
+                            className: "",
+                            closeModal: true,
+                        }
+                    }
+                }).then((value) => {
+                    switch (value) {
+                        case "reload":
+                            location.reload();
+                            break;
+                        default:
+                            return;
+                    }
+                });
+
+            }
+        });
+    }
 
 
+    function show_perklik_stimulasi(stat,id){
+        console.log(stat);
+        // bikin variabel data,switch stat="kemampuan_gerak_kasar" data= parse cek_data_kemampuan_gerak_kasar().data.kemampuan_gerak_kasar dan jika stat="kemampuan_gerak_halus" data= parse cek_data_kemampuan_gerak_kasar().data.kemampuan_gerak_halus dan jika stat="kemampuan_bicara_dan_bahasa" data= parse cek_data_kemampuan_gerak_kasar().data.kemampuan_bicara_dan_bahasa dan jika stat="kemampuan_bersosialisasi_dan_kemandirian" data= parse cek_data_kemampuan_gerak_kasar().data.kemampuan_bersosialisasi_dan_kemandirian
+        let data;
+        switch(stat){
+            case "kemampuan_gerak_kasar":
+                mesej= "Kemampuan Gerak Kasar";
+                data = JSON.parse(cek_data_kemampuan_gerak_kasar().data.kemampuan_gerak_kasar);
+                break;
+            case "kemampuan_gerak_halus":
+                mesej= "Kemampuan Gerak Halus";
+                data = JSON.parse(cek_data_kemampuan_gerak_halus().data.kemampuan_gerak_halus);
+                break;
+            case "kemampuan_bicara_dan_bahasa":
+                mesej= "Kemampuan Bicara Dan Bahasa";
+                data = JSON.parse(cek_data_kemampuan_bicara_dan_bahasa().data.kemampuan_bicara_dan_bahasa);
+                break;
+            case "kemampuan_bersosialisasi_dan_kemandirian":
+                mesej= "Kemampuan Bersosisalisasi Dan Kemandirian";
+                data = JSON.parse(cek_data_kemampuan_bersosialisasi_dan_kemandirian().data.kemampuan_bersosialisasi_dan_kemandirian);
+                break;
+        }
+        
+        console.log(data);
+
+        // cari di data di mana data.id=id dan tampilkan data.stimulasi dari id
+        let stimulasi = data.find(function(item){
+            return item.id == id;
+        });
+        // console.log(stimulasi);
+        //bikin modal di div id="modal_here" dengan label Stimulasi textarea=stimulasi.stimulasi dan label Nilai input=stimulasi.nilai_stimulasi dengan button update dan tampilkan modal
+        $('#modal_here').html(`
+            <div class="modal fade" id="modal_stimulasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Stimulasi ${mesej}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="stimulasi">Stimulasi</label>
+                                <textarea class="form-control" id="stimulasi_perklik_textarea" rows="3" placeholder="Masukkan Stimulasi">${stimulasi.stimulasi}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="keterangan">Keterangan</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control numbersOnly" value="${stimulasi.nilai_stimulasi}" placeholder="Masukkan Nilai %" id="nilai_stimulasi_perklik_input">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" onclick="update_data_perklik_stimulasi('${stat}','${id}')">Update</button>
+                            <button type="button" class="btn btn-danger" onclick="hapus_data_perklik_stimulasi('${stat}','${id}')">Hapus</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `);
+        InputNumbersOnly();
+        $('#modal_stimulasi').modal('show');
+        
+    }
+
+    function update_data_perklik_stimulasi(stat,id){
+        console.log(stat);
+        console.log(id);
+        // bikin variabel stimulasi dengan value id="stimulasi_perklik_textarea"
+        let stimulasi = $('#stimulasi_perklik_textarea').val();
+        let nilai = $('#nilai_stimulasi_perklik_input').val();
+        // console.log(stimulasi);
+        let data;
+        switch(stat){
+            case "kemampuan_gerak_kasar":
+                mesej= "Kemampuan Gerak Kasar";
+                data = JSON.parse(cek_data_kemampuan_gerak_kasar().data.kemampuan_gerak_kasar);
+                break;
+            case "kemampuan_gerak_halus":
+                mesej= "Kemampuan Gerak Halus";
+                data = JSON.parse(cek_data_kemampuan_gerak_halus().data.kemampuan_gerak_halus);
+                break;
+            case "kemampuan_bicara_dan_bahasa":
+                mesej= "Kemampuan Bicara Dan Bahasa";
+                data = JSON.parse(cek_data_kemampuan_bicara_dan_bahasa().data.kemampuan_bicara_dan_bahasa);
+                break;
+            case "kemampuan_bersosialisasi_dan_kemandirian":
+                mesej= "Kemampuan Bersosisalisasi Dan Kemandirian";
+                data = JSON.parse(cek_data_kemampuan_bersosialisasi_dan_kemandirian().data.kemampuan_bersosialisasi_dan_kemandirian);
+                break;
+        }
+
+        //update data.stimulasi=stimulasi, data.nilai_stimulasi=nilai dari id=id
+        let index = data.findIndex(function(item){
+            return item.id == id;
+        });
+        data[index].stimulasi = stimulasi;
+        data[index].nilai_stimulasi = nilai;
+        console.log(data);
+
+        //jika stimulasi kosong atau nilai kosong, maka toast error dan focus ke textarea stimulasi atau input nilai stimulasi
+        if(stimulasi == "" || nilai == ""){
+            toastr.error("Stimulasi dan Nilai Stimulasi Harus Diisi");
+            if(stimulasi == ""){
+                $('#stimulasi_perklik_textarea').focus();
+                return false;
+            }else{
+                $('#nilai_stimulasi_perklik_input').focus();
+                return false;
+            }
+        }
+
+        //buat sweet alert yakin ingin update data mesej="Yakin ingin update stimulasi\n"+mesej+" ?" dengan button cancel dan update, jangan ada modal,jangan ada data yang di update
+        swal({
+            title: "Yakin ingin update stimulasi\n"+mesej+" ?",
+            text: "",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willUpdate) => {
+            if (willUpdate) {
+                //update database dengan ajax method put, basicAuth username="Kicap_karan" password="karan_kicap456" ,jangan ada modal
+                $.ajax({
+                    url: `${url}update_data_perklik_stimulasi`,
+                    type: 'PUT',
+                    crossDomain: true,
+                    headers: {"Authorization": "Basic " + btoa("Kicap_karan" + ":" + "karan_kicap456")},
+                    data: {
+                        data: data,
+                        stat: stat,
+                        id:$_GET('id')
+                    },
+                    beforeSend: function(){
+                        sedang_proses();
+                    },
+                    success: function(response){
+                        $.unblockUI();
+                        swal("Data Berhasil Diupdate", {
+                            icon: "success",
+                        });
+                        $('.modal').modal('hide');
+                        // console.log(response);
+                        // buat switch stat=kemampuan_gerak_kasar jalankan cek_data_kemampuan_gerak_kasar(), stat=kemampuan_gerak_halus jalankan cek_data_kemampuan_gerak_kasar(), stat=kemampuan_bicara_dan_bahasa jalankan cek_data_kemampuan_gerak_kasar(), stat=kemampuan_bersosialisasi_dan_kemandirian jalankan cek_data_kemampuan_gerak_kasar()
+                        switch(stat){
+                            case "kemampuan_gerak_kasar":
+                                cek_data_kemampuan_gerak_kasar();
+                                break;
+                            case "kemampuan_gerak_halus":
+                                cek_data_kemampuan_gerak_halus();
+                                break;
+                            case "kemampuan_bicara_dan_bahasa":
+                                cek_data_kemampuan_bicara_dan_bahasa();
+                                break;
+                            case "kemampuan_bersosialisasi_dan_kemandirian":
+                                cek_data_kemampuan_bersosialisasi_dan_kemandirian();
+                                break;
+                        }
+                    },
+                    error: function(response){
+                        console.log(response);
+                        $.unblockUI();
+                        // tampil sweet alert error jika update data gagal dengan title "Update Data Gagal" dan pesan response.responseText+"\n"+" Silahkan Coba Lagi" dan button refresh halaman untuk refresh halaman dan button close untuk tutup modal
+                        swal({
+                            title: "Update Data Gagal",
+                            text: response.responseText+"\n"+" Silahkan Coba Lagi",
+                            icon: "error",
+                            buttons: {
+                                refresh: {
+                                    text: "Refresh",
+                                    value: "refresh",
+                                    visible: true,
+                                    className: "",
+                                    closeModal: true,
+                                },
+                                close: {
+                                    text: "Close",
+                                    value: "close",
+                                    visible: true,
+                                    className: "",
+                                    closeModal: true,
+                                }
+                            }
+                        })
+                        .then((value) => {
+                            switch (value) {
+                                case "refresh":
+                                    location.reload();
+                                    break;
+                                case "close":
+                                    $('.modal').modal('hide');
+                                    break;
+                            }
+                        });
+                        
+
+                        
+                        
+                    }
+                });
+            
+            }
+        })
+
+        
+
+        
+
+        
+        
+    }
     
 
+    function hapus_data_perklik_stimulasi(stat,id){
+        console.log(stat);
+        console.log(id);
+        // bikin variabel stimulasi dengan value id="stimulasi_perklik_textarea"
+        
+        // console.log(stimulasi);
+        let data;
+        switch(stat){
+            case "kemampuan_gerak_kasar":
+                mesej= "Kemampuan Gerak Kasar";
+                data = JSON.parse(cek_data_kemampuan_gerak_kasar().data.kemampuan_gerak_kasar);
+                break;
+            case "kemampuan_gerak_halus":
+                mesej= "Kemampuan Gerak Halus";
+                data = JSON.parse(cek_data_kemampuan_gerak_halus().data.kemampuan_gerak_halus);
+                break;
+            case "kemampuan_bicara_dan_bahasa":
+                mesej= "Kemampuan Bicara Dan Bahasa";
+                data = JSON.parse(cek_data_kemampuan_bicara_dan_bahasa().data.kemampuan_bicara_dan_bahasa);
+                break;
+            case "kemampuan_bersosialisasi_dan_kemandirian":
+                mesej= "Kemampuan Bersosisalisasi Dan Kemandirian";
+                data = JSON.parse(cek_data_kemampuan_bersosialisasi_dan_kemandirian().data.kemampuan_bersosialisasi_dan_kemandirian);
+                break;
+        }
+
+        //buat sweetalert yakin untuk menghapus data dengan mesej "Yakin hapus data stimulasi?" dengan button "Ya" dan "Tidak",jika button "Ya" maka hapus data dengan id=id dan close sweetalert
+        swal({
+            title: "Yakin hapus data stimulasi?",
+            text: "Data yang sudah dihapus tidak dapat dikembalikan",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                // hapus data dengan id=id
+                let index = data.findIndex(function(item){
+                    return item.id == id;
+                });
+                data.splice(index,1);
+                console.log(data);
+                
+                $.ajax({
+                    url: `${url}update_data_perklik_stimulasi`,
+                    type: 'PUT',
+                    crossDomain: true,
+                    headers: {"Authorization": "Basic " + btoa("Kicap_karan" + ":" + "karan_kicap456")},
+                    data: {
+                        data: (data.length == 0) ? "" : data,
+                        stat: stat,
+                        id:$_GET('id')
+                    },
+                    beforeSend: function(){
+                        sedang_proses();
+                    },
+                    success: function(response){
+                        $.unblockUI();
+                        swal("Data Berhasil Diupdate", {
+                            icon: "success",
+                        });
+                        $('.modal').modal('hide');
+                        // console.log(response);
+                        // buat switch stat=kemampuan_gerak_kasar jalankan cek_data_kemampuan_gerak_kasar(), stat=kemampuan_gerak_halus jalankan cek_data_kemampuan_gerak_kasar(), stat=kemampuan_bicara_dan_bahasa jalankan cek_data_kemampuan_gerak_kasar(), stat=kemampuan_bersosialisasi_dan_kemandirian jalankan cek_data_kemampuan_gerak_kasar()
+                        switch(stat){
+                            case "kemampuan_gerak_kasar":
+                                cek_data_kemampuan_gerak_kasar();
+                                break;
+                            case "kemampuan_gerak_halus":
+                                cek_data_kemampuan_gerak_halus();
+                                break;
+                            case "kemampuan_bicara_dan_bahasa":
+                                cek_data_kemampuan_bicara_dan_bahasa();
+                                break;
+                            case "kemampuan_bersosialisasi_dan_kemandirian":
+                                cek_data_kemampuan_bersosialisasi_dan_kemandirian();
+                                break;
+                        }
+                    },
+                    error: function(response){
+                        console.log(response);
+                        $.unblockUI();
+                        // tampil sweet alert error jika update data gagal dengan title "Update Data Gagal" dan pesan response.responseText+"\n"+" Silahkan Coba Lagi" dan button refresh halaman untuk refresh halaman dan button close untuk tutup modal
+                        swal({
+                            title: "Update Data Gagal",
+                            text: response.responseText+"\n"+" Silahkan Coba Lagi",
+                            icon: "error",
+                            buttons: {
+                                refresh: {
+                                    text: "Refresh",
+                                    value: "refresh",
+                                    visible: true,
+                                    className: "",
+                                    closeModal: true,
+                                },
+                                close: {
+                                    text: "Close",
+                                    value: "close",
+                                    visible: true,
+                                    className: "",
+                                    closeModal: true,
+                                }
+                            }
+                        })
+                        .then((value) => {
+                            switch (value) {
+                                case "refresh":
+                                    location.reload();
+                                    break;
+                                case "close":
+                                    $('.modal').modal('hide');
+                                    break;
+                            }
+                        });
+                        
+
+                        
+                        
+                    }
+                });
+            
+                
+            } else {
+                swal("Data tidak jadi dihapus");
+            }
+        });
+        
+
+        
+
+    }
     
 
+    function cek_kesimpulan(){
+        var data;
+        var auth = "Basic " + btoa("Kicap_karan" + ":" + "karan_kicap456");
+        $.ajax({
+            url: url+"cek_kesimpulan?id="+ $_GET('id'),
+            type: "GET",
+            crossDomain: true,
+            dataType: "json",
+            async: false,
+            headers: {
+                "Authorization": auth
+            },
+            beforeSend: function(){
+                sedang_proses();
+            },
+            success: function(response){
+                $.unblockUI();
+                // console.log(response)
+                data = response;
+                
+                if (data.message == "ya") {
+                    let data_kesimpulan = JSON.parse(data.data.kesimpulan);
+                    // jika data_kesimpulan.id="100-81" maka td id="td_kesimpulan_100_81" html data_kesimpulan.isi, jika data_kesimpulan.id="80-61" maka td id="td_kesimpulan_80_61" html data_kesimpulan.isi, jika data_kesimpulan.id="60-41" maka td id="td_kesimpulan_60_41" html data_kesimpulan.isi, jika data_kesimpulan.id="40-21" maka td id="td_kesimpulan_40_21" html data_kesimpulan.isi, jika data_kesimpulan.id="20-0" maka td id="td_kesimpulan_20_0" html data_kesimpulan.isi
+                    for (let i = 0; i < data_kesimpulan.length; i++) {
+                        if (data_kesimpulan[i].id == "100-81") {
+                            $("#td_kesimpulan_100_81").html(data_kesimpulan[i].isi);
+                        }else if (data_kesimpulan[i].id == "80-61") {
+                            $("#td_kesimpulan_80_61").html(data_kesimpulan[i].isi);
+                        }else if (data_kesimpulan[i].id == "60-41") {
+                            $("#td_kesimpulan_60_41").html(data_kesimpulan[i].isi);
+                        }else if (data_kesimpulan[i].id == "40-21") {
+                            $("#td_kesimpulan_40_21").html(data_kesimpulan[i].isi);
+                        }else if (data_kesimpulan[i].id == "20-0") {
+                            $("#td_kesimpulan_20_0").html(data_kesimpulan[i].isi);
+                        }
+                    }
+                }
+
+            },
+            error: function(response){
+                $.unblockUI();
+                console.log(response);
+                swal({
+                    title: "Tidak dapat terhubung ke server",
+                    text: "Sila periksa sambungan internet anda",
+                    icon: "error",
+                    button: "Reload Halaman",
+                }).then(function() {
+                    window.location.reload();
+                });
+            }
+        });
+        console.log(data);
+        return data;
+    }    
+    cek_kesimpulan();
+
+    function cek_intervensi(){
+        var data;
+        var auth = "Basic " + btoa("Kicap_karan" + ":" + "karan_kicap456");
+        $.ajax({
+            url: url+"cek_intervensi?id="+ $_GET('id'),
+            type: "GET",
+            crossDomain: true,
+            dataType: "json",
+            async: false,
+            headers: {
+                "Authorization": auth
+            },
+            beforeSend: function(){
+                sedang_proses();
+            },
+            success: function(response){
+                $.unblockUI();
+                // console.log(response)
+                data = response;
+                
+                if (data.message == "ya") {
+                    let data_intervensi = JSON.parse(data.data.intervensi);
+                    // jika data_intervensi.id="100-81" maka td id="td_intervensi_100_81" html data_intervensi.isi, jika data_intervensi.id="80-61" maka td id="td_intervensi_80_61" html data_intervensi.isi, jika data_intervensi.id="60-41" maka td id="td_intervensi_60_41" html data_intervensi.isi, jika data_intervensi.id="40-21" maka td id="td_intervensi_40_21" html data_intervensi.isi, jika data_intervensi.id="20-0" maka td id="td_intervensi_20_0" html data_intervensi.isi
+                    for (let i = 0; i < data_intervensi.length; i++) {
+                        if (data_intervensi[i].id == "100-81") {
+                            $("#td_intervensi_100_81").html(data_intervensi[i].isi);
+                        }else if (data_intervensi[i].id == "80-61") {
+                            $("#td_intervensi_80_61").html(data_intervensi[i].isi);
+                        }else if (data_intervensi[i].id == "60-41") {
+                            $("#td_intervensi_60_41").html(data_intervensi[i].isi);
+                        }else if (data_intervensi[i].id == "40-21") {
+                            $("#td_intervensi_40_21").html(data_intervensi[i].isi);
+                        }else if (data_intervensi[i].id == "20-0") {
+                            $("#td_intervensi_20_0").html(data_intervensi[i].isi);
+                        }
+                    }
+                }
+
+            },
+            error: function(response){
+                $.unblockUI();
+                console.log(response);
+                swal({
+                    title: "Tidak dapat terhubung ke server",
+                    text: "Sila periksa sambungan internet anda",
+                    icon: "error",
+                    button: "Reload Halaman",
+                }).then(function() {
+                    window.location.reload();
+                });
+            }
+        });
+        console.log(data);
+        return data;
+    }    
+    cek_intervensi();
     
+
+    //bikin fungsi show_kesimpulan_intervensi dengan parameter "id" dan "stat"
+    function show_kesimpulan_intervensi(id,stat){
+        //bikin var mesej dengan value ternary jika stat="kesimpulan" maka mesej="Kesimpulan" , jika stat="intervensi" maka mesej="Intervensi"
+        let mesej = (stat=="kesimpulan") ? "Kesimpulan" : "Intervensi";
+
+        //bikin  switch dengan var nilai,  jika id="100-81" maka nilai="100%-81%" , jika id="80-61" maka nilai="80%-61%" , jika id="60-41" maka nilai="60%-41%" , jika id="40-21" maka nilai="40%-21%" , jika id="20-0" maka nilai="20%-0%"
+        switch(id){
+            case "100-81":
+                nilai = "100%-81%";
+                break;
+            case "80-61":
+                nilai = "80%-61%";
+                break;
+            case "60-41":
+                nilai = "60%-41%";
+                break;
+            case "40-21":
+                nilai = "40%-21%";
+                break;
+            case "20-0":
+                nilai = "20%-0%";
+                break;
+        }
+
+        
+
+        //bikin modal di div id="modal_here" dengan modal title = mesej ,modal body terisi label=mesej + " ( " + nilai  + " )" dan textarea dengan id="textarea_isi_kesimpulan_intervensi" dan button dengan id="btn_update_kesimpulan_intervensi" , button close dan tampilkan modal
+        $('#modal_here').html(`
+            <div class="modal fade" id="modal_kesimpulan_intervensi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">${mesej}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <label>${mesej} ( ${nilai} )</label>
+                            <textarea id="textarea_isi_kesimpulan_intervensi" class="form-control" rows="3" placeholder="Isi ${mesej}"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" onclick="update_kesimpulan_intervensi('${id}','${stat}')">Update</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `);
+        $('.modal').modal('show');
+
+    }
+
+    
+    function update_kesimpulan_intervensi(id,stat){
+        // console.log(id)
+        let mesej = (stat=="kesimpulan") ? "Kesimpulan" : "Intervensi";
+        //bikin var isi_textarea dengan value dari textarea dengan id="textarea_isi_kesimpulan_intervensi"
+        let isi_textarea = $('#textarea_isi_kesimpulan_intervensi').val();
+
+        //jika stat="kesimpulan" bikin var data_lama dengan tenary jika cek_kesimpulan().message="tidak" maka data_lama=null , jika cek_kesimpulan().message="ya" maka data_lama=cek_kesimpulan().data.kesimpulan, jika stat="intervensi" bikin var data_lama dengan tenary jika cek_intervensi().message="tidak" maka data_lama=null , jika cek_intervensi().message="ya" maka data_lama=cek_intervensi().data.intervensi
+        let data_lama = (stat=="kesimpulan") ? (cek_kesimpulan().message=="tidak") ? null : cek_kesimpulan().data.kesimpulan : (cek_intervensi().message=="tidak") ? null : cek_intervensi().data.intervensi;
+
+
+
+        //jika isi_textarea kosong maka tampilkan toast dengan pesan mesej+" Harus Terisi" dan focus textarea dengan id="textarea_isi_kesimpulan_intervensi"
+        if(isi_textarea==""){
+            toastr.error(mesej+" Harus Terisi");
+            $('#textarea_isi_kesimpulan_intervensi').focus();
+        } else {
+            let data;
+            // jika data_lama=null maka bikin var data dengan array object id=id dan isi=isi_textarea
+            if(data_lama==null){
+                data = [{
+                    id: id,
+                    isi: isi_textarea
+                }];
+            } else {
+                // console.log(data_lama)
+                // bikin var cek dengan value false dan  var nomor_index, loop data_lama dengan var i dan jika data_lama[i].id=id maka cek=true ,nomor_index=i dan break
+                let cek = false;
+                let nomor_index;
+                for(let i=0;i<data_lama.length;i++){
+                    if(data_lama[i].id==id){
+                        cek = true;
+                        nomor_index = i;
+                        break;
+                    }
+                }
+
+                //jika cek=true maka data_lama[nomor_index].isi=isi_textarea, jika cek=false maka bikin var data dengan array object id=id dan isi=isi_textarea dan merge data dengan data_lama
+                if(cek){
+                    data_lama[nomor_index].isi = isi_textarea;
+                    data = data_lama;
+                } else {
+                    data = [{
+                        id: id,
+                        isi: isi_textarea
+                    }];
+                    data = data.concat(data_lama);
+                }
+                
+            }
+
+            // console.log(data);
+
+
+            //jika isi_textarea tidak kosong maka tampilkan sweet alert dengan title "Update Data" dan pesan "Apakah anda yakin ingin mengupdate data?" dan button yes dan no
+            swal({
+                title: "Update "+mesej,
+                text: "Apakah anda yakin ingin mengupdate "+stat +" ?",
+                icon: "warning",
+                buttons: {
+                    cancel: {
+                        text: "Cancel",
+                        value: null,
+                        visible: true,
+                        className: "",
+                        closeModal: true,
+                    },
+                    confirm: {
+                        text: "Yes",
+                        value: true,
+                        visible: true,
+                        className: "",
+                        closeModal: true
+                    }
+                }
+            })
+            .then((value) => {
+                
+                if(value){
+                    //bikin ajax dengan method POST ,basicAuth username=username dan password=password , beforeSend=loading() , cukup console.log(respond) jika success
+                    var auth = "Basic " + btoa("Kicap_karan" + ":" + "karan_kicap456");
+                    $.ajax({
+                        method: "POST",
+                        crossDomain: true,
+                        url: url+"update_"+stat,
+                        data: {
+                            "data": data,
+                            "id": $_GET('id'),
+                        },
+                        headers: {
+                            "Authorization": auth
+                        },
+                        beforeSend: function(){
+                            
+                            sedang_proses();
+                        },
+                        success: function(respond){
+                            $.unblockUI();
+                            // cek_kesimpulan();
+                            //jika stat="kesimpulan" maka jalankan fungsi cek_kesimpulan(), jika stat="intervensi" maka jalankan fungsi cek_intervensi()
+                            if(stat=="kesimpulan"){
+                                cek_kesimpulan();
+                            } else {
+                                cek_intervensi();
+                            }
+                            $('.modal').modal('hide');
+                            console.log(respond);
+                            
+                        },
+                        error: function(error){
+                            $.unblockUI();
+                            console.log(error);
+                        }
+                    });
+                    
+                }
+                
+               
+            });
+        
+        
+        }
+    }
     
 </script>
 </body>
