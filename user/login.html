@@ -15,6 +15,12 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* center the title and text of sweet alert */
+        .swal-title,.swal-text {
+            text-align: center;
+        }
+    </style>
 
 </head>
 
@@ -127,17 +133,17 @@
                         <!-- <h4 class="mb-30">Login</h4> -->
 
                         <!-- Form -->
-                        <form action="#" method="post">
+                        <form >
                             <div class="row">
                                 <div class="col-12 col-md-6">
-                                    <input type="text" name="message-name" class="form-control" placeholder="Username">
+                                    <input type="text" name="username" id="username" class="form-control" placeholder="Username" style="color: black;">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <input type="email" name="message-email" class="form-control" placeholder="Password">
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="Password" style="color: black;">
                                 </div>
                                 
                                 <div class="col-12">
-                                    <center><button type="submit" class="btn alime-btn btn-2 mt-15 mb-10">Login</button></center>
+                                    <center><button type="button" onclick="login()" class="btn alime-btn btn-2 mt-15 mb-10">Login</button></center>
                                 </div>
                                 <div class="col-12">
                                     <center class="mb-10"><a href="daftar.html" style="color: blue;">Daftar</a> jika tidak punya akun</center>
@@ -196,6 +202,91 @@
     <script src="js/alime.bundle.js"></script>
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
+
+
+
+    <script src="sweet-alert/sweetalert.js"></script>
+    <script src="sweet-alert/toastr/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweet-alert/toastr/toastr.min.css">
+    <script src="sweet-alert/block/jquery.blockUI.js"></script>
+    <script src="main.js"></script>
+    <script>
+        //create function login
+        function login(){
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if(username == '' || password == ''){
+                alert('Username atau Password tidak boleh kosong');
+            }else{
+                $.ajax({
+                    url: url+'user_login',
+                    type: 'GET',
+                    data: {data:{
+                        username: username,
+                        password: password
+                    }},
+                    headers: {
+                        //basicAuth username="Kicap_karan", password="karan_kicap456" 
+                        'Authorization': 'Basic ' + btoa('Kicap_karan' + ':' + 'karan_kicap456') 
+                    },
+                    beforeSend: function(){
+                        sedang_proses();
+                    },
+                    success: function(response){
+                        $.unblockUI();
+                        //save data to local storage
+                        localStorage.setItem('data',JSON.stringify(response.data));
+                        swal({
+                            title: "Login Berhasil",
+                            text: "Selamat datang "+response.data.nama,
+                            type: "success",
+                            confirmButtonColor: "#DD6B55",
+                            confirmButtonText: "OK",
+                            closeOnConfirm: false
+                        }).then(function(){
+                            window.location.href = "user_index.html";
+                        });
+                        // console.log(response)
+                    },
+                    error: function(response){
+                        $.unblockUI();
+                        // console.log(response)
+                        // jika response.status = 401 maka swal error text "Username atau Password salah" dan focus ke username
+                        if(response.status == 401){
+                            swal({
+                                icon: "error",
+                                text: "Username atau Password salah",
+                                type: "error",
+                                confirmButtonColor: "#DD6B55",
+                                confirmButtonText: "OK",
+                                closeOnConfirm: false,
+                            }).
+                            then(function(){
+                                $('#username').focus();
+                            });
+                        }else{
+                            swal({
+                                icon: "error",
+                                text: "Jaringan Mungkin Bermasalah \n Sila Reload Kembali Halaman",
+                                type: "error",
+                                confirmButtonColor: "#DD6B55",
+                                confirmButtonText: "OK",
+                                closeOnConfirm: false,
+                                dangerMode: true,
+                                value: true
+                            }).
+                            then(function(value){
+                                if (value) {
+                                    location.reload();
+                                }
+                                    
+                            });
+                        }
+                    }
+                });
+            }
+        }
+    </script>
 
 </body>
 

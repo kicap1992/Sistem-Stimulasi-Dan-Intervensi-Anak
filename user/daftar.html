@@ -16,6 +16,15 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="sweet-alert/sweetalert.css">
+    <style>
+        /* center the title and text of sweet alert */
+        .swal-title,.swal-text {
+            text-align: center;
+        }
+
+        
+
+    </style>
 
 </head>
 
@@ -131,32 +140,32 @@
                         <form id="sini_form">
                             <div class="row">
                                 <div class="col-12 col-md-6">
-                                    <input type="text" name="username" id="username" class="form-control mb-15" placeholder="Username">
+                                    <input type="text" name="username" id="username" class="form-control mb-15" placeholder="Username" style="color: black;">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <input type="password" name="password" id="password" class="form-control mb-15" placeholder="Password">
+                                    <input type="password" name="password" id="password" class="form-control mb-15" placeholder="Password" style="color: black;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="password" name="konfirmasi_password" id="konfirmasi_password" class="form-control mb-15" placeholder="Konfirmasi Password">
+                                    <input type="password" name="konfirmasi_password" id="konfirmasi_password" class="form-control mb-15" placeholder="Konfirmasi Password" style="color: black;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" name="nama" id="nama" class="form-control mb-15" placeholder="Nama">
+                                    <input type="text" name="nama" id="nama" class="form-control mb-15" placeholder="Nama" style="color: black;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" name="email" id='email' class="form-control mb-15" placeholder="Email">
+                                    <input type="email" name="email" id='email' class="form-control mb-15" placeholder="Email" style="color: black;">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <input type="text" name="umur" id="umur" minlength="1" maxlength="2"  class="form-control mb-15 numbersOnly" placeholder="Umur" >
+                                    <input type="text" name="umur" id="umur" minlength="1" maxlength="2"  class="form-control mb-15 numbersOnly" placeholder="Umur" style="color: black;">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <select class="form-control mb-15" name="jk" id="jk">
+                                    <select class="form-control mb-15" name="jk" id="jk" style="color: black;">
                                         <option  selected disabled>-Pilih Jenis Kelamin</option>
                                         <option value="Laki-laki">Laki-laki</option>
                                         <option value="Perempuan">Perempuan</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea name="alamat" id="alamat" class="form-control mb-10" placeholder="Alamat"></textarea>
+                                    <textarea name="alamat" id="alamat" class="form-control mb-10" placeholder="Alamat" style="color: black;"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <center><button type="button" onclick="daftar()" class="btn alime-btn btn-2 mt-15 mb-15">Daftar</button></center>
@@ -288,18 +297,74 @@
                     },
                     success: function(response){
                         $.unblockUI();
-                        console.log(response);
+                        swal({
+                            icon: 'success',
+                            text: "Email telah dikirim, silah tunggu konfirmasi dari admin",
+                            type: "success",
+                            confirmButtonColor: "#DD6B55",
+                            confirmButtonText: "Ok",
+                            closeOnConfirm: false
+                        }).
+                        then((result) => {
+                            window.location.href = "index.html";
+                        });
                     },
                     error: function(xhr, ajaxOptions, thrownError){
                         $.unblockUI();
-                        // jika xhr.status = 401 toast error "Email dalam proses pendaftaran dan menunggu pengesahan admin", jika xhr.status = 402 toast error "Email sudah terdaftar",
+                        
                         if(xhr.status == 401){
-                            toastr.error('Email dalam proses pendaftaran dan menunggu pengesahan admin');
+                            // sweet alaert error "Email dalam proses pendaftaran dan menunggu pengesahan admin"
+                            swal({
+                                icon: 'error',
+                                text: "Email dalam proses pendaftaran dan menunggu pengesahan admin",
+                                type: "error",
+                                confirmButtonColor: "#DD6B55",
+                                confirmButtonText: "Ok",
+                                closeOnConfirm: false
+                            })
                         }else if(xhr.status == 402){
-                            toastr.error('Email sudah terdaftar');
+                            // sweet alaert error "Email sudah terdaftar"
+                            swal({
+                                icon: 'error',
+                                text: "Email sudah terdaftar",
+                                type: "error",
+                                confirmButtonColor: "#DD6B55",
+                                confirmButtonText: "Ok",
+                                closeOnConfirm: false
+                            })
                         }else{
                             //buat sweet alert 2 button dengan text "Refresh Halaman" untuk refresh halaman dan button dengan text "Close" untuk menutup sweet alert 2
+                            swal({
+                                title: "Error",
+                                text: thrownError +"\nSila Refresh Halaman",
+                                icon: "warning",
+                                buttons: {
+                                    cancel: {
+                                        text: "Cancel",
+                                        value: null,
+                                        visible: true,
+                                        className: "",
+                                        closeModal: true,
+                                    },
+                                    confirm: {
+                                        text: "Refresh Halaman",
+                                        value: true,
+                                        visible: true,
+                                        className: "",
+                                        closeModal: true
+                                    }
+                                }
+                            })
+                            .then((value) => {
+                                
+                                if(value){
+                                    //refresh halaman
+                                    location.reload();
+                                }
+                                
                             
+                            });
+                        
                         }
                         
                     }

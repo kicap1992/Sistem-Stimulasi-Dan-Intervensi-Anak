@@ -16,6 +16,14 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="js/datatables/datatables.min.css"/> -->
+
+    <style>
+        /* center the title and text of sweet alert */
+        .swal-title,.swal-text {
+            text-align: center;
+        }
+    </style>
     
 </head>
 
@@ -75,7 +83,7 @@
                                     <li><a href="./gallery.html">Gallery</a></li> -->
                                     <li><a href="login.html">Data Sebelumnya</a></li>
                                     <li><a href="login.html">Logout</a></li>
-                                    <li><a href="#" style="color: aqua; cursor: default;">Nama User</a></li>
+                                    <li><a href="#" style="color: aqua; cursor: default;" class="nama_usernya">Nama User</a></li>
                                 </ul>
 
                                 <!-- Search Icon -->
@@ -100,7 +108,7 @@
                         <!-- Welcome Text -->
                         <div class="col-12 col-lg-8 col-xl-6">
                             <div class="welcome-text">
-                                <h2 data-animation="bounceInDown" data-delay="900ms">Hello</h2>
+                                <h2 data-animation="bounceInDown" data-delay="900ms" >Hello <h2 data-animation="bounceInDown" data-delay="900ms"  class="nama_usernya">asdasdsad</h2></h2>
                                 <p data-animation="bounceInDown" data-delay="500ms">Sistem ini menyediakan layanan intervensi dini pertumbuhan anak dari umur 1 hingga tahun melalui stimulasi yang dilalui oleh anak bagi ibu bapa yang ingin menggunakan aplikasi ini</p>
                                 <div class="hero-btn-group" data-animation="bounceInDown" data-delay="100ms">
                                     <a href="#" class="btn_mulai btn alime-btn mb-3 mb-sm-0 mr-4">Mulai</a>
@@ -119,7 +127,7 @@
                         <!-- Welcome Text -->
                         <div class="col-12 col-lg-8 col-xl-6">
                             <div class="welcome-text">
-                                <h2 data-animation="bounceInDown" data-delay="900ms">Hello</h2>
+                                <h2 data-animation="bounceInDown" data-delay="900ms" >Hello <h2 data-animation="bounceInDown" data-delay="900ms" class="nama_usernya">asdasdsad</h2></h2>
                                 <p data-animation="bounceInDown" data-delay="500ms">Sistem ini menyediakan layanan intervensi dini pertumbuhan anak dari umur 1 hingga tahun melalui stimulasi yang dilalui oleh anak bagi ibu bapa yang ingin menggunakan aplikasi ini. Untuk menggunakan sistem ini ibu bapa harus mendaftar dan login terlebih dahulu</p>
                                 <div class="hero-btn-group" data-animation="bounceInDown" data-delay="100ms">
                                     <a href="#" class="btn_mulai btn alime-btn mb-3 mb-sm-0 mr-4">Mulai</a>
@@ -154,33 +162,36 @@
 
                         
                         <div class="row">
+                            <div class="col-12"><h5>Informasi Anak</h5></div>
+
                             <div class="col-12">
-                                <input type="text" name="nama_anak" id="nama_anak" class="form-control mb-15" placeholder="Masukkan Nama Anak">
+                                
+                                <input type="text" name="nama_anak" id="nama_anak" class="form-control mb-15" placeholder="Masukkan Nama Anak" style="color: black;">
                             </div>
 
                             <div class="col-12 col-md-6">
-                                <select class="form-control mb-15" >
+                                <select class="form-control mb-15" name="kelompok_umur" id="kelompok_umur" style="color: black;">
                                     <option  selected disabled>-Kelompok Umur Stimulasi</option>
-                                    <option value="12 Hingga 18 Bulan">12 Hingga 18 Bulan</option>
-                                    <option value="18 hingga 24 Bulan">18 hingga 24 Bulan</option>
-                                    <option value="24 hingga 36 Bulan">24 hingga 36 Bulan</option>
-                                    <option value="36 hingga 48 Bulan">36 hingga 48 Bulan</option>
-                                    <option value="48 hingga 60 Bulan">48 hingga 60 Bulan</option>
+                                    <option value="1">12 Hingga 18 Bulan</option>
+                                    <option value="2">18 hingga 24 Bulan</option>
+                                    <option value="3">24 hingga 36 Bulan</option>
+                                    <option value="34">36 hingga 48 Bulan</option>
+                                    <option value="5">48 hingga 60 Bulan</option>
                                 </select>
                             </div>
                             <div class="col-12 col-md-6">
-                                <select class="form-control mb-15" >
+                                <select class="form-control mb-15" id="jk" name="jk" style="color: black;">
                                     <option  selected disabled>-Pilih Jenis Kelamin</option>
                                     <option value="Laki-laki">Laki-laki</option>
                                     <option value="Perempuan">Perempuan</option>
                                 </select>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col-12 data_sebelumnya">
                                 <center><button type="button"  id="lanjut_ke_stimulasi" class="btn alime-btn btn-2 mt-15 mb-10">Lanjut Ke Stimulasi</button></center>
                             </div>
                             
-                            <div class="col-12">
+                            <div class="col-12 data_sebelumnya" >
                                 <center class="mb-10">Lihat <a href="login.html" style="color: blue;"> Data Sebelumnya</a></center>
                             </div>
                         </div>
@@ -207,550 +218,72 @@
 
                         <!-- Form -->
                         <form >
-                            <div class="row">
+                            <div class="row sini_stimulasi_div">
                                 <div class="col-12">
-                                    <!--create table width=100% ,height=100% , border=none wih tr=10 and td=3-->
-                                    <table id="myTable" class="cell-border">
-                                        <tbody>
-                                            <tr>
-                                                <td width="10%" >
-                                                    <center>1</center>
-                                                </td>
-                                                <td width="80%"  style="text-align: left;">
-                                                    Stimulasi 1
-                                                </td>
-                                                <td width="10%" >
-                                                    <center><input type="checkbox" name="" id="sini_pertama"></center>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="10%" >
-                                                    <center>1</center>
-                                                </td>
-                                                <td width="80%"  style="text-align: left;">
-                                                    Stimulasi 1
-                                                </td>
-                                                <td width="10%" >
-                                                    <center><input type="checkbox" name="" id=""></center>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="10%" >
-                                                    <center>1</center>
-                                                </td>
-                                                <td width="80%"  style="text-align: left;">
-                                                    Stimulasi 1
-                                                </td>
-                                                <td width="10%" >
-                                                    <center><input type="checkbox" name="" id=""></center>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="10%" >
-                                                    <center>1</center>
-                                                </td>
-                                                <td width="80%"  style="text-align: left;">
-                                                    Stimulasi 1
-                                                </td>
-                                                <td width="10%" >
-                                                    <center><input type="checkbox" name="" id=""></center>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="10%" >
-                                                    <center>1</center>
-                                                </td>
-                                                <td width="80%"  style="text-align: left;">
-                                                    Stimulasi 1
-                                                </td>
-                                                <td width="10%" >
-                                                    <center><input type="checkbox" name="" id=""></center>
-                                                </td>
-                                            </tr>
+                                    <h5>KEMAMPUAN GERAK KASAR</h5>
+                                    <table id="table_kemampuan_gerak_kasar" class="cell-border">
+                                        <thead>
+                                            <td width="10%">No</td>
+                                            <td width="80%">Stimulasi</td>
+                                            <td width="10%">Aksi</td>
+                                        </thead>
+                                        <tbody id="tbody_kemampuan_gerak_kasar">
+                                            
                                         </tbody>
                                             
                                     </table>
 
-                                    <!-- <table id="example" class="display" style="width:100%" border="1" cellspacing="10">
+                                    <br>
+                                    <hr>
+                                    <br>
+                                    <h5>KEMAMPUAN GERAK HALUS</h5>
+                                    <table id="table_kemampuan_gerak_halus" class="cell-border">
                                         <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
-                                            </tr>
+                                            <td width="10%">No</td>
+                                            <td  width="80%">Stimulasi</td>
+                                            <td width="10%">Aksi</td>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
-                                                <td>$320,800</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Garrett Winters</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>63</td>
-                                                <td>2011/07/25</td>
-                                                <td>$170,750</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ashton Cox</td>
-                                                <td>Junior Technical Author</td>
-                                                <td>San Francisco</td>
-                                                <td>66</td>
-                                                <td>2009/01/12</td>
-                                                <td>$86,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cedric Kelly</td>
-                                                <td>Senior Javascript Developer</td>
-                                                <td>Edinburgh</td>
-                                                <td>22</td>
-                                                <td>2012/03/29</td>
-                                                <td>$433,060</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Airi Satou</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>33</td>
-                                                <td>2008/11/28</td>
-                                                <td>$162,700</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Brielle Williamson</td>
-                                                <td>Integration Specialist</td>
-                                                <td>New York</td>
-                                                <td>61</td>
-                                                <td>2012/12/02</td>
-                                                <td>$372,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Herrod Chandler</td>
-                                                <td>Sales Assistant</td>
-                                                <td>San Francisco</td>
-                                                <td>59</td>
-                                                <td>2012/08/06</td>
-                                                <td>$137,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Rhona Davidson</td>
-                                                <td>Integration Specialist</td>
-                                                <td>Tokyo</td>
-                                                <td>55</td>
-                                                <td>2010/10/14</td>
-                                                <td>$327,900</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Colleen Hurst</td>
-                                                <td>Javascript Developer</td>
-                                                <td>San Francisco</td>
-                                                <td>39</td>
-                                                <td>2009/09/15</td>
-                                                <td>$205,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Sonya Frost</td>
-                                                <td>Software Engineer</td>
-                                                <td>Edinburgh</td>
-                                                <td>23</td>
-                                                <td>2008/12/13</td>
-                                                <td>$103,600</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jena Gaines</td>
-                                                <td>Office Manager</td>
-                                                <td>London</td>
-                                                <td>30</td>
-                                                <td>2008/12/19</td>
-                                                <td>$90,560</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Quinn Flynn</td>
-                                                <td>Support Lead</td>
-                                                <td>Edinburgh</td>
-                                                <td>22</td>
-                                                <td>2013/03/03</td>
-                                                <td>$342,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Charde Marshall</td>
-                                                <td>Regional Director</td>
-                                                <td>San Francisco</td>
-                                                <td>36</td>
-                                                <td>2008/10/16</td>
-                                                <td>$470,600</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Haley Kennedy</td>
-                                                <td>Senior Marketing Designer</td>
-                                                <td>London</td>
-                                                <td>43</td>
-                                                <td>2012/12/18</td>
-                                                <td>$313,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tatyana Fitzpatrick</td>
-                                                <td>Regional Director</td>
-                                                <td>London</td>
-                                                <td>19</td>
-                                                <td>2010/03/17</td>
-                                                <td>$385,750</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Michael Silva</td>
-                                                <td>Marketing Designer</td>
-                                                <td>London</td>
-                                                <td>66</td>
-                                                <td>2012/11/27</td>
-                                                <td>$198,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Paul Byrd</td>
-                                                <td>Chief Financial Officer (CFO)</td>
-                                                <td>New York</td>
-                                                <td>64</td>
-                                                <td>2010/06/09</td>
-                                                <td>$725,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Gloria Little</td>
-                                                <td>Systems Administrator</td>
-                                                <td>New York</td>
-                                                <td>59</td>
-                                                <td>2009/04/10</td>
-                                                <td>$237,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bradley Greer</td>
-                                                <td>Software Engineer</td>
-                                                <td>London</td>
-                                                <td>41</td>
-                                                <td>2012/10/13</td>
-                                                <td>$132,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Dai Rios</td>
-                                                <td>Personnel Lead</td>
-                                                <td>Edinburgh</td>
-                                                <td>35</td>
-                                                <td>2012/09/26</td>
-                                                <td>$217,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jenette Caldwell</td>
-                                                <td>Development Lead</td>
-                                                <td>New York</td>
-                                                <td>30</td>
-                                                <td>2011/09/03</td>
-                                                <td>$345,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Yuri Berry</td>
-                                                <td>Chief Marketing Officer (CMO)</td>
-                                                <td>New York</td>
-                                                <td>40</td>
-                                                <td>2009/06/25</td>
-                                                <td>$675,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Caesar Vance</td>
-                                                <td>Pre-Sales Support</td>
-                                                <td>New York</td>
-                                                <td>21</td>
-                                                <td>2011/12/12</td>
-                                                <td>$106,450</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Doris Wilder</td>
-                                                <td>Sales Assistant</td>
-                                                <td>Sydney</td>
-                                                <td>23</td>
-                                                <td>2010/09/20</td>
-                                                <td>$85,600</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Angelica Ramos</td>
-                                                <td>Chief Executive Officer (CEO)</td>
-                                                <td>London</td>
-                                                <td>47</td>
-                                                <td>2009/10/09</td>
-                                                <td>$1,200,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Gavin Joyce</td>
-                                                <td>Developer</td>
-                                                <td>Edinburgh</td>
-                                                <td>42</td>
-                                                <td>2010/12/22</td>
-                                                <td>$92,575</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jennifer Chang</td>
-                                                <td>Regional Director</td>
-                                                <td>Singapore</td>
-                                                <td>28</td>
-                                                <td>2010/11/14</td>
-                                                <td>$357,650</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Brenden Wagner</td>
-                                                <td>Software Engineer</td>
-                                                <td>San Francisco</td>
-                                                <td>28</td>
-                                                <td>2011/06/07</td>
-                                                <td>$206,850</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Fiona Green</td>
-                                                <td>Chief Operating Officer (COO)</td>
-                                                <td>San Francisco</td>
-                                                <td>48</td>
-                                                <td>2010/03/11</td>
-                                                <td>$850,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Shou Itou</td>
-                                                <td>Regional Marketing</td>
-                                                <td>Tokyo</td>
-                                                <td>20</td>
-                                                <td>2011/08/14</td>
-                                                <td>$163,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Michelle House</td>
-                                                <td>Integration Specialist</td>
-                                                <td>Sydney</td>
-                                                <td>37</td>
-                                                <td>2011/06/02</td>
-                                                <td>$95,400</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Suki Burks</td>
-                                                <td>Developer</td>
-                                                <td>London</td>
-                                                <td>53</td>
-                                                <td>2009/10/22</td>
-                                                <td>$114,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Prescott Bartlett</td>
-                                                <td>Technical Author</td>
-                                                <td>London</td>
-                                                <td>27</td>
-                                                <td>2011/05/07</td>
-                                                <td>$145,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Gavin Cortez</td>
-                                                <td>Team Leader</td>
-                                                <td>San Francisco</td>
-                                                <td>22</td>
-                                                <td>2008/10/26</td>
-                                                <td>$235,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Martena Mccray</td>
-                                                <td>Post-Sales support</td>
-                                                <td>Edinburgh</td>
-                                                <td>46</td>
-                                                <td>2011/03/09</td>
-                                                <td>$324,050</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Unity Butler</td>
-                                                <td>Marketing Designer</td>
-                                                <td>San Francisco</td>
-                                                <td>47</td>
-                                                <td>2009/12/09</td>
-                                                <td>$85,675</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Howard Hatfield</td>
-                                                <td>Office Manager</td>
-                                                <td>San Francisco</td>
-                                                <td>51</td>
-                                                <td>2008/12/16</td>
-                                                <td>$164,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Hope Fuentes</td>
-                                                <td>Secretary</td>
-                                                <td>San Francisco</td>
-                                                <td>41</td>
-                                                <td>2010/02/12</td>
-                                                <td>$109,850</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Vivian Harrell</td>
-                                                <td>Financial Controller</td>
-                                                <td>San Francisco</td>
-                                                <td>62</td>
-                                                <td>2009/02/14</td>
-                                                <td>$452,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Timothy Mooney</td>
-                                                <td>Office Manager</td>
-                                                <td>London</td>
-                                                <td>37</td>
-                                                <td>2008/12/11</td>
-                                                <td>$136,200</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jackson Bradshaw</td>
-                                                <td>Director</td>
-                                                <td>New York</td>
-                                                <td>65</td>
-                                                <td>2008/09/26</td>
-                                                <td>$645,750</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Olivia Liang</td>
-                                                <td>Support Engineer</td>
-                                                <td>Singapore</td>
-                                                <td>64</td>
-                                                <td>2011/02/03</td>
-                                                <td>$234,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Bruno Nash</td>
-                                                <td>Software Engineer</td>
-                                                <td>London</td>
-                                                <td>38</td>
-                                                <td>2011/05/03</td>
-                                                <td>$163,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Sakura Yamamoto</td>
-                                                <td>Support Engineer</td>
-                                                <td>Tokyo</td>
-                                                <td>37</td>
-                                                <td>2009/08/19</td>
-                                                <td>$139,575</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Thor Walton</td>
-                                                <td>Developer</td>
-                                                <td>New York</td>
-                                                <td>61</td>
-                                                <td>2013/08/11</td>
-                                                <td>$98,540</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Finn Camacho</td>
-                                                <td>Support Engineer</td>
-                                                <td>San Francisco</td>
-                                                <td>47</td>
-                                                <td>2009/07/07</td>
-                                                <td>$87,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Serge Baldwin</td>
-                                                <td>Data Coordinator</td>
-                                                <td>Singapore</td>
-                                                <td>64</td>
-                                                <td>2012/04/09</td>
-                                                <td>$138,575</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Zenaida Frank</td>
-                                                <td>Software Engineer</td>
-                                                <td>New York</td>
-                                                <td>63</td>
-                                                <td>2010/01/04</td>
-                                                <td>$125,250</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Zorita Serrano</td>
-                                                <td>Software Engineer</td>
-                                                <td>San Francisco</td>
-                                                <td>56</td>
-                                                <td>2012/06/01</td>
-                                                <td>$115,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jennifer Acosta</td>
-                                                <td>Junior Javascript Developer</td>
-                                                <td>Edinburgh</td>
-                                                <td>43</td>
-                                                <td>2013/02/01</td>
-                                                <td>$75,650</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cara Stevens</td>
-                                                <td>Sales Assistant</td>
-                                                <td>New York</td>
-                                                <td>46</td>
-                                                <td>2011/12/06</td>
-                                                <td>$145,600</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Hermione Butler</td>
-                                                <td>Regional Director</td>
-                                                <td>London</td>
-                                                <td>47</td>
-                                                <td>2011/03/21</td>
-                                                <td>$356,250</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Lael Greer</td>
-                                                <td>Systems Administrator</td>
-                                                <td>London</td>
-                                                <td>21</td>
-                                                <td>2009/02/27</td>
-                                                <td>$103,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jonas Alexander</td>
-                                                <td>Developer</td>
-                                                <td>San Francisco</td>
-                                                <td>30</td>
-                                                <td>2010/07/14</td>
-                                                <td>$86,500</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Shad Decker</td>
-                                                <td>Regional Director</td>
-                                                <td>Edinburgh</td>
-                                                <td>51</td>
-                                                <td>2008/11/13</td>
-                                                <td>$183,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Michael Bruce</td>
-                                                <td>Javascript Developer</td>
-                                                <td>Singapore</td>
-                                                <td>29</td>
-                                                <td>2011/06/27</td>
-                                                <td>$183,000</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Donna Snider</td>
-                                                <td>Customer Support</td>
-                                                <td>New York</td>
-                                                <td>27</td>
-                                                <td>2011/01/25</td>
-                                                <td>$112,000</td>
-                                            </tr>
+                                        <tbody id="tbody_kemampuan_gerak_halus">
+                                            
                                         </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table> -->
+                                            
+                                    </table>
+
+                                    <br>
+                                    <hr>
+                                    <br>
+                                    <h5>KEMAMPUAN BICARA DAN BAHASA</h5>
+                                    <table id="table_kemampuan_bicara_dan_bahasa" class="cell-border">
+                                        <thead>
+                                            <td width="10%" >No</td>
+                                            <td width="80%">Stimulasi</td>
+                                            <td width="10%">Aksi</td>
+                                        </thead>
+                                        <tbody id="tbody_kemampuan_bicara_dan_bahasa">
+                                            
+                                        </tbody>
+                                            
+                                    </table>
+
+                                    <br>
+                                    <hr>
+                                    <br>
+                                    <h5>KEMAMPUAN SOSIALISASI DAN KEMANDIRIAN</h5>
+                                    <table id="table_kemampuan_sosialisasi_dan_kemandirian" class="cell-border">
+                                        <thead>
+                                            <td width="10%" >No</td>
+                                            <td width="80%">Stimulasi</td>
+                                            <td width="10%">Aksi</td>
+                                        </thead>
+                                        <tbody id="tbody_kemampuan_sosialisasi_dan_kemandirian">
+                                            
+                                        </tbody>
+                                       
+                                    </table>
+
+                                    <br>
+                                    <hr>
+                                    
                                 </div>
 
                                 
@@ -859,10 +392,18 @@
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <!-- <script type="text/javascript" src="js/datatables/datatables.min.js"></script> -->
+
+    <script src="sweet-alert/sweetalert.js"></script>
+    <script src="sweet-alert/toastr/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweet-alert/toastr/toastr.min.css">
+    <script src="sweet-alert/block/jquery.blockUI.js"></script>
+    <script src="main.js"></script>
+    <script src="main_user.js"></script>
+    
+
     <script>
-        $(document).ready( function () {
-            $('#myTable').DataTable();
-        } );
+        var data_full_kemampuan_gerak_kasar,data_full_kemampuan_gerak_halus,data_full_kemampuan_bicara_dan_bahasa,data_full_kemampuan_bersosialisasi_dan_kemandirian
 
         $(".btn_mulai").click(function() {
             $('html,body').animate({
@@ -872,12 +413,175 @@
         });
 
         $("#lanjut_ke_stimulasi").click(async function() {
-            // show div_stimulasi div
-            await $(".div_stimulasi").show();
-            await $('html,body').animate({
-                scrollTop: $(".div_stimulasi").offset().top},
-                'slow');
-                $("#sini_pertama").focus();
+            await sedang_proses()
+            // jika nama anak kosong, maka munculkan toast "Nama Anak Harus Diisi" dan focus ke nama anak, jika kelompok_umur belum terpilih, maka munculkan toast "Kelompok Umur Harus Diisi" dan focus ke kelompok_umur, jika jenis_kelamin belum terpilih, maka munculkan toast "Jenis Kelamin Harus Diisi" dan focus ke jenis_kelamin, jika tidak maka ok
+            if ($("#nama_anak").val() == "") {
+                $.unblockUI();
+                toastr.error("Nama Anak Harus Diisi");
+                $("#nama_anak").focus();
+            } else if ($("#kelompok_umur").val() == "" || $("#kelompok_umur").val() == null || $("#kelompok_umur").val() == undefined) {
+                $.unblockUI();
+                toastr.error("Kelompok Umur Harus Dipilih");
+                $("#kelompok_umur").focus();
+            } else if ($("#jk").val() == "" || $("#jk").val() == null || $("#jk").val() == undefined) {
+                $.unblockUI();
+                toastr.error("Jenis Kelamin Harus Dipilih");
+                $("#jk").focus();
+            } else {
+                let umur = $("#kelompok_umur").val();
+                // console.log(umur);
+                
+
+                await $("#nama_anak").attr("disabled", true);
+                await $("#kelompok_umur").attr("disabled", true);
+                await $("#jk").attr("disabled", true);
+                //hide div class="data_sebelumnya"
+                await $(".data_sebelumnya").hide();
+
+                let data = await get_data(umur)
+                // console.log(data);
+                $.unblockUI();
+                if(data == false){
+                    swal({
+                        title: "Error",
+                        text: "Jaringan Mungkin Bermasalah",
+                        type: "error",
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "OK",
+                        closeOnConfirm: false,
+                        dangerMode: true
+                    }).
+                    then(function(){
+                        window.location.href = "user_index.html";
+                    });
+                }else{
+                    await $(".div_stimulasi").show();
+                    await $('html,body').animate({
+                        scrollTop: $(".div_stimulasi").offset().top},
+                        'slow');
+                        $("#sini_pertama").focus();
+
+                    if (data.message == false) {
+                        // console.log('data belum lengkap');
+                        let html = `<center><h5>${data.data}</h5><button type="button" onclick="window.location.href='user_index.html'"  class="btn alime-btn btn-2 mb-2">Mulai Kembali</button> <br></center>`;
+                        $(".sini_stimulasi_div").html(html);
+                    }else if (data.status == true) {
+                        // console.log('data lengkap');
+                        let data_kemampuan_gerak_kasar = JSON.parse(data.data.kemampuan_gerak_kasar)
+                        let data_kemampuan_gerak_halus = JSON.parse(data.data.kemampuan_gerak_halus)
+                        let data_kemampuan_bicara_dan_bahasa = JSON.parse(data.data.kemampuan_bicara_dan_bahasa)
+                        let data_kemampuan_bersosialisasi_dan_kemandirian = JSON.parse(data.data.kemampuan_bersosialisasi_dan_kemandirian)
+
+                        data_full_kemampuan_gerak_kasar = data_kemampuan_gerak_kasar
+                        data_full_kemampuan_gerak_halus = data_kemampuan_gerak_halus
+                        data_full_kemampuan_bicara_dan_bahasa = data_kemampuan_bicara_dan_bahasa
+                        data_full_kemampuan_bersosialisasi_dan_kemandirian = data_kemampuan_bersosialisasi_dan_kemandirian
+
+                        //create var html_kemampuan_gerak_kasar with tr = length of data_kemampuan_gerak_kasar and 3 td, td = 1 to n, td = data_kemampuan_gerak_kasar[index].stimulasi ,td =checkbox with id="checkbox_data_kemampuan_gerak_kasar" and value = data_kemampuan_gerak_kasar[index].id , put html in tbody id="tbody_kemampuan_gerak_kasar"
+                        let html_kemampuan_gerak_kasar = "";
+                        for (let index = 0; index < data_kemampuan_gerak_kasar.length; index++) {
+                            html_kemampuan_gerak_kasar += `<tr>
+                            <td align="center">${index+1}</td>
+                            <td>${data_kemampuan_gerak_kasar[index].stimulasi}</td>
+                            <td align="center"><input type="checkbox" id="checkbox_data_kemampuan_gerak_kasar" value="${data_kemampuan_gerak_kasar[index].id}" class="checkbox_data_kemampuan_gerak_kasar"></td>
+                            </tr>`
+                        }
+                        $("#tbody_kemampuan_gerak_kasar").html(html_kemampuan_gerak_kasar);
+
+                        let html_kemampuan_gerak_halus = "";
+                        for (let index = 0; index < data_kemampuan_gerak_halus.length; index++) {
+                            html_kemampuan_gerak_halus += `<tr>
+                            <td align="center">${index+1}</td>
+                            <td>${data_kemampuan_gerak_halus[index].stimulasi}</td>
+                            <td align="center"><input type="checkbox" id="checkbox_data_kemampuan_gerak_halus" value="${data_kemampuan_gerak_halus[index].id}" class="checkbox_data_kemampuan_gerak_halus"></td>
+                            </tr>`
+                        }
+                        $("#tbody_kemampuan_gerak_halus").html(html_kemampuan_gerak_halus);
+
+                        let html_kemampuan_bicara_dan_bahasa = "";
+                        for (let index = 0; index < data_kemampuan_bicara_dan_bahasa.length; index++) {
+                            html_kemampuan_bicara_dan_bahasa += `<tr>
+                            <td align="center">${index+1}</td>
+                            <td>${data_kemampuan_bicara_dan_bahasa[index].stimulasi}</td>
+                            <td align="center"><input type="checkbox" id="checkbox_data_kemampuan_bicara_dan_bahasa" value="${data_kemampuan_bicara_dan_bahasa[index].id}" class="checkbox_data_kemampuan_bicara_dan_bahasa"></td>
+                            </tr>`
+                        }
+                        $("#tbody_kemampuan_bicara_dan_bahasa").html(html_kemampuan_bicara_dan_bahasa);
+
+                        let html_kemampuan_bersosialisasi_dan_kemandirian = "";
+                        for (let index = 0; index < data_kemampuan_bersosialisasi_dan_kemandirian.length; index++) {
+                            html_kemampuan_bersosialisasi_dan_kemandirian += `<tr>
+                            <td align="center">${index+1}</td>
+                            <td>${data_kemampuan_bersosialisasi_dan_kemandirian[index].stimulasi}</td>
+                            <td align="center"><input type="checkbox" id="checkbox_data_kemampuan_bersosialisasi_dan_kemandirian" value="${data_kemampuan_bersosialisasi_dan_kemandirian[index].id}" class="checkbox_data_kemampuan_bersosialisasi_dan_kemandirian"></td>
+                            </tr>`
+                        }
+                        $("#tbody_kemampuan_sosialisasi_dan_kemandirian").html(html_kemampuan_bersosialisasi_dan_kemandirian);
+                        
+
+                        
+
+                        
+
+                        
+
+
+                        $('#table_kemampuan_gerak_kasar').DataTable({
+                            //disable search and entries and sorting
+                            "searching": false,
+                            "lengthChange": false,
+                            "ordering": false,
+                            "info": false,
+                            "paging": false,
+                        });
+                    
+                        $('#table_kemampuan_gerak_halus').DataTable({
+                            //disable search and entries and sorting
+                            "searching": false,
+                            "lengthChange": false,
+                            "ordering": false,
+                            "info": false,
+                            "paging": false,
+                        });
+                    
+                        $('#table_kemampuan_bicara_dan_bahasa').DataTable({
+                            //disable search and entries and sorting
+                            "searching": false,
+                            "lengthChange": false,
+                            "ordering": false,
+                            "info": false,
+                            "paging": false,
+                        });
+                    
+                        $('#table_kemampuan_sosialisasi_dan_kemandirian').DataTable({
+                            //disable search and entries and sorting
+                            "searching": false,
+                            "lengthChange": false,
+                            "ordering": false,
+                            "info": false,
+                            "paging": false,
+                        });
+                    
+                    }
+
+
+                   
+                    
+                        
+                }
+                
+
+                
+                
+
+                
+            
+            }
+            
+               
+            
+
+               
         });
         
         $("#kesimpulan").click(async function() {
@@ -887,9 +591,102 @@
                 scrollTop: $(".div_intervensi").offset().top},
                 'slow');
                 // $("#sini_pertama").focus();
+
+            // create var data_kemampuan_gerak_kasar = checkbox_data_kemampuan_gerak_kasar that has been checked
+            let data_kemampuan_gerak_kasar = [];
+            let nilai_full = 0;
+            $(".checkbox_data_kemampuan_gerak_kasar:checked").each(function(){
+                let idnya= $(this).val();
+                //loop data_full_kemampuan_gerak_kasar and cek if idnya is equal to data_kemampuan_gerak_kasar[i].id, then push data_full_kemampuan_gerak_kasar[i].stimulasi to data_kemampuan_gerak_kasar
+                for (let i = 0; i < data_full_kemampuan_gerak_kasar.length; i++) {
+                    if (idnya == data_full_kemampuan_gerak_kasar[i].id) {
+                        data_kemampuan_gerak_kasar.push(data_full_kemampuan_gerak_kasar[i].stimulasi);
+                        nilai_full += parseInt(data_full_kemampuan_gerak_kasar[i].nilai_stimulasi);
+                    }
+                }
+            });
+
+            // create var data_kemampuan_gerak_halus = checkbox_data_kemampuan_gerak_halus that has been checked
+            let data_kemampuan_gerak_halus = [];
+            $(".checkbox_data_kemampuan_gerak_halus:checked").each(function(){
+                let idnya= $(this).val();
+                //loop data_full_kemampuan_gerak_halus and cek if idnya is equal to data_kemampuan_gerak_halus[i].id, then push data_full_kemampuan_gerak_halus[i].stimulasi to data_kemampuan_gerak_halus
+                for (let i = 0; i < data_full_kemampuan_gerak_halus.length; i++) {
+                    if (idnya == data_full_kemampuan_gerak_halus[i].id) {
+                        data_kemampuan_gerak_halus.push(data_full_kemampuan_gerak_halus[i].stimulasi);
+                        nilai_full += parseInt(data_full_kemampuan_gerak_halus[i].nilai_stimulasi);
+                    }
+                }
+            });
+
+            // create var data_kemampuan_bicara_dan_bahasa = checkbox_data_kemampuan_bicara_dan_bahasa that has been checked
+            let data_kemampuan_bicara_dan_bahasa = [];
+            $(".checkbox_data_kemampuan_bicara_dan_bahasa:checked").each(function(){
+                let idnya= $(this).val();
+                //loop data_full_kemampuan_bicara_dan_bahasa and cek if idnya is equal to data_kemampuan_bicara_dan_bahasa[i].id, then push data_full_kemampuan_bicara_dan_bahasa[i].stimulasi to data_kemampuan_bicara_dan_bahasa
+                for (let i = 0; i < data_full_kemampuan_bicara_dan_bahasa.length; i++) {
+                    if (idnya == data_full_kemampuan_bicara_dan_bahasa[i].id) {
+                        data_kemampuan_bicara_dan_bahasa.push(data_full_kemampuan_bicara_dan_bahasa[i].stimulasi);
+                        nilai_full += parseInt(data_full_kemampuan_bicara_dan_bahasa[i].nilai_stimulasi);
+                    }
+                }
+            });
+
+            // create var data_kemampuan_bersosialisasi_dan_kemandirian = checkbox_data_kemampuan_bersosialisasi_dan_kemandirian that has been checked
+            let data_kemampuan_bersosialisasi_dan_kemandirian = [];
+            $(".checkbox_data_kemampuan_bersosialisasi_dan_kemandirian:checked").each(function(){
+                let idnya= $(this).val();
+                //loop data_full_kemampuan_bersosialisasi_dan_kemandirian and cek if idnya is equal to data_kemampuan_bersosialisasi_dan_kemandirian[i].id, then push data_full_kemampuan_bersosialisasi_dan_kemandirian[i].stimulasi to data_kemampuan_bersosialisasi_dan_kemandirian
+                for (let i = 0; i < data_full_kemampuan_bersosialisasi_dan_kemandirian.length; i++) {
+                    if (idnya == data_full_kemampuan_bersosialisasi_dan_kemandirian[i].id) {
+                        data_kemampuan_bersosialisasi_dan_kemandirian.push(data_full_kemampuan_bersosialisasi_dan_kemandirian[i].stimulasi);
+                        nilai_full += parseInt(data_full_kemampuan_bersosialisasi_dan_kemandirian[i].nilai_stimulasi);
+                    }
+                }
+            });
+
+            // console.log(data_kemampuan_gerak_kasar);
+            // console.log(data_kemampuan_gerak_halus);
+            // console.log(data_kemampuan_bicara_dan_bahasa);
+            // console.log(data_kemampuan_bersosialisasi_dan_kemandirian);
+            // console.log(nilai_full);
+
+            nilai_full = (nilai_full/4 < 0) ? 0 : nilai_full/4;
+            
+            // let data_kesimpulan_intervensi
+            
+            
         });
 
+    
+        // create function get_data with parameter id_data
+        function get_data(id_data) {
+            // create var data and get data from database with ajax ,if success then return data else return false
+            var data = $.ajax({
+                url: url+"get_data?id="+id_data,
+               
+                type: "GET",
+                async: false
+            });
+            
+            // jika data.status == 401 maka console.log("401"),jika data.status == 200 maka console.log("200"),jika tidak maka console.log("tidak ada data")
+            if (data.status == 201) {
+                return data.responseJSON;
+            }  else if (data.status == 200) {
+                // console.log("200");
+                return data.responseJSON;
+            } else {
+                console.log("tidak ada data");
+                return false;
+            }
+
+
+        }
+
+        function get_kesimpulan_intervensi(id_data) {
+        }
     </script>
+    
 
 </body>
 
