@@ -1,5 +1,6 @@
 // localStorage.removeItem('data');
 //bikin fungsi cek_user
+var id_user
 function cek_user(){
   //bikin var data = localStorage.getItem('data'); dan kemudian cek apakah data ada atau tidak
   let data = localStorage.getItem('data');
@@ -19,6 +20,7 @@ function cek_user(){
     });
   }else{
     data = JSON.parse(data)
+    id_user = data.id_user
     // console.log(data)
 
     $.ajax({
@@ -79,3 +81,38 @@ function cek_user(){
 }
 
 cek_user()
+
+function logout(){
+  //create swal "Yakin Ingin Keluar?"
+  swal({
+    icon: "info",
+    title: "Yakin Ingin Keluar?",
+    text: "",
+    type: "info",
+    showCancelButton: true,
+    confirmButtonColor: "#DD6B55",
+    confirmButtonText: "Ya",
+    cancelButtonText: "Tidak",
+    closeOnConfirm: false,
+    closeOnCancel: false
+  }).then(function(isConfirm){
+    if (isConfirm) {
+      //jika yakin maka akan menghapus data localStorage dan diarahkan ke halaman login
+      localStorage.removeItem('data');
+      //create swal "Berhasil Keluar"
+      swal({
+        icon: "success",
+        title: "Terima Kasih",
+        text: "Anda Telah Logout",
+        type: "success",
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "OK",
+        closeOnConfirm: false,
+      }).then(function(){
+        window.location.href = "index.html";
+      });
+
+    } 
+  })
+
+}

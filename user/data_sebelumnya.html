@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Sistem Stimulasi Dan Intervensi Anak 1 Hingga 5 Tahun - Halaman Pendaftaran</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/core-img/favicon.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sweet-alert/sweetalert.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/> -->
+    <link rel="stylesheet" type="text/css" href="js/datatables/datatables.min.css"/>
+    <style>
+        /* center the title and text of sweet alert */
+        .swal-title,.swal-text {
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- /Preloader -->
+
+    <div class="top-search-area" id="sini_modal">
+      
+    </div>
+    <!-- Header Area Start -->
+    <header class="header-area">
+      <!-- Main Header Start -->
+      <div class="main-header-area">
+          <div class="classy-nav-container breakpoint-off">
+              <div class="container">
+                  <!-- Classy Menu -->
+                  <nav class="classy-navbar justify-content-between" id="alimeNav">
+
+                      <!-- Logo -->
+                      <a class="nav-brand" href="./index.html"><img src="./img/core-img/logo.png" alt=""></a>
+
+                      <!-- Navbar Toggler -->
+                      <div class="classy-navbar-toggler">
+                          <span class="navbarToggler"><span></span><span></span><span></span></span>
+                      </div>
+
+                      <!-- Menu -->
+                      <div class="classy-menu">
+                          <!-- Menu Close Button -->
+                          <div class="classycloseIcon">
+                              <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                          </div>
+                          <!-- Nav Start -->
+                          <div class="classynav">
+                              <ul id="nav">
+                                  <li><a href="user_index.html">Halaman Utama</a></li>
+                                  <!-- <li><a href="#">Pages</a>
+                                      <ul class="dropdown">
+                                          <li><a href="./index.html">- Home</a></li>
+                                          <li><a href="./about.html">- About</a></li>
+                                          <li><a href="./gallery.html">- Gallery</a></li>
+                                          <li><a href="./blog.html">- Blog</a></li>
+                                          <li><a href="./single-blog.html">- Blog Details</a></li>
+                                          <li><a href="./contact.html">- Contact</a></li>
+                                          <li><a href="#">- Dropdown</a>
+                                              <ul class="dropdown">
+                                                  <li><a href="#">- Dropdown Item</a></li>
+                                                  <li><a href="#">- Dropdown Item</a></li>
+                                                  <li><a href="#">- Dropdown Item</a></li>
+                                                  <li><a href="#">- Dropdown Item</a></li>
+                                              </ul>
+                                          </li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="./about.html">About</a></li>
+                                  <li><a href="./gallery.html">Gallery</a></li> -->
+                                  <li><a href="data_sebelumnya.html">Data Sebelumnya</a></li>
+                                  <li><a href="#" onclick="logout()">Logout</a></li>
+                                  <li><a href="#" style="color: aqua; cursor: default;" class="nama_usernya">Nama User</a></li>
+                              </ul>
+
+                              <!-- Search Icon -->
+                              <!-- <div class="search-icon" data-toggle="modal" data-target="#searchModal"><i class="ti-search"></i></div> -->
+                          </div>
+                          <!-- Nav End -->
+                      </div>
+                  </nav>
+              </div>
+          </div>
+      </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Breadcrumb Area Start -->
+    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/2.jpg);">
+        <div class="container h-100" >
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="page-title">Data Sebelumnya</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="user_index.html"><i class="icon_house_alt"></i> Halaman Utama</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Data Sebelumnya</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Area End -->
+
+    
+
+   
+
+    
+
+    <!-- Comment Area Start -->
+    <br>
+    <div class="comment-area section-padding-0">
+        <div class="container" style="background-color: aliceblue; border-radius: 25px;">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    
+
+                    <!-- Leave A Reply -->
+                    <div class="alime-contact-form mt-30">
+                        <!-- <h4 class="mb-30">Login</h4> -->
+
+                        <!-- Form -->
+                        <form id="sini_form">
+                            <div class="row" id="div_log_history">
+                              <div class="col-12"><h5 class="mb-10">Log History</h5></div>
+                              <div class="col-12" id="div_table_log_history"></div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Comment Area End -->
+    
+     <!-- Footer Area Start -->
+     <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-content d-flex align-items-center justify-content-between">
+                        <!-- Copywrite Text -->
+                        <div class="copywrite-text">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://kicap-karan.com" target="_blank">Kicap Karan</a>.  
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                        <!-- Footer Logo -->
+                        <!-- <div class="footer-logo">
+                            <a href="#"><img src="img/core-img/logo2.png" alt=""></a>
+                        </div> -->
+                        <!-- Social Info -->
+                        <div class="social-info">
+                            <a href="#"><i class="ti-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="ti-instagram" aria-hidden="true"></i></a>
+                            <a href="#"><i class="ti-linkedin" aria-hidden="true"></i></a>
+                            <a href="#"><i class="ti-youtube" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    
+
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/alime.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script>
+    <script src="sweet-alert/sweetalert.js"></script>
+    <script src="sweet-alert/toastr/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweet-alert/toastr/toastr.min.css">
+    <script src="sweet-alert/block/jquery.blockUI.js"></script>
+
+    <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script> -->
+    <script type="text/javascript" src="js/datatables/datatables.min.js"></script>
+
+    <script src="sweet-alert/sweetalert.js"></script>
+    <script src="sweet-alert/toastr/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweet-alert/toastr/toastr.min.css">
+    <script src="sweet-alert/block/jquery.blockUI.js"></script>
+    <script src="main.js"></script>
+    <script src="main_user.js"></script>
+
+    <script>
+      //bikin fungsi get_data_log_history
+      function get_data_log_history(){
+        $.ajax({
+          url: url+"get_data_log_history?id_user="+id_user,
+          type: 'GET',
+          headers: {
+            //basicAuth username="Kicap_karan", password="karan_kicap456" 
+            'Authorization': 'Basic ' + btoa('Kicap_karan' + ':' + 'karan_kicap456') 
+          },
+          beforeSend: function(){
+            sedang_proses()
+          },
+          success: function(response){
+            // $('#table_log_history').html(response);
+            if (response.status == true) {
+              //bikin var data = response.data, kemudian bikin var html untuk table dengan width 100% ,id table_log_history, dengan 4 column, "NO" ,"Nama Anak" , "Tanggal Periksa", "Aksi"
+              var data = response.data,
+              html = '<table class="table table-striped table-bordered" id="table_log_history" width="100%">'+
+                      '<thead>'+
+                        '<tr>'+
+                          '<th align="center">NO</th>'+
+                          '<th>Nama Anak</th>'+
+                          '<th>Tanggal Periksa</th>'+
+                          '<th align="center">Aksi</th>'+
+                        '</tr>'+
+                      '</thead>'+
+                      '<tbody>';
+              // bikin tr berdasarkan looping data, dimana "No" = 1 to n, "Nama Anak" = data.nama_anak, "Tanggal Periksa" = data.created_at, "Aksi" = html button dengan class btn-primary dengan id "btn_detail_log_history" dan "btn_delete_log_history"
+              for (var i = 0; i < data.length; i++) {
+                html += '<tr>'+
+                          '<td align="center">'+(i+1)+'</td>'+
+                          '<td>'+data[i].nama_anak+'</td>'+
+                          '<td>'+data[i].created_at+'</td>'+
+                          '<td align="center">'+
+                            '<button class="btn btn-sm btn-primary" type="button"  id="btn_detail_log_history" data-id="'+data[i].id_stimulasi_intervensi+'">Detail</button>'+
+                          '</td>'+
+                        '</tr>';
+              }
+              html += '</tbody>'+
+                      '</table><br>';
+              $('#div_table_log_history').html(html);
+
+              $('#table_log_history').DataTable();
+              
+
+            }else{
+              $('#div_log_history').html(`<div class="col-12"><center><h5 class="mb-10">Belum Pernah Menggunakan Sistem Sebelumnya</h5></center></div><div class="col-12"><center><button type="button" onclick="window.location.href='user_index.html'" class="btn alime-btn btn-2 mt-15 mb-10">Mulai Stimulasi</button></center><br></div>`);
+            }
+          },
+          error: function(response){
+            console.log(response);
+          }
+        });
+      }
+      get_data_log_history();
+
+      // btn_detail_log_history onclick
+      $('#div_table_log_history').on('click', '#btn_detail_log_history', function(){
+        var id_stimulasi_intervensi = $(this).data('id');
+        // create ajax check_data_log_history by id_stimulasi_intervensi
+        $.ajax({
+          url: url+"check_data_log_history?id="+id_stimulasi_intervensi,
+          type: 'GET',
+          headers: {
+            //basicAuth username="Kicap_karan", password="karan_kicap456" 
+            'Authorization': 'Basic ' + btoa('Kicap_karan' + ':' + 'karan_kicap456') 
+          },
+          beforeSend: function(){
+            sedang_proses()
+          },
+          success: function(response){
+            $.unblockUI();
+            console.log(response)
+            //create var data = response.data, kemudian bikin html modal
+            var data = response.data,
+            html = `<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">`;
+            
+            // bikin html dengan data.nama_anak, data.tanggal_periksa, data.keterangan, data.keterangan_detail
+            html += `<div class="row justify-content-center" style="background-color: aliceblue; border-radius: 25px;">
+              <div class="col-lg-12">
+                <div class="alime-contact-form mt-30">
+                  <div class="row">`;
+            
+            // bikin html dengan label ="Nama Anak" dan input dengan class form-control value = data.nama_anak, label = "Kelompok Umur" dan input dengan class form-control value =  jika kelompok umur 1, maka value="12-18 bulan" jika kelompok umur 2, maka value="18-24 bulan" jika kelompok umur 3, maka value="24-36 bulan" jika kelompok umur 4, maka value="36-48 bulan" jika kelompok umur 5, maka value="48-60 bulan" , label = "Jenis Kelamin" dan input dengan class form-control value = data.jk, label = "Tanggal Periksa" dan input dengan class form-control value = data.created_at
+            html += `<div class="col-lg-6">
+                      <div class="contact-form-style mb-30">
+                        <div class="contact-form-style-head">
+                          <h6>Nama Anak</h6>
+                        </div>
+                        <div class="contact-form-style-body">
+                          <input type="text" class="form-control" value="`+data.nama_anak+`" disabled style="color:black">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="contact-form-style mb-30">
+                        <div class="contact-form-style-head">
+                          <h6>Kelompok Umur</h6>
+                        </div>
+                        <div class="contact-form-style-body">
+                          <input type="text" class="form-control" value="${
+                            // jika kelompok umur 1, maka value="12-18 bulan" jika kelompok umur 2, maka value="18-24 bulan" jika kelompok umur 3, maka value="24-36 bulan" jika kelompok umur 4, maka value="36-48 bulan" jika kelompok umur 5, maka value="48-60 bulan"
+                            data.kelompok_umur == 1 ? "12-18 bulan" : data.kelompok_umur == 2 ? "18-24 bulan" : data.kelompok_umur == 3 ? "24-36 bulan" : data.kelompok_umur == 4 ? "36-48 bulan" : data.kelompok_umur == 5 ? "48-60 bulan" : "-"
+                          }" disabled style="color:black">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="contact-form-style mb-30">
+                        <div class="contact-form-style-head">
+                          <h6>Jenis Kelamin</h6>
+                        </div>
+                        <div class="contact-form-style-body">
+                          <input type="text" class="form-control" value="`+data.jk+`" disabled style="color:black">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="contact-form-style mb-30">
+                        <div class="contact-form-style-head">
+                          <h6>Tanggal Periksa</h6>
+                        </div>
+                        <div class="contact-form-style-body">
+                          <input type="text" class="form-control" value="`+data.created_at+`" disabled style="color:black">
+                        </div>
+                      </div>
+                    </div>`;
+
+            // bikin var data_kemampuan_gerak_kasar = JSON.parse(data.kemampuan_gerak_kasar)
+            var data_kemampuan_gerak_kasar = JSON.parse(data.kemampuan_gerak_kasar);
+
+            if (data_kemampuan_gerak_kasar.length >0) {
+                //bikin html dengan hr dan kemudian label="Stimulasi Kemampuan Gerak Kasar" dan table width = 100% ,id="table_kemampuan_gerak_kasar"  dengan 2 column , 1st column = "NO" dan 2nd column = "Stimulasi"
+                html += `<div class="col-lg-12"><hr>
+                        <div class="contact-form-style mb-30">
+                          <div class="contact-form-style-head">
+                            <h6>Stimulasi Kemampuan Gerak Kasar</h6>
+                          </div>
+                          <div class="contact-form-style-body">
+                            <table width="100%" class="cell-border" id="table_kemampuan_gerak_kasar">
+                              <thead style='display:none;'>
+                                <tr>
+                                  <th>Stimulasi</th>
+                                </tr>
+                              </thead>
+                              <tbody>`;
+              // bikin tr dengan jumlah data_kemampuan_gerak_kasar.length ,column "NO" = 1 to n, column "Stimulasi" = data_kemampuan_gerak_kasar[i] dan center column "NO"
+              for(var i = 0; i < data_kemampuan_gerak_kasar.length; i++){
+                html += `<tr>
+                          <td>`+data_kemampuan_gerak_kasar[i]+`</td>
+                        </tr>`;
+              }
+              // tutup tbody dan table
+              html += `</tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>`;
+
+            }else{
+              // bikin html "Tiada Stimulasi Kemampuan Gerak Kasar"
+              html += `<div class="col-lg-12"><hr>
+                        <div class="contact-form-style mb-30">
+                          <div class="contact-form-style-head">
+                            <h6>Tiada Stimulasi Kemampuan Gerak Kasar</h6>
+                          </div>
+                        </div>
+                      </div>`;
+            }
+            
+            
+
+            // bikin var data_kemampuan_gerak_halus = JSON.parse(data.kemampuan_gerak_halus)
+            var data_kemampuan_gerak_halus = JSON.parse(data.kemampuan_gerak_halus);
+
+            if (data_kemampuan_gerak_halus.length > 0) {
+              //bikin html dengan hr dan kemudian label="Stimulasi Kemampuan Gerak Kasar" dan table width = 100% ,id="table_kemampuan_gerak_halus"  dengan 2 column , 1st column = "NO" dan 2nd column = "Stimulasi"
+              html += `<div class="col-lg-12"><hr>
+                        <div class="contact-form-style mb-30">
+                          <div class="contact-form-style-head">
+                            <h6>Stimulasi Kemampuan Gerak Halus</h6>
+                          </div>
+                          <div class="contact-form-style-body">
+                            <table width="100%" class="cell-border" id="table_kemampuan_gerak_halus">
+                              <thead style='display:none;'>
+                                <tr>
+                                  <th>Stimulasi</th>
+                                </tr>
+                              </thead>
+                              <tbody>`;
+              // bikin tr dengan jumlah data_kemampuan_gerak_halus.length ,column "NO" = 1 to n, column "Stimulasi" = data_kemampuan_gerak_halus[i] dan center column "NO"
+              for(var i = 0; i < data_kemampuan_gerak_halus.length; i++){
+                html += `<tr>
+                          <td>`+data_kemampuan_gerak_halus[i]+`</td>
+                        </tr>`;
+              }
+              // tutup tbody dan table
+              html += `</tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>`;
+            }else{
+              // bikin html "Tiada Stimulasi Kemampuan Gerak Halus"
+              html += `<div class="col-lg-12"><hr>
+                        <div class="contact-form-style mb-30">
+                          <div class="contact-form-style-head">
+                            <h6>Tiada Stimulasi Kemampuan Gerak Halus</h6>
+                          </div>
+                        </div>
+                      </div>`;
+            }
+            
+              
+                    
+            // bikin var data_kemampuan_bicara_dan_bahasa = JSON.parse(data.kemampuan_bicara_dan_bahasa)
+            var data_kemampuan_bicara_dan_bahasa = JSON.parse(data.kemampuan_bicara_dan_bahasa);
+            
+            if (data_kemampuan_bicara_dan_bahasa.length > 0) {
+               //bikin html dengan hr dan kemudian label="Stimulasi Kemampuan Gerak Kasar" dan table width = 100% ,id="table_kemampuan_bicara_dan_bahasa"  dengan 2 column , 1st column = "NO" dan 2nd column = "Stimulasi"
+               html += `<div class="col-lg-12"><hr>
+                        <div class="contact-form-style mb-30">
+                          <div class="contact-form-style-head">
+                            <h6>Stimulasi Kemampuan Bicara Dan Bahasa</h6>
+                          </div>
+                          <div class="contact-form-style-body">
+                            <table width="100%" class="cell-border" id="table_kemampuan_bicara_dan_bahasa">
+                              <thead style='display:none;'>
+                                <tr>
+                                  <th>Stimulasi</th>
+                                </tr>
+                              </thead>
+                              <tbody>`;
+              // bikin tr dengan jumlah data_kemampuan_bicara_dan_bahasa.length ,column "NO" = 1 to n, column "Stimulasi" = data_kemampuan_bicara_dan_bahasa[i] dan center column "NO"
+              for(var i = 0; i < data_kemampuan_bicara_dan_bahasa.length; i++){
+                html += `<tr>
+                          <td>`+data_kemampuan_bicara_dan_bahasa[i]+`</td>
+                        </tr>`;
+              }
+              // tutup tbody dan table
+              html += `</tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>`;
+
+
+            }else{
+              // bikin html "Tiada Stimulasi Kemampuan Bicara Dan Bahasa"
+              html += `<div class="col-lg-12"><hr>
+                        <div class="contact-form-style mb-30">
+                          <div class="contact-form-style-head">
+                            <h6>Tiada Stimulasi Kemampuan Bicara Dan Bahasa</h6>
+                          </div>
+                        </div>
+                      </div>`;
+            }
+
+            // bikin var data_kemampuan_bersosialisasi_dan_kemandirian = JSON.parse(data.kemampuan_bersosialisasi_dan_kemandirian)
+            var data_kemampuan_bersosialisasi_dan_kemandirian = JSON.parse(data.kemampuan_bersosialisasi_dan_kemandirian);
+            
+            if (data_kemampuan_bersosialisasi_dan_kemandirian.length > 0) {
+               //bikin html dengan hr dan kemudian label="Stimulasi Kemampuan Gerak Kasar" dan table width = 100% ,id="table_kemampuan_bersosialisasi_dan_kemandirian"  dengan 2 column , 1st column = "NO" dan 2nd column = "Stimulasi"
+               html += `<div class="col-lg-12"><hr>
+                        <div class="contact-form-style mb-30">
+                          <div class="contact-form-style-head">
+                            <h6>Stimulasi Kemampuan Bicara Dan Bahasa</h6>
+                          </div>
+                          <div class="contact-form-style-body">
+                            <table width="100%" class="cell-border" id="table_kemampuan_bersosialisasi_dan_kemandirian">
+                              <thead style='display:none;'>
+                                <tr>
+                                  <th>Stimulasi</th>
+                                </tr>
+                              </thead>
+                              <tbody>`;
+              // bikin tr dengan jumlah data_kemampuan_bersosialisasi_dan_kemandirian.length ,column "NO" = 1 to n, column "Stimulasi" = data_kemampuan_bersosialisasi_dan_kemandirian[i] dan center column "NO"
+              for(var i = 0; i < data_kemampuan_bersosialisasi_dan_kemandirian.length; i++){
+                html += `<tr>
+                          <td>`+data_kemampuan_bersosialisasi_dan_kemandirian[i]+`</td>
+                        </tr>`;
+              }
+              // tutup tbody dan table
+              html += `</tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>`;
+
+
+            }else{
+              // bikin html "Tiada Stimulasi Kemampuan Sosialisasi Dan Kemandirian"
+              html += `<div class="col-lg-12"><hr>
+                        <div class="contact-form-style mb-30">
+                          <div class="contact-form-style-head">
+                            <h6>Tiada Stimulasi Kemampuan Sosialisasi Dan Kemandirian</h6>
+                          </div>
+                        </div>
+                      </div>`;
+            }
+             
+             
+            // bikin html dengan hr dan kemudian label="Kesimpulan" dan textarea = data.kesimpulan resize = none
+            html += `<div class="col-lg-12"><hr>
+                      <div class="contact-form-style mb-30">
+                        <div class="contact-form-style-head">
+                          <h6>Kesimpulan</h6>
+                        </div>
+                        <div class="contact-form-style-body">
+                          <textarea class="form-control" rows="5" style="resize: none; color:black" readonly >`+data.kesimpulan+`</textarea>
+                        </div>
+                      </div>
+                    </div>`;
+            
+
+            //bikin html dengan hr dan kemudian label="Intervensi" dan textarea = data.intervensi resize = none
+            html += `<div class="col-lg-12"><hr>
+                      <div class="contact-form-style mb-30">
+                        <div class="contact-form-style-head">
+                          <h6>Intervensi</h6>
+                        </div>
+                        <div class="contact-form-style-body">
+                          <textarea class="form-control" rows="5" style="resize: none; color:black" readonly>`+data.intervensi+`</textarea>
+                        </div>
+                      </div>
+                    </div>`;
+           
+            //bikin html dengan button modal close center
+            html += `<div class="col-lg-12">
+                      <div class="contact-form-style mb-30">
+                        <div class="contact-form-style-body text-center">
+                          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>`;
+
+            html +=`</div>
+                
+                </div>
+
+              </div>
+            </div>`;
+                          
+            html +=`</div>
+                    </div>
+                </div>
+            </div>`;
+            //bikin modal dengan id modal_detail_log_history
+            $('#sini_modal').html(html);
+
+            //datatables table_kemampuan_gerak_kasar
+
+            if (data_kemampuan_gerak_kasar.length > 0) {
+              
+              $('#table_kemampuan_gerak_kasar').DataTable({
+                //disable search and entries and sorting\
+              
+                "searching": false,
+                "lengthChange": false,
+                "ordering": false,
+                "info": false,
+                "paging": false,
+              });
+              
+            }
+            
+
+            if (data_kemampuan_gerak_halus.length > 0) {
+              $('#table_kemampuan_gerak_halus').DataTable({
+                //disable search and entries and sorting\
+              
+                "searching": false,
+                "lengthChange": false,
+                "ordering": false,
+                "info": false,
+                "paging": false,
+              });
+
+            }
+
+            if (data_kemampuan_bicara_dan_bahasa.length > 0) {
+              $('#table_kemampuan_bicara_dan_bahasa').DataTable({
+                //disable search and entries and sorting\
+              
+                "searching": false,
+                "lengthChange": false,
+                "ordering": false,
+                "info": false,
+                "paging": false,
+              });
+
+            
+              
+            }
+             
+            
+            if (data_kemampuan_bersosialisasi_dan_kemandirian.length > 0) {
+              $('#table_kemampuan_bersosialisasi_dan_kemandirian').DataTable({
+                //disable search and entries and sorting\
+              
+                "searching": false,
+                "lengthChange": false,
+                "ordering": false,
+                "info": false,
+                "paging": false,
+              });
+
+            
+              
+            }
+              
+           
+            $('#searchModal').modal('show');
+          },
+          error: function(response){
+            $.unblockUI();
+            console.log(response);
+          }
+        }); 
+
+      });
+    </script>
+
+</body>
+
+</html>

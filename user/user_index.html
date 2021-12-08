@@ -8,15 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Sistem Stimulasi Dan Intervensi Anak 1 Hingga 5 Tahun - Halaman Utama</title>
+    <title>Sistem Stimulasi Dan Intervensi Anak 1 Hingga 5 Tahun - Data Sebelumnya</title>
 
     <!-- Favicon -->
     <link rel="icon" href="./img/core-img/favicon.png">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>
-    <!-- <link rel="stylesheet" type="text/css" href="js/datatables/datatables.min.css"/> -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/> -->
+    <link rel="stylesheet" type="text/css" href="js/datatables/datatables.min.css"/>
 
     <style>
         /* center the title and text of sweet alert */
@@ -60,7 +60,7 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li><a href="index.html">Halaman Utama</a></li>
+                                    <li><a href="user_index.html">Halaman Utama</a></li>
                                     <!-- <li><a href="#">Pages</a>
                                         <ul class="dropdown">
                                             <li><a href="./index.html">- Home</a></li>
@@ -81,8 +81,8 @@
                                     </li>
                                     <li><a href="./about.html">About</a></li>
                                     <li><a href="./gallery.html">Gallery</a></li> -->
-                                    <li><a href="login.html">Data Sebelumnya</a></li>
-                                    <li><a href="login.html">Logout</a></li>
+                                    <li><a href="data_sebelumnya.html">Data Sebelumnya</a></li>
+                                    <li><a href="#" onclick="logout()">Logout</a></li>
                                     <li><a href="#" style="color: aqua; cursor: default;" class="nama_usernya">Nama User</a></li>
                                 </ul>
 
@@ -192,7 +192,7 @@
                             </div>
                             
                             <div class="col-12 data_sebelumnya" >
-                                <center class="mb-10">Lihat <a href="login.html" style="color: blue;"> Data Sebelumnya</a></center>
+                                <center class="mb-10">Lihat <a href="data_sebelumnya.html" style="color: blue;"> Data Sebelumnya</a></center>
                             </div>
                         </div>
                     
@@ -288,7 +288,7 @@
 
                                 
 
-                                <div class="col-12">
+                                <div class="col-12" id="div_button_kesimpulan_intervensi">
                                     <center><button type="button" id="kesimpulan" class="btn alime-btn btn-2 mt-15 mb-10">Kesimpulan & Intervensi</button></center>
                                 </div>
                                 
@@ -312,7 +312,7 @@
                     <!-- Leave A Reply -->
                     <div class="blog-details-text">
                         <h5 class="mt-15 mb-10">Kesimpulan</h5>
-                        <p>In recent years people have realized the importance of proper diet and exercise, and recent surveys show that over the last 20 years people are eating better and working out more often, resulting in people living longer, but people are still lacking in their understanding that their mental well being is just as important as their physical health.</p>
+                        <p id="p_kesimpulan">In recent years people have realized the importance of proper diet and exercise, and recent surveys show that over the last 20 years people are eating better and working out more often, resulting in people living longer, but people are still lacking in their understanding that their mental well being is just as important as their physical health.</p>
 
 
                         
@@ -334,12 +334,29 @@
                     <!-- Leave A Reply -->
                     <div class="blog-details-text">
                         <h5 class="mt-15 mb-10">Intervensi</h5>
-                        <p>Today most people get on average 4 to 6 hours of exercise every day, and make sure that everything they put in their mouths is not filled with sugars or preservatives, but they pay no attention to their mental health, no vacations, not even the occasional long weekend, 60 hour weeks, taking work home with them and even working weekends. All of this for hopes of one day getting that big promotion. What good will it do you when your brain overloads and you have a breakdown in the office.</p>
+                        <p id="p_intervensi">Today most people get on average 4 to 6 hours of exercise every day, and make sure that everything they put in their mouths is not filled with sugars or preservatives, but they pay no attention to their mental health, no vacations, not even the occasional long weekend, 60 hour weeks, taking work home with them and even working weekends. All of this for hopes of one day getting that big promotion. What good will it do you when your brain overloads and you have a breakdown in the office.</p>
 
 
                         
 
                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br class="div_intervensi" style="display: none;">
+    <div class="alime--blog-area section-padding-0 div_intervensi" style="display: none;"  >
+        <div class="container" style="background-color: aliceblue; border-radius: 25px;">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    
+
+                    <!-- Leave A Reply -->
+                    <div class="blog-details-text">
+                        <center><button type="button" onclick="location.reload()" class="btn btn-xs alime-btn btn-2 mt-15 mb-10">Mulai Kembali</button> &nbsp <button type="button" onclick="window.location.href='data_sebelumnya.html'" class="btn btn-xs alime-btn btn-2 mt-15 mb-10">Lihat History</button></center>
                     </div>
                 </div>
             </div>
@@ -391,8 +408,8 @@
     <script src="js/alime.bundle.js"></script>
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <!-- <script type="text/javascript" src="js/datatables/datatables.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script> -->
+    <script type="text/javascript" src="js/datatables/datatables.min.js"></script>
 
     <script src="sweet-alert/sweetalert.js"></script>
     <script src="sweet-alert/toastr/toastr.min.js"></script>
@@ -403,7 +420,7 @@
     
 
     <script>
-        var data_full_kemampuan_gerak_kasar,data_full_kemampuan_gerak_halus,data_full_kemampuan_bicara_dan_bahasa,data_full_kemampuan_bersosialisasi_dan_kemandirian
+        var data_full_kemampuan_gerak_kasar,data_full_kemampuan_gerak_halus,data_full_kemampuan_bicara_dan_bahasa,data_full_kemampuan_bersosialisasi_dan_kemandirian,data_full_kesimpulan,data_full_intervensi
 
         $(".btn_mulai").click(function() {
             $('html,body').animate({
@@ -471,11 +488,17 @@
                         let data_kemampuan_gerak_halus = JSON.parse(data.data.kemampuan_gerak_halus)
                         let data_kemampuan_bicara_dan_bahasa = JSON.parse(data.data.kemampuan_bicara_dan_bahasa)
                         let data_kemampuan_bersosialisasi_dan_kemandirian = JSON.parse(data.data.kemampuan_bersosialisasi_dan_kemandirian)
+                        
 
                         data_full_kemampuan_gerak_kasar = data_kemampuan_gerak_kasar
                         data_full_kemampuan_gerak_halus = data_kemampuan_gerak_halus
                         data_full_kemampuan_bicara_dan_bahasa = data_kemampuan_bicara_dan_bahasa
                         data_full_kemampuan_bersosialisasi_dan_kemandirian = data_kemampuan_bersosialisasi_dan_kemandirian
+
+                        data_full_intervensi = JSON.parse(data.data.intervensi)
+                        data_full_kesimpulan = JSON.parse(data.data.kesimpulan)
+                        // console.log(data_full_kesimpulan)
+                        // console.log(data_full_intervensi)
 
                         //create var html_kemampuan_gerak_kasar with tr = length of data_kemampuan_gerak_kasar and 3 td, td = 1 to n, td = data_kemampuan_gerak_kasar[index].stimulasi ,td =checkbox with id="checkbox_data_kemampuan_gerak_kasar" and value = data_kemampuan_gerak_kasar[index].id , put html in tbody id="tbody_kemampuan_gerak_kasar"
                         let html_kemampuan_gerak_kasar = "";
@@ -586,10 +609,7 @@
         
         $("#kesimpulan").click(async function() {
             // show div_stimulasi div
-            await $(".div_intervensi").show();
-            await $('html,body').animate({
-                scrollTop: $(".div_intervensi").offset().top},
-                'slow');
+            
                 // $("#sini_pertama").focus();
 
             // create var data_kemampuan_gerak_kasar = checkbox_data_kemampuan_gerak_kasar that has been checked
@@ -652,9 +672,85 @@
             // console.log(nilai_full);
 
             nilai_full = (nilai_full/4 < 0) ? 0 : nilai_full/4;
+            //round nilai_full to int
+            nilai_full = Math.round(nilai_full);
             
-            // let data_kesimpulan_intervensi
+            let data_kesimpulan = get_kesimpulan(nilai_full);
+            let data_intervensi = get_intervensi(nilai_full);
+
+            // console.log(data_kesimpulan);
+            // console.log(data_intervensi);
+            // console.log(nilai_full)
             
+            let data_all = {
+                id_user : id_user,
+                kelompok_umur : $("#kelompok_umur").val(),
+                nama_anak : $("#nama_anak").val(),
+                jk : $("#jk").val(),
+                kemampuan_gerak_kasar : JSON.stringify(data_kemampuan_gerak_kasar),
+                kemampuan_gerak_halus : JSON.stringify(data_kemampuan_gerak_halus),
+                kemampuan_bicara_dan_bahasa : JSON.stringify(data_kemampuan_bicara_dan_bahasa),
+                kemampuan_bersosialisasi_dan_kemandirian : JSON.stringify(data_kemampuan_bersosialisasi_dan_kemandirian),
+                kesimpulan : data_kesimpulan,
+                intervensi : data_intervensi
+            }
+
+            //hide div id=div_button_kesimpulan_intervensi
+            $("#div_button_kesimpulan_intervensi").hide();
+            $("#p_kesimpulan").html(data_kesimpulan)
+            $("#p_intervensi").html(data_intervensi)
+
+            //disabled checkbox id="checkbox_data_kemampuan_gerak_kasar"
+            $(".checkbox_data_kemampuan_gerak_kasar").attr("disabled", true);
+            $(".checkbox_data_kemampuan_gerak_halus").attr("disabled", true);
+            $(".checkbox_data_kemampuan_bicara_dan_bahasa").attr("disabled", true);
+            $(".checkbox_data_kemampuan_bersosialisasi_dan_kemandirian").attr("disabled", true);
+
+            // create swal success with text "Data Anda Telah Tersimpan Di Sistem, \n Anda Dapat Melihat Hasilnya Di Data Sebelumnya"
+            // create ajax request to save data_all to database
+            $.ajax({
+                url: url+"save_data_stimulasi_intervensi",
+                type: "POST",
+                data: {data : data_all},
+                headers: {
+                    //basicAuth username="Kicap_karan", password="karan_kicap456" 
+                    'Authorization': 'Basic ' + btoa('Kicap_karan' + ':' + 'karan_kicap456') 
+                },
+                beforeSend: function(){
+                    sedang_proses()
+                },
+                success: function(data){
+                    console.log(data);
+                    $.unblockUI();
+                    swal({
+                        title: "Terima Kasih",
+                        text: "Data Anda Telah Tersimpan Di Sistem \nAnda Dapat Melihat Hasilnya Di Data Sebelumnya",
+                        icon: "success",
+                        button: "OK",
+                    });
+                },
+                error: function(data){
+                    $.unblockUI();
+                    swal({
+                        title: "Terjadi Kesalahan",
+                        text: "Data Gagal Tersimpan Di Sistem",
+                        icon: "error",
+                        button: "OK",
+                    });
+                }
+            });
+            
+
+            // $(".btn_mulai").attr("onclick", location.reload());
+
+            await $(".div_intervensi").show();
+            await $('html,body').animate({
+                scrollTop: $(".div_intervensi").offset().top},
+                'slow');
+
+            
+            
+
             
         });
 
@@ -664,7 +760,10 @@
             // create var data and get data from database with ajax ,if success then return data else return false
             var data = $.ajax({
                 url: url+"get_data?id="+id_data,
-               
+                headers: {
+                    //basicAuth username="Kicap_karan", password="karan_kicap456" 
+                    'Authorization': 'Basic ' + btoa('Kicap_karan' + ':' + 'karan_kicap456') 
+                },
                 type: "GET",
                 async: false
             });
@@ -683,8 +782,52 @@
 
         }
 
-        function get_kesimpulan_intervensi(id_data) {
+        function get_kesimpulan(nilai) {
+            // create if nilai 0 to 20, then id="20-0", if nilai 21 to 40, then id="21-40", if nilai 41 to 60, then id="41-60", if nilai 61 to 80, then id="61-80", if nilai 81 to 100, then id="81-100"
+            let id;
+            if (nilai <= 20) {
+                id= "20-0";
+            } else if (nilai <= 40) {
+                id= "40-21";
+            } else if (nilai <= 60) {
+                id= "60-41";
+            } else if (nilai <= 80) {
+                id= "80-61";
+            } else if (nilai <= 100) {
+                id= "100-81";
+            } 
+
+            //loop data_full_kesimpulan , if data_full_kesimpulan[i].id == id then return data_full_kesimpulan[i].kesimpulan
+            for (let i = 0; i < data_full_kesimpulan.length; i++) {
+                if (data_full_kesimpulan[i].id == id) {
+                    return data_full_kesimpulan[i].isi;
+                }
+            }
         }
+    
+        function get_intervensi(nilai) {
+            // create if nilai 0 to 20, then id="20-0", if nilai 21 to 40, then id="40-21", if nilai 41 to 60, then id="60-41", if nilai 61 to 80, then id="80-61", if nilai 81 to 100, then id="100-81"
+            let id;
+            if (nilai <= 20) {
+                id= "20-0";
+            } else if (nilai <= 40) {
+                id= "40-21";
+            } else if (nilai <= 60) {
+                id= "60-41";
+            } else if (nilai <= 80) {
+                id= "80-61";
+            } else if (nilai <= 100) {
+                id= "100-81";
+            } 
+
+            //loop data_full_intervensi , if data_full_intervensi[i].id == id then return data_full_intervensi[i].intervensi
+            for (let i = 0; i < data_full_intervensi.length; i++) {
+                if (data_full_intervensi[i].id == id) {
+                    return data_full_intervensi[i].isi;
+                }
+            }
+        }
+    
     </script>
     
 
