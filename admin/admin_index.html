@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<title>Sistem Stimulasi & Intervensi Dini Pertumbuhan Anak 1 Hingga 5 Tahun - Halaman Utama Admin</title>
+
+<!-- Bootstrap Core and vandor -->
+<link rel="stylesheet" href="template_assets/plugins/bootstrap/css/bootstrap.min.css" />
+
+<!-- Plugins css -->
+<link rel="stylesheet" href="template_assets/plugins/summernote/dist/summernote.css"/>
+
+
+<!-- Core css -->
+<link rel="stylesheet" href="template_assets/css/style.min.css"/>
+<link rel="stylesheet" href="assets/sweetalert/sweetalert.css">
+</head>
+
+<body class="font-muli theme-cyan gradient">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+    </div>
+</div>
+
+<div id="main_content">
+    <!-- Start Main top header -->
+    <div id="header_top" class="header_top">
+        <div class="container">
+            <div class="hleft">
+                <a class="header-brand" href="admin_index.html"><i class="fa fa-graduation-cap brand-logo"></i></a>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="nav-link icon menu_toggle"><i class="fe fe-align-center"></i></a>
+                    <!-- <a href="page-search.html" class="nav-link icon"><i class="fe fe-search" data-toggle="tooltip" data-placement="right" title="Search..."></i></a>
+                    <a href="app-email.html"  class="nav-link icon app_inbox"><i class="fe fe-inbox" data-toggle="tooltip" data-placement="right" title="Inbox"></i></a>
+                    <a href="app-filemanager.html"  class="nav-link icon app_file xs-hide"><i class="fe fe-folder" data-toggle="tooltip" data-placement="right" title="File Manager"></i></a>
+                    <a href="app-social.html"  class="nav-link icon xs-hide"><i class="fe fe-share-2" data-toggle="tooltip" data-placement="right" title="Social Media"></i></a> -->
+                    <!-- <a href="javascript:void(0)" class="nav-link icon theme_btn"><i class="fe fe-feather"></i></a>
+                    <a href="javascript:void(0)" class="nav-link icon settingbar"><i class="fe fe-settings"></i></a> -->
+                </div>
+            </div>
+            <div class="hright">
+                <!-- <a href="javascript:void(0)" class="nav-link icon right_tab"><i class="fe fe-align-right"></i></a> -->
+                <a href="#" onclick="logout()" class="nav-link icon settingbar"><i class="fe fe-power"></i></a>                
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+
+   
+
+    <!-- Start Main leftbar navigation -->
+    <div id="left-sidebar" class="sidebar">
+        <h5 class="brand-name">SS&IDPA<a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu-uni">Navigasi</a></li>
+        </ul>
+        <div class="tab-content mt-3">
+            <div class="tab-pane fade show active" id="menu-uni" role="tabpanel">
+                <nav class="sidebar-nav">
+                    <ul class="metismenu">
+                        <li class="active"><a href="admin_index.html"><i class="fa fa-dashboard"></i><span>Halaman Utama</span></a></li>
+                        <li><a href="log_user.html"><i class="fa fa-address-book"></i><span>Halaman User</span></a></li>
+                        <li><a href="log_history.html"><i class="fa fa-bar-chart"></i><span>Halaman Log Data</span></a></li>
+                        <!-- <li class="g_heading">Extra</li> -->
+                        <li><a href="#" onclick="logout()"><i class="fe fe-power"></i><span>Logout</span></a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+            
+        </div>
+    </div>
+
+
+    
+    <!-- Start project content area -->
+    <div class="page">
+        <!-- Start Page header -->
+        <div class="section-body" id="page_top">
+            <div class="container-fluid">
+                <div class="page-header">
+                    <div class="left">                        
+                        <!-- <div class="input-group">
+                            <input type="text" class="form-control" placeholder="What you want to find">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button">Search</button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="right">
+                        <ul class="nav nav-pills">                            
+                            <li class="nav-item ">
+                                <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Halaman Utama</a>
+                                
+                            </li>
+                            
+                        </ul>
+                        <div class="notification d-flex">
+                            <div class="dropdown d-flex">
+                                <a href="javascript:void(0)" class="chip ml-3 nama_admin" data-toggle="dropdown">
+                                     George</a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                    <a class="dropdown-item" href="profile.html"><i class="dropdown-icon fe fe-user"></i> Profile</a>
+                                    <!-- <a class="dropdown-item" href="app-setting.html"><i class="dropdown-icon fe fe-settings"></i> Settings</a>
+                                    <a class="dropdown-item" href="app-email.html"><span class="float-right"><span class="badge badge-primary">6</span></span><i class="dropdown-icon fe fe-mail"></i> Inbox</a>
+                                    <a class="dropdown-item" href="javascript:void(0)"><i class="dropdown-icon fe fe-send"></i> Message</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="javascript:void(0)"><i class="dropdown-icon fe fe-help-circle"></i> Need help?</a> -->
+                                    <a class="dropdown-item" href="#" onclick="logout()"><i class="dropdown-icon fe fe-log-out"></i> Sign out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Page title and tab -->
+        <div class="section-body">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="header-action">
+                        <h1 class="page-title">Dashboard</h1>
+                        <ol class="breadcrumb page-breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">SS&IDPA</a></li>
+                            <!-- <li class="breadcrumb-item"><a href="#">University</a></li> -->
+                            <li class="breadcrumb-item active" aria-current="page">Halaman Utama</li>
+                        </ol>
+                    </div>
+                    <ul class="nav nav-tabs page-header-tab">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#admin-Dashboard">Dashboard</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#admin-Activity">Activity</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section-body mt-4">
+            <div class="container-fluid">
+                <div class="row clearfix row-deck">
+                    <div class="col-6 col-md-6 col-xl-6">
+                        <div class="card">
+                            <div class="card-body ribbon">
+                                <div class="ribbon-box green jumlah_data" data-toggle="tooltip" title="Jumlah Data">5</div>
+                                <a href="log_history.html" class="my_sort_cut text-muted">
+                                    <i class="fa fa-bar-chart"></i>
+                                    <span>Data</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-6">
+                        <div class="card">
+                            <div class="card-body ribbon">
+                                <div class="ribbon-box green jumlah_user" data-toggle="tooltip" title="Jumlah User">5</div>
+                                <a href="log_user.html" class="my_sort_cut text-muted">
+                                    <i class="fa fa-address-book"></i>
+                                    <span>User</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="admin-Dashboard" role="tabpanel">
+                        <div class="row clearfix">
+                            <div class="col-xl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">KELOMPOK UMUR STIMULASI</h3>
+                                        <div class="card-options">
+                                            <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+                                            <a href="#" class="card-options-fullscreen" data-toggle="card-fullscreen"><i class="fe fe-maximize"></i></a>
+                                            <!-- <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a> -->
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-sm-flex justify-content-between">
+                                            <!-- <div class="font-12 mb-2"><span>Measure How Fast You’re Growing Monthly Recurring Revenue. <a href="#">Learn More</a></span></div> -->
+                                            <div class="font-12 mb-2"><span>Pilih kekompok umur stimulasi. </span></div>
+                                            
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <select name="kelompok_umur" id="" class="form-control">
+                                                <option selected disabled>-Pilih Kelompok Umur</option>
+                                                <option value="1">12 Hingga 18 Bulan</option>
+                                                <option value="2">18 Hingga 24 Bulan</option>
+                                                <option value="3">24 Hingga 36 Bulan</option>
+                                                <option value="4">36 Hingga 48 Bulan</option>
+                                                <option value="5">48 Hingga 60 Bulan</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <button type="button" class="btn btn-primary" id="update_stimulasi">Update Stimulasi & Intervensi</button>
+                                        </div>
+                                        
+
+
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>                
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Start main footer -->
+        <div class="section-body">
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            Copyright © 2021 <a href="https://www.kicap-karan.com">Kicap Karan</a>.
+                        </div>
+                        <div class="col-md-6 col-sm-12 text-md-right">
+                            <!-- <ul class="list-inline mb-0">
+                                <li class="list-inline-item"><a href="../doc/index.html">Documentation</a></li>
+                                <li class="list-inline-item"><a href="javascript:void(0)">FAQ</a></li>
+                                <li class="list-inline-item"><a href="javascript:void(0)" class="btn btn-outline-primary btn-sm">Buy Now</a></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>    
+</div>
+
+<!-- Start Main project js, jQuery, Bootstrap -->
+<script src="template_assets/bundles/lib.vendor.bundle.js"></script>
+
+<!-- Start all plugin js -->
+<script src="template_assets/bundles/counterup.bundle.js"></script>
+<script src="template_assets/bundles/apexcharts.bundle.js"></script>
+<script src="template_assets/bundles/summernote.bundle.js"></script>
+
+<!-- Start project main js  and page js -->
+<script src="template_assets/js/core.js"></script>
+<script src="assets/js/page/index.js"></script>
+<script src="assets/js/page/summernote.js"></script>
+<script src="assets/toastr/toastr.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/toastr/toastr.min.css">
+<script src="assets/sweetalert/sweetalert.js"></script>
+<script src="assets/block/jquery.blockUI.js"></script>
+<script src="main.js"></script>
+<script src="main_admin.js"></script>
+<script>
+
+
+    // create function if button id="update_stimulasi" is click
+    $('#update_stimulasi').click(function(){
+        // get value from select option
+        var kelompok_umur = $('select[name=kelompok_umur]').val();
+        // if kelompok umur is null or empty than show alert else move to halaman_stimulasi.html?id=kelompok_umur
+        if(kelompok_umur == null || kelompok_umur == ""){
+            //create toastr
+            toastr.error('Pilih kelompok umur stimulasi terlebih dahulu');
+        }else{
+            window.location.href = "halaman_stimulasi.html?id="+kelompok_umur;
+        }
+        
+    });
+</script>
+</body>
+</html>

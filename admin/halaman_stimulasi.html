@@ -33,20 +33,20 @@
     <div id="header_top" class="header_top">
         <div class="container">
             <div class="hleft">
-                <a class="header-brand" href="index.html"><i class="fa fa-graduation-cap brand-logo"></i></a>
+                <a class="header-brand" href="admin_index.html"><i class="fa fa-graduation-cap brand-logo"></i></a>
                 <div class="dropdown">
                     <a href="javascript:void(0)" class="nav-link icon menu_toggle"><i class="fe fe-align-center"></i></a>
                     <!-- <a href="page-search.html" class="nav-link icon"><i class="fe fe-search" data-toggle="tooltip" data-placement="right" title="Search..."></i></a>
                     <a href="app-email.html"  class="nav-link icon app_inbox"><i class="fe fe-inbox" data-toggle="tooltip" data-placement="right" title="Inbox"></i></a>
                     <a href="app-filemanager.html"  class="nav-link icon app_file xs-hide"><i class="fe fe-folder" data-toggle="tooltip" data-placement="right" title="File Manager"></i></a>
                     <a href="app-social.html"  class="nav-link icon xs-hide"><i class="fe fe-share-2" data-toggle="tooltip" data-placement="right" title="Social Media"></i></a> -->
-                    <a href="javascript:void(0)" class="nav-link icon theme_btn"><i class="fe fe-feather"></i></a>
-                    <a href="javascript:void(0)" class="nav-link icon settingbar"><i class="fe fe-settings"></i></a>
+                    <!-- <a href="javascript:void(0)" class="nav-link icon theme_btn"><i class="fe fe-feather"></i></a>
+                    <a href="javascript:void(0)" class="nav-link icon settingbar"><i class="fe fe-settings"></i></a> -->
                 </div>
             </div>
             <div class="hright">
-                <a href="javascript:void(0)" class="nav-link icon right_tab"><i class="fe fe-align-right"></i></a>
-                <a href="login.html" class="nav-link icon settingbar"><i class="fe fe-power"></i></a>                
+                <!-- <a href="javascript:void(0)" class="nav-link icon right_tab"><i class="fe fe-align-right"></i></a> -->
+                <a href="#" onclick="logout()" class="nav-link icon settingbar"><i class="fe fe-power"></i></a>                
             </div>
         </div>
     </div>
@@ -67,10 +67,11 @@
             <div class="tab-pane fade show active" id="menu-uni" role="tabpanel">
                 <nav class="sidebar-nav">
                     <ul class="metismenu">
-                        <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i><span>Halaman Utama</span></a></li>
-                        
+                        <li class="active"><a href="admin_index.html"><i class="fa fa-dashboard"></i><span>Halaman Utama</span></a></li>
+                        <li><a href="log_user.html"><i class="fa fa-address-book"></i><span>Halaman User</span></a></li>
+                        <li><a href="log_history.html"><i class="fa fa-bar-chart"></i><span>Halaman Log Data</span></a></li>
                         <!-- <li class="g_heading">Extra</li> -->
-                        <li><a href="events.html"><i class="fe fe-power"></i><span>Logout</span></a></li>
+                        <li><a href="#" onclick="logout()"><i class="fe fe-power"></i><span>Logout</span></a></li>
                         
                     </ul>
                 </nav>
@@ -78,6 +79,7 @@
             
         </div>
     </div>
+
 
 
     
@@ -105,16 +107,16 @@
                         </ul>
                         <div class="notification d-flex">
                             <div class="dropdown d-flex">
-                                <a href="javascript:void(0)" class="chip ml-3" data-toggle="dropdown">
-                                    <span class="avatar" style="background-image: url(template_assets/images/xs/avatar5.jpg)"></span> George</a>
+                                <a href="javascript:void(0)" class="chip ml-3 nama_admin" data-toggle="dropdown">
+                                     George</a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                    <a class="dropdown-item" href="page-profile.html"><i class="dropdown-icon fe fe-user"></i> Profile</a>
-                                    <a class="dropdown-item" href="app-setting.html"><i class="dropdown-icon fe fe-settings"></i> Settings</a>
+                                    <a class="dropdown-item" href="profile.html"><i class="dropdown-icon fe fe-user"></i> Profile</a>
+                                    <!-- <a class="dropdown-item" href="app-setting.html"><i class="dropdown-icon fe fe-settings"></i> Settings</a>
                                     <a class="dropdown-item" href="app-email.html"><span class="float-right"><span class="badge badge-primary">6</span></span><i class="dropdown-icon fe fe-mail"></i> Inbox</a>
                                     <a class="dropdown-item" href="javascript:void(0)"><i class="dropdown-icon fe fe-send"></i> Message</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="javascript:void(0)"><i class="dropdown-icon fe fe-help-circle"></i> Need help?</a>
-                                    <a class="dropdown-item" href="login.html"><i class="dropdown-icon fe fe-log-out"></i> Sign out</a>
+                                    <a class="dropdown-item" href="javascript:void(0)"><i class="dropdown-icon fe fe-help-circle"></i> Need help?</a> -->
+                                    <a class="dropdown-item" href="#" onclick="logout()"><i class="dropdown-icon fe fe-log-out"></i> Sign out</a>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +133,7 @@
                         <ol class="breadcrumb page-breadcrumb">
                             <li class="breadcrumb-item"><a href="#">SS&IDPA</a></li>
                             <li class="breadcrumb-item"><a href="#">Halaman Stimulasi & Intervensi</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Kelompok Stimulasi Umur</li>
+                            <li class="breadcrumb-item active title_kelompok_umurnya" aria-current="page">Kelompok Stimulasi Umur</li>
                         </ol>
                     </div>
                     <ul class="nav nav-tabs page-header-tab">
@@ -514,12 +516,16 @@
 <script src="assets/sweetalert/sweetalert.js"></script>
 <script src="assets/block/jquery.blockUI.js"></script>
 <script src="main.js"></script>
+<script src="main_admin.js"></script>
 <script>
     // buat function cek url ?id= apakah 1 hingga 5,jika tidak maka buat sweet alert dengan mesej error "Halaman tidak ditemukan" kemudian lanjutkan ke halaman index.html 
     function cek_url(){
         var url = window.location.href;
         var id = url.split("?");
         if(id[1] == "id=1" || id[1] == "id=2" || id[1] == "id=3" || id[1] == "id=4" || id[1] == "id=5"){
+            //create var namanya with tenary if 1 then namanya = "12 Hingga 19 Bulan", if 2 then namanya = "18 Hingga 24 Bulan", if 3 then namanya = "24 Hingga 36 Bulan", if 4 then namanya = "36 Hingga 48 Bulan", if 5 then namanya = "48 Hingga 60 Bulan"
+            var namanya = (id[1] == "id=1") ? "12 Hingga 18 Bulan" : (id[1] == "id=2") ? "18 Hingga 24 Bulan" : (id[1] == "id=3") ? "24 Hingga 36 Bulan" : (id[1] == "id=4") ? "36 Hingga 48 Bulan" : (id[1] == "id=5") ? "48 Hingga 60 Bulan" : "Halaman tidak ditemukan";
+            $(".title_kelompok_umurnya").html(namanya);
             return true;
         }else{
             swal({

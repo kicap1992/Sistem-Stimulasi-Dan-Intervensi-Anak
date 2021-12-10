@@ -14,6 +14,7 @@ toastr.options = {
 };
 
 var url = "http://localhost/malik/server/api/";
+var url2 = "http://localhost/malik/server/";
 
 function $_GET(param) {
   var vars = {};
