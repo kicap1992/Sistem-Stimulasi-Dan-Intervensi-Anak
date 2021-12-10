@@ -456,7 +456,7 @@
                 await $(".data_sebelumnya").hide();
 
                 let data = await get_data(umur)
-                // console.log(data);
+                console.log(data);
                 $.unblockUI();
                 if(data == false){
                     swal({
@@ -478,7 +478,8 @@
                         'slow');
                         $("#sini_pertama").focus();
 
-                    if (data.message == false) {
+
+                    if (data.status == false) {
                         // console.log('data belum lengkap');
                         let html = `<center><h5>${data.data}</h5><button type="button" onclick="window.location.href='user_index.html'"  class="btn alime-btn btn-2 mb-2">Mulai Kembali</button> <br></center>`;
                         $(".sini_stimulasi_div").html(html);
